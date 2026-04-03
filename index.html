@@ -1,1059 +1,933 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RESCON 2026 — Earth & Environmental Sciences</title>
+    <title>RESCON 2026 — Nature, Science, and Sustainability</title>
     <link rel="stylesheet" href="style.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
     <!-- ========== NAVIGATION ========== -->
     <input type="checkbox" id="nav-toggle" class="nav-toggle" />
     <nav class="navbar">
-      <div class="nav-inner">
-        <a href="#home" class="nav-logo">
-          <span class="logo-icon">🌿</span>
-          <span class="logo-text">RESCON<em>2026</em></span>
-        </a>
+        <div class="nav-inner">
+            <a href="#home" class="nav-logo">
+                <img src="images/web/crest.png" alt="RESCON logo" class="logo-img" width="72" height="72" />
+                <span>RESCON<br /><em>2026</em></span>
+            </a>
 
-        <label for="nav-toggle" class="hamburger" aria-label="Toggle menu">
-          <span></span><span></span><span></span>
-        </label>
+            <label for="nav-toggle" class="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </label>
 
-        <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#guidelines">Guidelines</a></li>
-          <li><a href="#committee">Committee</a></li>
-          <li><a href="#registration">Registration</a></li>
-          <li><a href="gallery/index.html">Gallery</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#guidelines">Guidelines</a></li>
+                <li><a href="#committee">Committee</a></li>
+                <li><a href="#registration">Registration</a></li>
+                <li><a href="gallery/index.html">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
     </nav>
     <label for="nav-toggle" class="nav-overlay"></label>
 
     <!-- ========== HERO ========== -->
     <section class="hero" id="home">
-      <div class="hero-bg">
-        <!-- Hero Carousel -->
-        <div class="hero-carousel">
-          <div
-            class="carousel-slide active"
-            style="
+        <div class="hero-bg">
+            <!-- Hero Carousel -->
+            <div class="hero-carousel">
+                <div class="carousel-slide active" style="
               background-image: url(&quot;https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&h=1080&fit=crop&crop=center&quot;);
-            "
-          ></div>
-          <div
-            class="carousel-slide"
-            style="
+            "></div>
+                <div class="carousel-slide" style="
               background-image: url(&quot;media/web/dukeejoexrt-mountains-9580848.jpg&quot;);
-            "
-          ></div>
-          <div
-            class="carousel-slide"
-            style="
+            "></div>
+                <div class="carousel-slide" style="
               background-image: url(&quot;https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=1920&h=1080&fit=crop&crop=center&quot;);
-            "
-          ></div>
-          <div
-            class="carousel-slide"
-            style="
+            "></div>
+                <div class="carousel-slide" style="
               background-image: url(&quot;https://images.unsplash.com/photo-1555255707-c07966088b7b?w=1920&h=1080&fit=crop&crop=center&quot;);
-            "
-          ></div>
+            "></div>
+            </div>
+            <div class="carousel-indicators">
+                <span class="indicator active" data-slide="0"></span>
+                <span class="indicator" data-slide="1"></span>
+                <span class="indicator" data-slide="2"></span>
+                <span class="indicator" data-slide="3"></span>
+            </div>
+            <div class="hero-texture"></div>
+            <div class="hero-rings">
+                <div class="ring r1"></div>
+                <div class="ring r2"></div>
+                <div class="ring r3"></div>
+            </div>
+            <div class="hero-particles">
+                <span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="hero-earth-elements">
+                <div class="earth-element">🌍</div>
+                <div class="earth-element">🌱</div>
+                <div class="earth-element">💧</div>
+                <div class="earth-element">🪨</div>
+                <div class="earth-element">🌿</div>
+                <div class="earth-element">🌊</div>
+            </div>
         </div>
-        <div class="carousel-indicators">
-          <span class="indicator active" data-slide="0"></span>
-          <span class="indicator" data-slide="1"></span>
-          <span class="indicator" data-slide="2"></span>
-          <span class="indicator" data-slide="3"></span>
+        <div class="hero-content">
+            <p class="hero-tag">
+                Postgraduate Institute of Science · University of Peradeniya
+            </p>
+            <h1 class="hero-title">
+                <span class="hero-res">RES</span><span class="hero-con">CON</span>
+                <span class="hero-year">2026</span>
+            </h1>
+            <p class="hero-subtitle">
+                Earth Science, Geoscience, and Sustainability: Advancing research for
+                a resilient planet
+            </p>
+            <p class="hero-date">
+                📅 September 24–25, 2026 · Faculty of Science, University of
+                Peradeniya
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#guidelines" class="btn btn-primary">Submit</a>
+                <a href="#themes" class="btn btn-secondary">Themes</a>
+                <a href="#dates" class="btn btn-secondary">Important Dates</a>
+            </div>
+
+            <div class="hero-doc-panel" aria-label="Conference downloads">
+                <a href="media/flyer.pdf" target="_blank" class="btn">📄 Download Flyer</a>
+                <a href="media/brochure.pdf" target="_blank" class="btn">📋 Download Brochure</a>
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat">
+                    <strong data-target="600" class="counter">0</strong><span>Researchers</span>
+                </div>
+                <div class="stat-sep"></div>
+                <div class="stat">
+                    <strong data-target="6" class="counter">0</strong><span>Theme Areas</span>
+                </div>
+                <div class="stat-sep"></div>
+                <div class="stat">
+                    <strong data-target="15" class="counter">0</strong><span>Keynotes</span>
+                </div>
+            </div>
         </div>
-        <div class="hero-texture"></div>
-        <div class="hero-rings">
-          <div class="ring r1"></div>
-          <div class="ring r2"></div>
-          <div class="ring r3"></div>
-        </div>
-        <div class="hero-particles">
-          <span></span><span></span><span></span><span></span><span></span>
-          <span></span><span></span><span></span><span></span><span></span>
-        </div>
-        <div class="hero-earth-elements">
-          <div class="earth-element">🌍</div>
-          <div class="earth-element">🌱</div>
-          <div class="earth-element">💧</div>
-          <div class="earth-element">🪨</div>
-          <div class="earth-element">🌿</div>
-          <div class="earth-element">🌊</div>
-        </div>
-      </div>
-      <div class="hero-content">
-        <p class="hero-tag">
-          Postgraduate Institute of Science · University of Peradeniya
-        </p>
-        <h1 class="hero-title">
-          <span class="hero-res">RES</span><span class="hero-con">CON</span>
-          <span class="hero-year">2026</span>
-        </h1>
-        <p class="hero-subtitle">
-          Breaking Boundaries:<br />Collaborative Science for Global Challenges
-        </p>
-        <p class="hero-date">
-          📅 November 28–29, 2026 · Faculty of Science, University of Peradeniya
-        </p>
-        <div class="hero-buttons">
-          <a href="#guidelines" class="btn btn-primary">Submit Abstract</a>
-          <a href="#registration" class="btn btn-secondary">Registration</a>
-        </div>
-        <div class="hero-stats">
-          <div class="stat">
-            <strong data-target="600" class="counter">0</strong
-            ><span>Researchers</span>
-          </div>
-          <div class="stat-sep"></div>
-          <div class="stat">
-            <strong data-target="6" class="counter">0</strong
-            ><span>Theme Areas</span>
-          </div>
-          <div class="stat-sep"></div>
-          <div class="stat">
-            <strong data-target="15" class="counter">0</strong
-            ><span>Keynotes</span>
-          </div>
-        </div>
-      </div>
-      <div class="hero-scroll">
-        <span>Scroll</span>
-        <div class="scroll-line"></div>
-      </div>
     </section>
 
     <!-- ========== ABOUT ========== -->
     <section class="about section section-teal" id="about">
-      <div class="container">
-        <div class="about-grid">
-          <div class="about-visual">
-            <div
-              class="about-bg"
-              style="
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-visual">
+                    <div class="about-bg" style="
                 background-image: url(&quot;media/web/yassay-earth-3629519.jpg&quot;);
-              "
-            ></div>
-            <div class="about-badge">
-              <span class="badge-num">15<sup>th</sup></span>
-              <span class="badge-label">Annual Research Congress</span>
+              "></div>
+                    <div class="about-badge">
+                        <span class="badge-num">15<sup>th</sup></span>
+                        <span class="badge-label">Annual Research Congress</span>
+                    </div>
+                    <div class="about-art">
+                        <div class="art-layer l1">🌍</div>
+                        <div class="art-layer l2">🔬</div>
+                        <div class="art-layer l3">🌱</div>
+                    </div>
+                    <div class="about-accent-box">
+                        <p>"Where science meets<br />the Earth's future."</p>
+                    </div>
+                </div>
+                <div class="about-body">
+                    <span class="section-label">About the Congress</span>
+                    <h2 class="section-title">
+                        Sri Lanka's Premier<br />Earth Sciences Forum
+                    </h2>
+                    <p>
+                        RESCON 2026 is the premier annual research congress organized by
+                        the <strong>Postgraduate Institute of Science (PGIS)</strong>,
+                        University of Peradeniya — Sri Lanka's foremost institution for
+                        postgraduate education in the natural sciences.
+                    </p>
+                    <p>
+                        The PGIS Research Congress is the major annual research conference
+                        of the Postgraduate Institute of Science. The congress provides an
+                        excellent platform to share knowledge and network with scientists
+                        across the country and abroad through the presentation of
+                        cutting-edge research.
+                    </p>
+                    <p>
+                        The Congress will be held on the 24th and 25th of September 2026.
+                        The Inauguration Ceremony, together with the keynote speech by a
+                        distinguished scientist will be held on the 24th of September
+                        before Lunch break.
+                    </p>
+                    <p>
+                        Technical Sessions of RESCON 2026 will be held on the afternoon of
+                        24th and full day of 25th of September at the PGIS, and
+                        international participants will attend online.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight">
+                            <span class="hl-icon">�</span>
+                            <span>Earth & Environmental Sciences</span>
+                        </div>
+                        <div class="highlight">
+                            <span class="hl-icon">💻</span>
+                            <span>Computer Science & AI</span>
+                        </div>
+                        <div class="highlight">
+                            <span class="hl-icon">🧬</span>
+                            <span>Life Sciences</span>
+                        </div>
+                        <div class="highlight">
+                            <span class="hl-icon">⚛️</span>
+                            <span>Physical Sciences</span>
+                        </div>
+                        <div class="highlight">
+                            <span class="hl-icon">📚</span>
+                            <span>Science Education</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="about-art">
-              <div class="art-layer l1">🌍</div>
-              <div class="art-layer l2">🔬</div>
-              <div class="art-layer l3">🌱</div>
-            </div>
-            <div class="about-accent-box">
-              <p>"Where science meets<br />the Earth's future."</p>
-            </div>
-          </div>
-          <div class="about-body">
-            <span class="section-label">About the Congress</span>
-            <h2 class="section-title">
-              Sri Lanka's Premier<br />Earth Sciences Forum
-            </h2>
-            <p>
-              RESCON 2024 is the premier annual research congress organized by
-              the <strong>Postgraduate Institute of Science (PGIS)</strong>,
-              University of Peradeniya — Sri Lanka's foremost institution for
-              postgraduate education in the natural sciences.
-            </p>
-            <p>
-              The congress brings together researchers, academics, industry
-              professionals, and policymakers to share cutting-edge findings
-              across
-              <strong>Earth, Mineral, and Environmental Sciences</strong>,
-              fostering interdisciplinary dialogue that addresses pressing
-              global challenges.
-            </p>
-            <p>
-              RESCON serves as an essential platform for graduate students and
-              early-career researchers to present their work, receive expert
-              feedback, and build lasting professional networks within Sri Lanka
-              and internationally.
-            </p>
-            <div class="about-highlights">
-              <div class="highlight">
-                <span class="hl-icon">🏔️</span>
-                <span>Earth & Geosciences</span>
-              </div>
-              <div class="highlight">
-                <span class="hl-icon">🌊</span>
-                <span>Environmental Research</span>
-              </div>
-              <div class="highlight">
-                <span class="hl-icon">🧬</span>
-                <span>Life Sciences</span>
-              </div>
-              <div class="highlight">
-                <span class="hl-icon">💻</span>
-                <span>ICT & AI Integration</span>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
     </section>
 
     <!-- ========== PROCEEDINGS ========== -->
     <section class="proceedings section section-alt" id="proceedings">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-label">Past Proceedings</span>
-          <h2 class="section-title">RESCON Proceedings</h2>
-          <p class="section-desc">
-            Access proceedings from previous RESCON conferences to explore past
-            research and presentations.
-          </p>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Past Proceedings</span>
+                <h2 class="section-title">RESCON Proceedings</h2>
+                <p class="section-desc">
+                    Access proceedings from previous RESCON conferences to explore past
+                    research and presentations.
+                </p>
+            </div>
+            <div class="proceedings-grid">
+                <div class="proceeding-item">
+                    <a href="media/proceedings/rescon2025.pdf" target="_blank" class="proceeding-link">
+                        <img class="proceeding-thumb" alt="RESCON 2025 Proceedings"
+                            src="media/proceedings/Proceedings RESCON2026.png" />
+                    </a>
+                    <p>
+                        Proceedings of the 15th Annual Research Congress featuring
+                        cutting-edge research in nature, science, and sustainability.
+                    </p>
+                </div>
+                <div class="proceeding-item">
+                    <a href="media/proceedings/rescon2024.pdf" target="_blank" class="proceeding-link">
+                        <img class="proceeding-thumb" alt="RESCON 2024 Proceedings"
+                            src="media/proceedings/Research Highlights 2026.png" />
+                    </a>
+                    <p>
+                        Highlights from the 14th RESCON with key findings and
+                        presentations on scientific research for a resilient planet.
+                    </p>
+                </div>
+            </div>
         </div>
-        <div class="proceedings-grid">
-          <div class="proceeding-item">
-            <img
-              src="media/web/dukeejoexrt-mountains-9580848.jpg"
-              alt="RESCON 2025 Proceedings"
-              class="proceeding-thumb"
-            />
-            <h3>RESCON 2025</h3>
-            <p>Proceedings of the 14th Annual Research Congress</p>
-            <a
-              href="media/proceedings/rescon2025.pdf"
-              class="btn btn-primary"
-              target="_blank"
-              >Download PDF</a
-            >
-          </div>
-          <div class="proceeding-item">
-            <img
-              src="media/web/yassay-earth-3629519.jpg"
-              alt="RESCON 2024 Proceedings"
-              class="proceeding-thumb"
-            />
-            <h3>RESCON 2024</h3>
-            <p>Proceedings of the 13th Annual Research Congress</p>
-            <a
-              href="media/proceedings/rescon2024.pdf"
-              class="btn btn-primary"
-              target="_blank"
-              >Download PDF</a
-            >
-          </div>
-          <div class="proceeding-item">
-            <img
-              src="media/web/croenick-gems-8528440_1920.jpg"
-              alt="RESCON 2023 Proceedings"
-              class="proceeding-thumb"
-            />
-            <h3>RESCON 2023</h3>
-            <p>Proceedings of the 12th Annual Research Congress</p>
-            <a
-              href="media/proceedings/rescon2023.pdf"
-              class="btn btn-primary"
-              target="_blank"
-              >Download PDF</a
-            >
-          </div>
-          <div class="proceeding-item">
-            <img
-              src="media/web/aiamkay-desert-5265239_1920.jpg"
-              alt="RESCON 2022 Proceedings"
-              class="proceeding-thumb"
-            />
-            <h3>RESCON 2022</h3>
-            <p>Proceedings of the 11th Annual Research Congress</p>
-            <a
-              href="media/proceedings/rescon2022.pdf"
-              class="btn btn-primary"
-              target="_blank"
-              >Download PDF</a
-            >
-          </div>
-        </div>
-      </div>
     </section>
 
     <!-- ========== THEMES ========== -->
     <section class="themes section section-alt" id="themes">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-label">Research Focus Areas</span>
-          <h2 class="section-title">Congress Themes</h2>
-          <p class="section-desc">
-            Submit your research under one of our six interdisciplinary theme
-            tracks, curated to reflect the most pressing challenges in science
-            today.
-          </p>
-        </div>
-        <div class="themes-grid">
-          <div class="theme-card">
-            <div
-              class="theme-bg"
-              style="
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Research Focus Areas</span>
+                <h2 class="section-title">Congress Themes</h2>
+                <p class="section-desc">
+                    Submit your research under one of our five interdisciplinary theme
+                    tracks, curated to reflect the most pressing challenges in science
+                    today.
+                </p>
+            </div>
+            <div class="themes-grid">
+                <div class="theme-card">
+                    <div class="theme-bg" style="
                 background-image: url(&quot;media/web/yassay-earth-3629519.jpg&quot;);
-              "
-            ></div>
-            <div class="theme-icon-wrap tc-green">🌍</div>
-            <h3>Earth &amp; Environmental Sciences</h3>
-            <p>
-              Geology, geomorphology, climate change, hydrology, soil science,
-              and atmospheric dynamics shaping our planet.
-            </p>
-            <ul>
-              <li>Climate Change & Adaptation</li>
-              <li>Geological Mapping</li>
-              <li>Environmental Monitoring</li>
-            </ul>
-            <span class="theme-tag">Track A</span>
-          </div>
+              "></div>
+                    <div class="theme-icon-wrap tc-green">🌍</div>
+                    <h3>Earth &amp; Environmental Sciences</h3>
+                    <p>
+                        Geology, geomorphology, climate change, hydrology, soil science,
+                        and atmospheric dynamics shaping our planet.
+                    </p>
+                    <ul>
+                        <li>Climate Change & Adaptation</li>
+                        <li>Geological Mapping</li>
+                        <li>Environmental Monitoring</li>
+                    </ul>
+                    <span class="theme-tag">Track A</span>
+                </div>
 
-          <div class="theme-card">
-            <div
-              class="theme-bg"
-              style="
+                <div class="theme-card">
+                    <div class="theme-bg" style="
                 background-image: url(&quot;media/web/aiamkay-desert-5265239_1920.jpg&quot;);
-              "
-            ></div>
-            <div class="theme-icon-wrap tc-blue">💻</div>
-            <h3>ICT &amp; Statistics in Earth Science</h3>
-            <p>
-              Application of information technology, remote sensing, GIS, and
-              statistical methods to environmental research.
-            </p>
-            <ul>
-              <li>Remote Sensing & GIS</li>
-              <li>Spatial Statistics</li>
-              <li>Data Science Methods</li>
-            </ul>
-            <span class="theme-tag">Track B</span>
-          </div>
+              "></div>
+                    <div class="theme-icon-wrap tc-blue">💻</div>
+                    <h3>
+                        Computer Science, Artificial Intelligence, Mathematics &amp;
+                        Statistics
+                    </h3>
+                    <p>
+                        Application of computational methods, AI algorithms, mathematical
+                        modeling, and statistical analysis to scientific research and
+                        problem-solving.
+                    </p>
+                    <ul>
+                        <li>AI & Machine Learning</li>
+                        <li>Algorithm Design</li>
+                        <li>Mathematical Modeling</li>
+                        <li>Statistical Methods</li>
+                    </ul>
+                    <span class="theme-tag">Track B</span>
+                </div>
 
-          <div class="theme-card">
-            <div
-              class="theme-bg"
-              style="
+                <div class="theme-card">
+                    <div class="theme-bg" style="
                 background-image: url(&quot;media/web/croenick-gems-8528440_1920.jpg&quot;);
-              "
-            ></div>
-            <div class="theme-icon-wrap tc-emerald">🌿</div>
-            <h3>Life Sciences &amp; Biodiversity</h3>
-            <p>
-              Ecology, zoology, botany, microbiology, and conservation biology
-              with a focus on Sri Lanka's rich biodiversity.
-            </p>
-            <ul>
-              <li>Conservation Biology</li>
-              <li>Microbial Ecology</li>
-              <li>Tropical Biodiversity</li>
-            </ul>
-            <span class="theme-tag">Track C</span>
-          </div>
+              "></div>
+                    <div class="theme-icon-wrap tc-emerald">🧬</div>
+                    <h3>Life Sciences</h3>
+                    <p>
+                        Research in biology, biotechnology, genetics, ecology, and related
+                        fields focusing on living organisms and their interactions.
+                    </p>
+                    <ul>
+                        <li>Biotechnology</li>
+                        <li>Genetics & Genomics</li>
+                        <li>Ecology</li>
+                        <li>Biomedical Research</li>
+                    </ul>
+                    <span class="theme-tag">Track C</span>
+                </div>
 
-          <div class="theme-card">
-            <div
-              class="theme-bg"
-              style="
+                <div class="theme-card">
+                    <div class="theme-bg" style="
                 background-image: url(&quot;https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=400&h=200&fit=crop&crop=center&quot;);
-              "
-            ></div>
-            <div class="theme-icon-wrap tc-amber">⚛️</div>
-            <h3>Physical Sciences</h3>
-            <p>
-              Physics, chemistry, and materials science research with direct
-              applications to environmental and geological systems.
-            </p>
-            <ul>
-              <li>Geochemistry</li>
-              <li>Materials & Minerals</li>
-              <li>Environmental Physics</li>
-            </ul>
-            <span class="theme-tag">Track D</span>
-          </div>
+              "></div>
+                    <div class="theme-icon-wrap tc-amber">⚛️</div>
+                    <h3>Physical Sciences</h3>
+                    <p>
+                        Fundamental research in physics, chemistry, materials science, and
+                        related disciplines exploring the laws of nature.
+                    </p>
+                    <ul>
+                        <li>Quantum Physics</li>
+                        <li>Chemical Synthesis</li>
+                        <li>Materials Science</li>
+                        <li>Energy Research</li>
+                    </ul>
+                    <span class="theme-tag">Track D</span>
+                </div>
 
-          <div class="theme-card">
-            <div
-              class="theme-bg"
-              style="
+                <div class="theme-card">
+                    <div class="theme-bg" style="
                 background-image: url(&quot;https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400&h=200&fit=crop&crop=center&quot;);
-              "
-            ></div>
-            <div class="theme-icon-wrap tc-indigo">📚</div>
-            <h3>Science Education</h3>
-            <p>
-              Innovative pedagogy, curriculum design, and outreach strategies to
-              advance scientific literacy in Sri Lanka.
-            </p>
-            <ul>
-              <li>STEM Pedagogy</li>
-              <li>Science Communication</li>
-              <li>Curriculum Innovation</li>
-            </ul>
-            <span class="theme-tag">Track E</span>
-          </div>
-
-          <div class="theme-card theme-card-featured">
-            <div
-              class="theme-bg"
-              style="
-                background-image: url(&quot;media/web/kellepics-planet-5312560.jpg&quot;);
-              "
-            ></div>
-            <div class="theme-icon-wrap tc-teal">🤖</div>
-            <h3>AI in Environmental Modeling</h3>
-            <p>
-              Machine learning, neural networks, and AI-driven predictive
-              modeling for ecosystem management and climate forecasting.
-            </p>
-            <ul>
-              <li>ML for Climate Models</li>
-              <li>AI-driven Forecasting</li>
-              <li>Smart Environmental Systems</li>
-            </ul>
-            <span class="theme-tag theme-tag-new">Track F · New</span>
-          </div>
+              "></div>
+                    <div class="theme-icon-wrap tc-indigo">📚</div>
+                    <h3>Science Education</h3>
+                    <p>
+                        Innovative approaches to teaching and learning science, curriculum
+                        development, and science communication strategies.
+                    </p>
+                    <ul>
+                        <li>Pedagogical Methods</li>
+                        <li>Curriculum Design</li>
+                        <li>Science Communication</li>
+                        <li>Educational Technology</li>
+                    </ul>
+                    <span class="theme-tag">Track E</span>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
     <!-- ========== KEYNOTE SPEAKERS ========== -->
     <section class="speakers section section-lavender" id="committee">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-label">Leadership & Organization</span>
-          <h2 class="section-title">Main Organizing Committee</h2>
-          <p class="section-desc">
-            Meet the dedicated team leading RESCON 2026
-          </p>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Leadership & Organization</span>
+                <h2 class="section-title">Main Organizing Committee</h2>
+                <p class="section-desc">
+                    Meet the dedicated team leading RESCON 2026
+                </p>
+            </div>
+            <table class="committee-table">
+                <thead>
+                    <tr>
+                        <th>Position</th>
+                        <th>Name</th>
+                        <th>Department</th>
+                        <th>Role</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Director</td>
+                        <td>Prof. Nanda Balasooriya</td>
+                        <td>Geology</td>
+                        <td>Director | PGIS</td>
+                    </tr>
+                    <tr>
+                        <td>Chairperson</td>
+                        <td>Prof. Manawadevi Ganehenege</td>
+                        <td>Chemistry</td>
+                        <td>Chairperson | RESCON 2026</td>
+                    </tr>
+                    <tr>
+                        <td>Secretary</td>
+                        <td>Dr. Gajaba Ellepola</td>
+                        <td>Zoology</td>
+                        <td>Secretary | RESCON 2026</td>
+                    </tr>
+                    <tr>
+                        <td>Editor</td>
+                        <td>Prof. Namal Priyantha</td>
+                        <td>Chemistry</td>
+                        <td>Editor-in-chief | RESCON 2026</td>
+                    </tr>
+                    <tr>
+                        <td>Member</td>
+                        <td>Prof. Shalika Kumburegama</td>
+                        <td>Zoology</td>
+                        <td>Committee Member</td>
+                    </tr>
+                    <tr>
+                        <td>Assoc. Editor</td>
+                        <td>Dr. Subhashini Gunathilake</td>
+                        <td>Chemistry</td>
+                        <td>Associate Editor | RESCON 2026</td>
+                    </tr>
+                    <tr>
+                        <td>Finance</td>
+                        <td>Mr. Saman Jayakody</td>
+                        <td>PGIS</td>
+                        <td>Financial Coordinator | RESCON 2026</td>
+                    </tr>
+                    <tr>
+                        <td>Member</td>
+                        <td>Ms. AAS Priyadharshini</td>
+                        <td>SAR</td>
+                        <td>Committee Member</td>
+                    </tr>
+                    <tr>
+                        <td>Convener</td>
+                        <td>Ms. Shiromi Rajapura</td>
+                        <td>PGIS</td>
+                        <td>Convener | Ceremonial Committee</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-        <table class="committee-table">
-          <thead>
-            <tr>
-              <th>Position</th>
-              <th>Name</th>
-              <th>Department</th>
-              <th>Role</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Director</td>
-              <td>Prof. Nanda Balasooriya</td>
-              <td>Geology</td>
-              <td>Director | PGIS</td>
-            </tr>
-            <tr>
-              <td>Chairperson</td>
-              <td>Prof. Manawadevi Ganehenege</td>
-              <td>Chemistry</td>
-              <td>Chairperson | RESCON 2026</td>
-            </tr>
-            <tr>
-              <td>Secretary</td>
-              <td>Dr. Gajaba Ellepola</td>
-              <td>Zoology</td>
-              <td>Secretary | RESCON 2026</td>
-            </tr>
-            <tr>
-              <td>Editor</td>
-              <td>Prof. Namal Priyantha</td>
-              <td>Chemistry</td>
-              <td>Editor-in-chief | RESCON 2026</td>
-            </tr>
-            <tr>
-              <td>Member</td>
-              <td>Prof. Shalika Kumburegama</td>
-              <td>Zoology</td>
-              <td>Committee Member</td>
-            </tr>
-            <tr>
-              <td>Assoc. Editor</td>
-              <td>Dr. Subhashini Gunathilake</td>
-              <td>Chemistry</td>
-              <td>Associate Editor | RESCON 2026</td>
-            </tr>
-            <tr>
-              <td>Finance</td>
-              <td>Mr. Saman Jayakody</td>
-              <td>PGIS</td>
-              <td>Financial Coordinator | RESCON 2026</td>
-            </tr>
-            <tr>
-              <td>Member</td>
-              <td>Ms. AAS Priyadharshini</td>
-              <td>SAR</td>
-              <td>Committee Member</td>
-            </tr>
-            <tr>
-              <td>Convener</td>
-              <td>Ms. Shiromi Rajapura</td>
-              <td>PGIS</td>
-              <td>Convener | Ceremonial Committee</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
     </section>
 
     <!-- ========== IMPORTANT DATES ========== -->
     <section class="dates section section-sunset" id="dates">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-label">Mark Your Calendar</span>
-          <h2 class="section-title">Important Dates</h2>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Mark Your Calendar</span>
+                <h2 class="section-title">Important Dates</h2>
+            </div>
+            <div class="dates-timeline">
+                <div class="timeline-event">
+                    <h4>Call for Abstracts</h4>
+                    <p class="date-value">April 1, 2026</p>
+                    <p>
+                        Abstract submission opens for all Earth Science and
+                        interdisciplinary tracks.
+                    </p>
+                </div>
+                <div class="timeline-event">
+                    <h4>Abstract Submission Deadline</h4>
+                    <p class="date-value">May 15, 2026</p>
+                    <p>Final deadline to submit abstracts for review.</p>
+                </div>
+                <div class="timeline-event">
+                    <h4>Review Period</h4>
+                    <p class="date-value">May 16 - July 10, 2026</p>
+                    <p>Peer review of abstracts by scientific committee.</p>
+                </div>
+                <div class="timeline-event">
+                    <h4>Notification of Acceptance</h4>
+                    <p class="date-value">July 15, 2026</p>
+                    <p>Authors receive acceptance status and presentation type.</p>
+                </div>
+                <div class="timeline-event">
+                    <h4>Revised Abstracts Submission</h4>
+                    <p class="date-value">August 15, 2026</p>
+                    <p>Submit final abstract version for conference proceedings.</p>
+                </div>
+                <div class="timeline-event">
+                    <h4>Early Bird Registration</h4>
+                    <p class="date-value">August 20, 2026</p>
+                    <p>Register early for discounted rates.</p>
+                </div>
+                <div class="timeline-event">
+                    <h4>Regular Registration Closes</h4>
+                    <p class="date-value">September 15, 2026</p>
+                    <p>Last day to complete registration.</p>
+                </div>
+                <div class="timeline-event">
+                    <h4>Conference Dates</h4>
+                    <p class="date-value">September 24-25, 2026</p>
+                    <p>Inauguration, keynotes, oral & poster sessions, and closing.</p>
+                </div>
+            </div>
         </div>
-        <div class="timeline">
-          <div class="tl-item">
-            <div class="tl-dot"></div>
-            <div class="tl-line"></div>
-            <div class="tl-card">
-              <span class="tl-badge badge-upcoming">Upcoming</span>
-              <h4>Early Bird Registration</h4>
-              <p class="tl-date">30 September 2026</p>
-              <p>
-                Early registration deadline with discounted rates for all
-                categories.
-              </p>
-            </div>
-          </div>
-
-          <div class="tl-item">
-            <div class="tl-dot"></div>
-            <div class="tl-line"></div>
-            <div class="tl-card">
-              <span class="tl-badge badge-upcoming">Upcoming</span>
-              <h4>Abstract Submission Deadline</h4>
-              <p class="tl-date">15 October 2026</p>
-              <p>
-                Submit your abstract via the Microsoft CMT system. Maximum 250
-                words in structured format.
-              </p>
-            </div>
-          </div>
-
-          <div class="tl-item">
-            <div class="tl-dot"></div>
-            <div class="tl-line"></div>
-            <div class="tl-card">
-              <span class="tl-badge badge-upcoming">Upcoming</span>
-              <h4>Notification of Acceptance</h4>
-              <p class="tl-date">31 October 2026</p>
-              <p>
-                Authors will receive peer review decisions and presentation type
-                assignment by this date.
-              </p>
-            </div>
-          </div>
-
-          <div class="tl-item">
-            <div class="tl-dot"></div>
-            <div class="tl-line"></div>
-            <div class="tl-card">
-              <span class="tl-badge badge-upcoming">Upcoming</span>
-              <h4>Camera Ready Submission</h4>
-              <p class="tl-date">15 November 2026</p>
-              <p>
-                Final revised abstract (camera-ready copy) due for inclusion in
-                the proceedings.
-              </p>
-            </div>
-          </div>
-
-          <div class="tl-item tl-last">
-            <div class="tl-dot tl-dot-star"></div>
-            <div class="tl-card">
-              <span class="tl-badge badge-conf">Conference</span>
-              <h4>RESCON 2026 Conference</h4>
-              <p class="tl-date">28–29 November 2026</p>
-              <p>
-                Two days of keynote lectures, parallel oral presentations,
-                poster sessions, and networking events at University of
-                Peradeniya.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
 
     <!-- ========== REGISTRATION ========== -->
     <section class="registration section section-dark" id="registration">
-      <div
-        class="reg-bg"
-        style="
+        <div class="reg-bg" style="
           background-image: url(&quot;https://images.unsplash.com/photo-1551818255-e9355c40bee2?w=1920&h=600&fit=crop&crop=center&quot;);
-        "
-      ></div>
-      <div class="container">
-        <div class="reg-grid">
-          <div class="reg-body">
-            <span class="section-label label-light">Join RESCON 2026</span>
-            <h2 class="section-title title-light">Register Now</h2>
-            <p>
-              Secure your place at Sri Lanka's most significant annual gathering
-              of Earth and Environmental Scientists. Registration includes full
-              access to all keynotes, sessions, poster exhibitions, and the
-              conference dinner.
-            </p>
-            <div class="reg-steps">
-              <div class="reg-step">
-                <span class="step-num">01</span>
-                <span>Create a Microsoft CMT account or log in</span>
-              </div>
-              <div class="reg-step">
-                <span class="step-num">02</span>
-                <span>Complete the online registration form</span>
-              </div>
-              <div class="reg-step">
-                <span class="step-num">03</span>
-                <span>Pay the applicable registration fee</span>
-              </div>
-              <div class="reg-step">
-                <span class="step-num">04</span>
-                <span>Receive confirmation email with your ID</span>
-              </div>
+        "></div>
+        <div class="container">
+            <div class="reg-grid">
+                <div class="reg-body">
+                    <span class="section-label label-light">Join RESCON 2026</span>
+                    <h2 class="section-title title-light">Register Now</h2>
+                    <p>
+                        Secure your place at Sri Lanka's most significant annual gathering
+                        of Earth and Environmental Scientists. Registration includes full
+                        access to all keynotes, sessions, poster exhibitions, and the
+                        conference dinner.
+                    </p>
+                    <div class="reg-steps">
+                        <div class="reg-step">
+                            <span class="step-num">01</span>
+                            <span>Create a Microsoft CMT account or log in</span>
+                        </div>
+                        <div class="reg-step">
+                            <span class="step-num">02</span>
+                            <span>Complete the online registration form</span>
+                        </div>
+                        <div class="reg-step">
+                            <span class="step-num">03</span>
+                            <span>Pay the applicable registration fee</span>
+                        </div>
+                        <div class="reg-step">
+                            <span class="step-num">04</span>
+                            <span>Receive confirmation email with your ID</span>
+                        </div>
+                    </div>
+                    <div class="reg-buttons">
+                        <a href="#" class="btn btn-light">Register as Author</a>
+                        <a href="#" class="btn btn-outline-light">Register as Attendee</a>
+                    </div>
+                </div>
+                <div class="reg-visual">
+                    <div class="reg-pricing">
+                        <div class="pricing-header">💳 Registration Fees</div>
+                        <p class="pricing-note">
+                            Find the appropriate registration category below and register
+                            early for early bird discounts.
+                        </p>
+                        <div class="pricing-cards">
+                            <div class="pricing-card pricing-card-student">
+                                <div class="price-category">Local Students</div>
+                                <div class="price-tier">
+                                    <div class="price-col">
+                                        <div class="price-label">Early Bird</div>
+                                        <div class="price-amount">Rs. 2,000</div>
+                                        <small>Before Aug 20</small>
+                                    </div>
+                                    <div class="price-divider"></div>
+                                    <div class="price-col">
+                                        <div class="price-label">Regular</div>
+                                        <div class="price-amount">Rs. 2,500</div>
+                                        <small>Before Sep 15</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pricing-card pricing-card-local">
+                                <div class="price-category">Local Academics</div>
+                                <div class="price-tier">
+                                    <div class="price-col">
+                                        <div class="price-label">Early Bird</div>
+                                        <div class="price-amount">Rs. 2,500</div>
+                                        <small>Before Aug 20</small>
+                                    </div>
+                                    <div class="price-divider"></div>
+                                    <div class="price-col">
+                                        <div class="price-label">Regular</div>
+                                        <div class="price-amount">Rs. 3,000</div>
+                                        <small>Before Sep 15</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pricing-card pricing-card-saarc">
+                                <div class="price-category">International (SAARC)</div>
+                                <div class="price-tier">
+                                    <div class="price-col">
+                                        <div class="price-label">Early Bird</div>
+                                        <div class="price-amount">$ 75</div>
+                                        <small>Before Aug 20</small>
+                                    </div>
+                                    <div class="price-divider"></div>
+                                    <div class="price-col">
+                                        <div class="price-label">Regular</div>
+                                        <div class="price-amount">$ 100</div>
+                                        <small>Before Sep 15</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pricing-card pricing-card-intl">
+                                <div class="price-category">International (Global)</div>
+                                <div class="price-tier">
+                                    <div class="price-col">
+                                        <div class="price-label">Early Bird</div>
+                                        <div class="price-amount">$ 100</div>
+                                        <small>Before Aug 20</small>
+                                    </div>
+                                    <div class="price-divider"></div>
+                                    <div class="price-col">
+                                        <div class="price-label">Regular</div>
+                                        <div class="price-amount">$ 125</div>
+                                        <small>Before Sep 15</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="reg-buttons">
-              <a href="#" class="btn btn-light">Register as Author</a>
-              <a href="#" class="btn btn-outline-light">Register as Attendee</a>
-            </div>
-          </div>
-          <div class="reg-visual">
-            <div class="reg-pricing">
-              <div class="pricing-header">💳 Registration Fees</div>
-              <p class="pricing-note">
-                Find the appropriate registration category below and register
-                early for early bird discounts.
-              </p>
-              <div class="pricing-cards">
-                <div class="pricing-card pricing-card-student">
-                  <div class="price-category">Local Students</div>
-                  <div class="price-tier">
-                    <div class="price-col">
-                      <div class="price-label">Early Bird</div>
-                      <div class="price-amount">Rs. 2,000</div>
-                      <small>Before Oct 22</small>
-                    </div>
-                    <div class="price-divider"></div>
-                    <div class="price-col">
-                      <div class="price-label">Regular</div>
-                      <div class="price-amount">Rs. 2,500</div>
-                      <small>Before Oct 31</small>
-                    </div>
-                  </div>
-                </div>
-                <div class="pricing-card pricing-card-local">
-                  <div class="price-category">Local Academics</div>
-                  <div class="price-tier">
-                    <div class="price-col">
-                      <div class="price-label">Early Bird</div>
-                      <div class="price-amount">Rs. 2,500</div>
-                      <small>Before Oct 22</small>
-                    </div>
-                    <div class="price-divider"></div>
-                    <div class="price-col">
-                      <div class="price-label">Regular</div>
-                      <div class="price-amount">Rs. 3,000</div>
-                      <small>Before Oct 31</small>
-                    </div>
-                  </div>
-                </div>
-                <div class="pricing-card pricing-card-saarc">
-                  <div class="price-category">International (SAARC)</div>
-                  <div class="price-tier">
-                    <div class="price-col">
-                      <div class="price-label">Early Bird</div>
-                      <div class="price-amount">$ 75</div>
-                      <small>Before Oct 22</small>
-                    </div>
-                    <div class="price-divider"></div>
-                    <div class="price-col">
-                      <div class="price-label">Regular</div>
-                      <div class="price-amount">$ 100</div>
-                      <small>Before Oct 31</small>
-                    </div>
-                  </div>
-                </div>
-                <div class="pricing-card pricing-card-intl">
-                  <div class="price-category">International (Global)</div>
-                  <div class="price-tier">
-                    <div class="price-col">
-                      <div class="price-label">Early Bird</div>
-                      <div class="price-amount">$ 100</div>
-                      <small>Before Oct 22</small>
-                    </div>
-                    <div class="price-divider"></div>
-                    <div class="price-col">
-                      <div class="price-label">Regular</div>
-                      <div class="price-amount">$ 125</div>
-                      <small>Before Oct 31</small>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
     </section>
 
     <!-- ========== CONTACT ========== -->
     <section class="contact section section-teal" id="contact">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-label">Get in Touch</span>
-          <h2 class="section-title">Contact Us</h2>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Get in Touch</span>
+                <h2 class="section-title">Contact Us</h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <span class="contact-icon">📍</span>
+                    <h4>Address</h4>
+                    <p>
+                        Postgraduate Institute of Science<br />Peradeniya, 20400<br />Sri
+                        Lanka
+                    </p>
+                </div>
+                <div class="contact-card">
+                    <span class="contact-icon">📞</span>
+                    <h4>Phone</h4>
+                    <p>
+                        +94 81 231 2796 (Congress Office)<br />
+                        <small>Mon–Fri, 8:30 AM – 4:30 PM</small>
+                    </p>
+                </div>
+                <div class="contact-card">
+                    <span class="contact-icon">✉️</span>
+                    <h4>Email</h4>
+                    <p>
+                        rescon2026@pgis.lk<br />sachinthaniik@sci.pdn.ac.lk (Congress
+                        Secretary)<br />
+                        <small>We respond within 2 working days</small>
+                    </p>
+                </div>
+                <div class="contact-card">
+                    <span class="contact-icon">🌐</span>
+                    <h4>Website</h4>
+                    <p>
+                        www.pgis.lk/rescon2026<br />
+                        <small>For updates, programme,<br />and submission portal</small>
+                    </p>
+                </div>
+            </div>
         </div>
-        <div class="contact-grid">
-          <div class="contact-card">
-            <span class="contact-icon">📍</span>
-            <h4>Address</h4>
-            <p>
-              Postgraduate Institute of Science (PGIS)<br />University of
-              Peradeniya<br />Peradeniya 20400<br />Sri Lanka
-            </p>
-          </div>
-          <div class="contact-card">
-            <span class="contact-icon">📞</span>
-            <h4>Phone</h4>
-            <p>
-              +94 81 239 4796<br />+94 81 239 4797<br />
-              <small>Mon–Fri, 8:30 AM – 4:30 PM</small>
-            </p>
-          </div>
-          <div class="contact-card">
-            <span class="contact-icon">✉️</span>
-            <h4>Email</h4>
-            <p>
-              rescon2024@pgis.lk<br />info@pgis.lk<br />
-              <small>We respond within 2 working days</small>
-            </p>
-          </div>
-          <div class="contact-card">
-            <span class="contact-icon">🌐</span>
-            <h4>Website</h4>
-            <p>
-              www.pgis.lk/rescon2024<br />
-              <small>For updates, programme,<br />and submission portal</small>
-            </p>
-          </div>
-        </div>
-      </div>
     </section>
 
     <!-- ========== FOOTER ========== -->
     <footer class="footer">
-      <div class="container">
-        <div class="footer-grid">
-          <div class="footer-brand">
-            <div class="footer-logo">🌿 RESCON 2026</div>
-            <p>
-              The Annual Research Congress of the Postgraduate Institute of
-              Science, University of Peradeniya — advancing Earth and
-              Environmental Sciences research in Sri Lanka.
-            </p>
-            <div class="social-links">
-              <a href="#" class="social-btn" aria-label="Facebook">
-                <svg
-                  viewBox="0 0 24 24"
-                  width="18"
-                  height="18"
-                  fill="currentColor"
-                >
-                  <path
-                    d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
-                  />
-                </svg>
-              </a>
-              <a href="#" class="social-btn" aria-label="Twitter">
-                <svg
-                  viewBox="0 0 24 24"
-                  width="18"
-                  height="18"
-                  fill="currentColor"
-                >
-                  <path
-                    d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"
-                  />
-                </svg>
-              </a>
-              <a href="#" class="social-btn" aria-label="LinkedIn">
-                <svg
-                  viewBox="0 0 24 24"
-                  width="18"
-                  height="18"
-                  fill="currentColor"
-                >
-                  <path
-                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
-                  />
-                  <rect x="2" y="9" width="4" height="12" />
-                  <circle cx="4" cy="4" r="2" />
-                </svg>
-              </a>
-              <a href="#" class="social-btn" aria-label="YouTube">
-                <svg
-                  viewBox="0 0 24 24"
-                  width="18"
-                  height="18"
-                  fill="currentColor"
-                >
-                  <path
-                    d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"
-                  />
-                  <polygon
-                    points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"
-                    fill="currentColor"
-                  />
-                </svg>
-              </a>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">🌿 RESCON 2026</div>
+                    <p>
+                        The Annual Research Congress of the Postgraduate Institute of
+                        Science, University of Peradeniya — advancing Earth and
+                        Environmental Sciences research in Sri Lanka.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-btn" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-btn" aria-label="Twitter">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                                <path
+                                    d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-btn" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                                <rect x="2" y="9" width="4" height="12" />
+                                <circle cx="4" cy="4" r="2" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-btn" aria-label="YouTube">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                                <path
+                                    d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" />
+                                <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="#about">About RESCON</a></li>
+                        <li><a href="#themes">Conference Themes</a></li>
+                        <li><a href="#committee">Keynote Speakers</a></li>
+                        <li><a href="#dates">Important Dates</a></li>
+                        <li><a href="guidelines/index.html">Author Guidelines</a></li>
+                        <li><a href="gallery/index.html">Gallery</a></li>
+                        <li><a href="#registration">Registration</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h5>Resources</h5>
+                    <ul>
+                        <li><a href="#">Abstract Template</a></li>
+                        <li><a href="#">CMT Submission Portal</a></li>
+                        <li><a href="#">Conference Programme</a></li>
+                        <li><a href="#">Previous Proceedings</a></li>
+                        <li><a href="#">Venue & Accommodation</a></li>
+                        <li><a href="#">PGIS Website</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h5>Organised By</h5>
+                    <div class="footer-org">
+                        <div class="org-logo">PGIS</div>
+                        <p>
+                            Postgraduate Institute of Science<br />University of Peradeniya
+                        </p>
+                    </div>
+                    <h5 style="margin-top: 1.5rem">Supported By</h5>
+                    <p style="color: #90a4ae; font-size: 0.85rem; line-height: 1.6">
+                        National Science Foundation of Sri Lanka<br />University Grants
+                        Commission<br />Ministry of Education
+                    </p>
+                </div>
             </div>
-          </div>
 
-          <div class="footer-col">
-            <h5>Quick Links</h5>
-            <ul>
-              <li><a href="#about">About RESCON</a></li>
-              <li><a href="#themes">Conference Themes</a></li>
-              <li><a href="#committee">Keynote Speakers</a></li>
-              <li><a href="#dates">Important Dates</a></li>
-              <li><a href="guidelines/index.html">Author Guidelines</a></li>
-              <li><a href="gallery/index.html">Gallery</a></li>
-              <li><a href="#registration">Registration</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-col">
-            <h5>Resources</h5>
-            <ul>
-              <li><a href="#">Abstract Template</a></li>
-              <li><a href="#">CMT Submission Portal</a></li>
-              <li><a href="#">Conference Programme</a></li>
-              <li><a href="#">Previous Proceedings</a></li>
-              <li><a href="#">Venue & Accommodation</a></li>
-              <li><a href="#">PGIS Website</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-col">
-            <h5>Organised By</h5>
-            <div class="footer-org">
-              <div class="org-logo">PGIS</div>
-              <p>
-                Postgraduate Institute of Science<br />University of Peradeniya
-              </p>
+            <div class="footer-bottom">
+                <p>
+                    Â© 2026 RESCON â€” Postgraduate Institute of Science, University of
+                    Peradeniya. All rights reserved.
+                </p>
+                <p>
+                    <a href="#">Privacy Policy</a> · <a href="#">Terms of Use</a> ·
+                    <a href="#">Sitemap</a>
+                </p>
             </div>
-            <h5 style="margin-top: 1.5rem">Supported By</h5>
-            <p style="color: #90a4ae; font-size: 0.85rem; line-height: 1.6">
-              National Science Foundation of Sri Lanka<br />University Grants
-              Commission<br />Ministry of Education
-            </p>
-          </div>
         </div>
-
-        <div class="footer-bottom">
-          <p>
-            Â© 2026 RESCON â€” Postgraduate Institute of Science, University of
-            Peradeniya. All rights reserved.
-          </p>
-          <p>
-            <a href="#">Privacy Policy</a> · <a href="#">Terms of Use</a> ·
-            <a href="#">Sitemap</a>
-          </p>
-        </div>
-      </div>
     </footer>
-  </body>
-  <script>
+</body>
+<script>
     document.addEventListener("DOMContentLoaded", function () {
-      /* Hero Carousel */
-      const slides = document.querySelectorAll(".carousel-slide");
-      const indicators = document.querySelectorAll(".indicator");
-      let currentSlide = 0;
-      let slideInterval;
+        /* Hero Carousel */
+        const slides = document.querySelectorAll(".carousel-slide");
+        const indicators = document.querySelectorAll(".indicator");
+        let currentSlide = 0;
+        let slideInterval;
 
-      function showSlide(index) {
-        slides.forEach((slide) => slide.classList.remove("active"));
-        indicators.forEach((indicator) => indicator.classList.remove("active"));
-        slides[index].classList.add("active");
-        indicators[index].classList.add("active");
-        currentSlide = index;
-      }
-
-      function nextSlide() {
-        currentSlide = (currentSlide + 1) % slides.length;
-        showSlide(currentSlide);
-      }
-
-      function startAutoSlide() {
-        slideInterval = setInterval(nextSlide, 5000);
-      }
-      function stopAutoSlide() {
-        clearInterval(slideInterval);
-      }
-
-      indicators.forEach((indicator, index) => {
-        indicator.addEventListener("click", () => {
-          showSlide(index);
-          stopAutoSlide();
-          startAutoSlide();
-        });
-      });
-
-      const heroSection = document.querySelector(".hero");
-      heroSection.addEventListener("mouseenter", stopAutoSlide);
-      heroSection.addEventListener("mouseleave", startAutoSlide);
-      startAutoSlide();
-
-      /* Smooth in-page scrolling */
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
-          const target = document.querySelector(this.getAttribute("href"));
-          if (target) {
-            e.preventDefault();
-            target.scrollIntoView({ behavior: "smooth", block: "start" });
-            history.pushState(null, "", this.getAttribute("href"));
-          }
-        });
-      });
-
-      /* Navbar transform on scroll */
-      const navbar = document.querySelector(".navbar");
-      const navLinks = document.querySelectorAll(".nav-links a");
-      const sectionNodes = Array.from(document.querySelectorAll("section[id]"));
-      const backToTop = document.createElement("button");
-
-      backToTop.className = "back-to-top";
-      backToTop.setAttribute("aria-label", "Scroll to top");
-      backToTop.innerHTML = "↑";
-      document.body.appendChild(backToTop);
-
-      backToTop.addEventListener("click", () => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      });
-
-      function updateScrollUI() {
-        const y = window.scrollY;
-        if (y > 72) {
-          navbar.classList.add("shrink");
-          backToTop.classList.add("visible");
-        } else {
-          navbar.classList.remove("shrink");
-          backToTop.classList.remove("visible");
+        function showSlide(index) {
+            slides.forEach((slide) => slide.classList.remove("active"));
+            indicators.forEach((indicator) => indicator.classList.remove("active"));
+            slides[index].classList.add("active");
+            indicators[index].classList.add("active");
+            currentSlide = index;
         }
 
-        const fromTop = y + 80;
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
 
-        sectionNodes.forEach((section) => {
-          if (
-            section.offsetTop <= fromTop &&
-            section.offsetTop + section.offsetHeight > fromTop
-          ) {
-            const id = section.getAttribute("id");
-            navLinks.forEach((link) => {
-              link.classList.toggle(
-                "active",
-                link.getAttribute("href") === "#" + id,
-              );
+        function startAutoSlide() {
+            slideInterval = setInterval(nextSlide, 5000);
+        }
+        function stopAutoSlide() {
+            clearInterval(slideInterval);
+        }
+
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener("click", () => {
+                showSlide(index);
+                stopAutoSlide();
+                startAutoSlide();
             });
-          }
         });
-      }
 
-      window.addEventListener("scroll", updateScrollUI, { passive: true });
-      updateScrollUI();
+        const heroSection = document.querySelector(".hero");
+        heroSection.addEventListener("mouseenter", stopAutoSlide);
+        heroSection.addEventListener("mouseleave", startAutoSlide);
+        startAutoSlide();
 
-      /* Animated counters */
-      const counters = document.querySelectorAll(".counter");
-      let countersAnimated = false;
+        /* Smooth in-page scrolling */
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+            anchor.addEventListener("click", function (e) {
+                const target = document.querySelector(this.getAttribute("href"));
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: "smooth", block: "start" });
+                    history.pushState(null, "", this.getAttribute("href"));
+                }
+            });
+        });
 
-      const animateCounters = () => {
-        counters.forEach((counter) => {
-          const target = +counter.dataset.target;
-          const duration = 1400;
-          const frameRate = 40;
-          const totalFrames = Math.round(duration / frameRate);
-          let frame = 0;
+        /* Navbar transform on scroll */
+        const navbar = document.querySelector(".navbar");
+        const navLinks = document.querySelectorAll(".nav-links a");
+        const sectionNodes = Array.from(document.querySelectorAll("section[id]"));
+        const backToTop = document.createElement("button");
 
-          const counterTimer = setInterval(() => {
-            frame++;
-            const progress = frame / totalFrames;
-            const value = Math.ceil(target * progress);
-            counter.textContent = value;
-            if (frame === totalFrames) {
-              clearInterval(counterTimer);
-              counter.textContent = target;
+        backToTop.className = "back-to-top";
+        backToTop.setAttribute("aria-label", "Scroll to top");
+        backToTop.innerHTML = "↑";
+        document.body.appendChild(backToTop);
+
+        backToTop.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+
+        function updateScrollUI() {
+            const y = window.scrollY;
+            if (y > 72) {
+                navbar.classList.add("shrink");
+                backToTop.classList.add("visible");
+            } else {
+                navbar.classList.remove("shrink");
+                backToTop.classList.remove("visible");
             }
-          }, frameRate);
-        });
-      };
 
-      const counterObserver = new IntersectionObserver(
-        (entries, observer) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting && !countersAnimated) {
-              animateCounters();
-              countersAnimated = true;
-              observer.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.4 },
-      );
+            const fromTop = y + 80;
 
-      const hero = document.querySelector(".hero");
-      if (hero) counterObserver.observe(hero);
+            sectionNodes.forEach((section) => {
+                if (
+                    section.offsetTop <= fromTop &&
+                    section.offsetTop + section.offsetHeight > fromTop
+                ) {
+                    const id = section.getAttribute("id");
+                    navLinks.forEach((link) => {
+                        link.classList.toggle(
+                            "active",
+                            link.getAttribute("href") === "#" + id,
+                        );
+                    });
+                }
+            });
+        }
 
-      /* Reveal animations */
-      const revealObserver = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.style.animationDelay = Math.random() * 0.45 + "s";
-              entry.target.classList.add("animate-in");
-              revealObserver.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.1, rootMargin: "0px 0px -50px 0px" },
-      );
+        window.addEventListener("scroll", updateScrollUI, { passive: true });
+        updateScrollUI();
 
-      document
-        .querySelectorAll(
-          ".theme-card, .speaker-card, .timeline-item, .contact-card, .reg-card",
-        )
-        .forEach((el) => {
-          revealObserver.observe(el);
-        });
+        /* Animated counters */
+        const counters = document.querySelectorAll(".counter");
+        let countersAnimated = false;
 
-      /* Accessible focus for hamburger menu */
-      const navToggle = document.querySelector("#nav-toggle");
-      const navOverlay = document.querySelector(".nav-overlay");
+        const animateCounters = () => {
+            counters.forEach((counter) => {
+                const target = +counter.dataset.target;
+                const duration = 1400;
+                const frameRate = 40;
+                const totalFrames = Math.round(duration / frameRate);
+                let frame = 0;
 
-      if (navToggle && navOverlay) {
-        navToggle.addEventListener("change", () => {
-          if (navToggle.checked) {
-            navOverlay.style.display = "block";
-            document.body.style.overflow = "hidden";
-          } else {
-            navOverlay.style.display = "none";
-            document.body.style.overflow = "";
-          }
-        });
+                const counterTimer = setInterval(() => {
+                    frame++;
+                    const progress = frame / totalFrames;
+                    const value = Math.ceil(target * progress);
+                    counter.textContent = value;
+                    if (frame === totalFrames) {
+                        clearInterval(counterTimer);
+                        counter.textContent = target;
+                    }
+                }, frameRate);
+            });
+        };
 
-        navOverlay.addEventListener("click", () => {
-          navToggle.checked = false;
-          navOverlay.style.display = "none";
-          document.body.style.overflow = "";
-        });
-      }
+        const counterObserver = new IntersectionObserver(
+            (entries, observer) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting && !countersAnimated) {
+                        animateCounters();
+                        countersAnimated = true;
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            { threshold: 0.4 },
+        );
+
+        const hero = document.querySelector(".hero");
+        if (hero) counterObserver.observe(hero);
+
+        /* Reveal animations */
+        const revealObserver = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationDelay = Math.random() * 0.45 + "s";
+                        entry.target.classList.add("animate-in");
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            },
+            { threshold: 0.1, rootMargin: "0px 0px -50px 0px" },
+        );
+
+        document
+            .querySelectorAll(
+                ".theme-card, .speaker-card, .timeline-item, .contact-card, .reg-card",
+            )
+            .forEach((el) => {
+                revealObserver.observe(el);
+            });
+
+        /* Accessible focus for hamburger menu */
+        const navToggle = document.querySelector("#nav-toggle");
+        const navOverlay = document.querySelector(".nav-overlay");
+
+        if (navToggle && navOverlay) {
+            navToggle.addEventListener("change", () => {
+                if (navToggle.checked) {
+                    navOverlay.style.display = "block";
+                    document.body.style.overflow = "hidden";
+                } else {
+                    navOverlay.style.display = "none";
+                    document.body.style.overflow = "";
+                }
+            });
+
+            navOverlay.addEventListener("click", () => {
+                navToggle.checked = false;
+                navOverlay.style.display = "none";
+                document.body.style.overflow = "";
+            });
+        }
     });
-  </script>
+</script>
+
 </html>
