@@ -1,0 +1,2195 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pre-Conference Workshops — RESCON 2026 | PGIS</title>
+    <meta
+      name="description"
+      content="Pre-Conference Workshops for RESCON 2026 at Postgraduate Institute of Science, University of Peradeniya."
+    />
+    <link rel="stylesheet" href="./../style.css" />
+    <style>
+      /* ── WORKSHOPS PAGE SPECIFIC STYLES ── */
+
+      /* Page hero — compact inner-page version */
+      .page-hero {
+        position: relative;
+        min-height: 44vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: calc(var(--nav-h) + 4rem) 2rem 4rem;
+        overflow: hidden;
+        background: var(--bark);
+        background-image:
+          radial-gradient(
+            ellipse 80% 60% at 30% 0%,
+            rgba(192, 91, 58, 0.28) 0%,
+            transparent 55%
+          ),
+          radial-gradient(
+            ellipse 60% 50% at 80% 100%,
+            rgba(61, 107, 69, 0.18) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            ellipse 50% 50% at 60% 50%,
+            rgba(232, 150, 12, 0.12) 0%,
+            transparent 50%
+          );
+      }
+
+      .page-hero-rings {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        pointer-events: none;
+      }
+
+      .page-hero-rings .ring {
+        border-color: rgba(232, 201, 154, 0.06);
+      }
+
+      .page-hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 760px;
+      }
+
+      .page-hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.72rem;
+        font-weight: 600;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--saffron);
+        background: rgba(244, 166, 35, 0.15);
+        border: 1px solid rgba(244, 166, 35, 0.3);
+        padding: 0.4rem 1.2rem;
+        border-radius: var(--r-pill);
+        margin-bottom: 1.2rem;
+      }
+
+      .page-hero-title {
+        font-family: var(--font-display);
+        font-size: clamp(2.4rem, 6vw, 4rem);
+        font-weight: 700;
+        color: var(--offwhite);
+        line-height: 1.1;
+        margin-bottom: 1rem;
+        letter-spacing: -0.02em;
+      }
+
+      .page-hero-title span {
+        color: var(--saffron);
+      }
+
+      .page-hero-desc {
+        font-size: 1rem;
+        color: rgba(248, 238, 224, 0.7);
+        max-width: 520px;
+        margin: 0 auto 2rem;
+        line-height: 1.75;
+      }
+
+      .breadcrumb {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.8rem;
+        color: rgba(232, 201, 154, 0.5);
+        justify-content: center;
+        margin-bottom: 1.5rem;
+      }
+
+      .breadcrumb a {
+        color: rgba(232, 201, 154, 0.65);
+        transition: color var(--t) var(--ease);
+      }
+      .breadcrumb a:hover {
+        color: var(--sand);
+      }
+      .breadcrumb .sep {
+        opacity: 0.4;
+      }
+
+      /* Workshop nav tabs */
+      .ws-tabs {
+        display: flex;
+        gap: 0.5rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 2.5rem 0;
+        background: var(--cream);
+        border-bottom: 1px solid rgba(44, 26, 14, 0.08);
+        position: sticky;
+        top: var(--nav-h);
+        z-index: 100;
+        backdrop-filter: blur(10px);
+      }
+
+      .ws-tab {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.55rem 1.25rem;
+        border-radius: var(--r-pill);
+        font-size: 0.84rem;
+        font-weight: 500;
+        color: var(--text-muted);
+        background: transparent;
+        border: 1.5px solid rgba(44, 26, 14, 0.12);
+        cursor: pointer;
+        transition: all var(--t) var(--ease);
+        text-decoration: none;
+      }
+
+      .ws-tab:hover {
+        background: var(--parchment);
+        border-color: rgba(192, 91, 58, 0.25);
+        color: var(--bark);
+      }
+
+      .ws-tab.active {
+        background: linear-gradient(135deg, var(--terracotta), var(--rust));
+        border-color: transparent;
+        color: #fff;
+        box-shadow: 0 4px 14px rgba(192, 91, 58, 0.35);
+      }
+
+      .ws-tab .tab-num {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        font-size: 0.7rem;
+        font-weight: 700;
+        background: rgba(255, 255, 255, 0.2);
+      }
+
+      /* Main workshops container */
+      .workshops-wrap {
+        padding: 5rem 0 6rem;
+      }
+
+      /* Individual workshop block */
+      .workshop-block {
+        margin-bottom: 6rem;
+        padding-bottom: 6rem;
+        border-bottom: 1px solid rgba(44, 26, 14, 0.08);
+        scroll-margin-top: calc(var(--nav-h) + 90px);
+      }
+
+      .workshop-block:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+
+      /* Workshop header row */
+      .ws-header {
+        display: flex;
+        align-items: flex-start;
+        gap: 2rem;
+        margin-bottom: 2.5rem;
+      }
+
+      .ws-number {
+        flex-shrink: 0;
+        width: 64px;
+        height: 64px;
+        border-radius: var(--r);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--font-display);
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: #fff;
+        position: relative;
+        box-shadow: var(--shadow-sm);
+      }
+
+      .ws-number-1 {
+        background: linear-gradient(135deg, var(--teal-vivid), var(--ocean));
+      }
+      .ws-number-2 {
+        background: linear-gradient(135deg, var(--violet), var(--plum));
+      }
+      .ws-number-3 {
+        background: linear-gradient(135deg, var(--moss), var(--fern));
+      }
+      .ws-number-4 {
+        background: linear-gradient(135deg, var(--amber-glow), var(--gold));
+      }
+      .ws-number-5 {
+        background: linear-gradient(135deg, var(--terracotta), var(--rust));
+      }
+
+      .ws-header-text {
+        flex: 1;
+      }
+
+      .ws-series-label {
+        display: inline-block;
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--terracotta);
+        margin-bottom: 0.5rem;
+      }
+
+      .ws-title {
+        font-family: var(--font-display);
+        font-size: clamp(1.4rem, 3vw, 2.1rem);
+        font-weight: 700;
+        color: var(--text-heading);
+        line-height: 1.2;
+        margin-bottom: 0.9rem;
+      }
+
+      .ws-meta-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.65rem;
+      }
+
+      .ws-meta-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        font-size: 0.8rem;
+        font-weight: 500;
+        padding: 0.3rem 0.85rem;
+        border-radius: var(--r-pill);
+        background: var(--cream);
+        color: var(--text-mid);
+        border: 1px solid rgba(44, 26, 14, 0.1);
+      }
+
+      .ws-meta-pill .pill-icon {
+        font-size: 0.9rem;
+      }
+
+      /* Content layout: description + speakers */
+      .ws-body {
+        display: grid;
+        grid-template-columns: 1fr 300px;
+        gap: 3rem;
+        align-items: start;
+        margin-bottom: 2.5rem;
+      }
+
+      .ws-body-full {
+        grid-template-columns: 1fr;
+      }
+
+      .ws-description p {
+        color: var(--text-mid);
+        font-size: 0.97rem;
+        line-height: 1.82;
+        margin-bottom: 1rem;
+      }
+
+      .ws-description p:last-child {
+        margin-bottom: 0;
+      }
+
+      .ws-description strong {
+        color: var(--bark);
+        font-weight: 600;
+      }
+
+      .ws-description ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin: 1rem 0 1.2rem;
+      }
+
+      .ws-description ul li {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.6rem;
+        font-size: 0.93rem;
+        color: var(--text-mid);
+        line-height: 1.65;
+      }
+
+      .ws-description ul li::before {
+        content: "▸";
+        color: var(--terracotta);
+        font-size: 0.65rem;
+        flex-shrink: 0;
+        margin-top: 0.35em;
+      }
+
+      .ws-flyer-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-top: 1.2rem;
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--terracotta);
+        border: 1.5px solid rgba(192, 91, 58, 0.3);
+        background: rgba(192, 91, 58, 0.05);
+        padding: 0.5rem 1.1rem;
+        border-radius: var(--r-sm);
+        transition: all var(--t) var(--ease);
+      }
+
+      .ws-flyer-link:hover {
+        background: rgba(192, 91, 58, 0.1);
+        border-color: var(--terracotta);
+        transform: translateY(-1px);
+      }
+
+      /* Speaker cards sidebar */
+      .ws-speakers {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .ws-speaker-card {
+        background: var(--offwhite);
+        border: 1.5px solid rgba(44, 26, 14, 0.08);
+        border-radius: var(--r);
+        padding: 1.4rem 1.2rem;
+        text-align: center;
+        box-shadow: var(--shadow-xs);
+        transition: all var(--t) var(--ease);
+      }
+
+      .ws-speaker-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow);
+        border-color: rgba(192, 91, 58, 0.2);
+      }
+
+      .ws-speaker-avatar {
+        width: 82px;
+        height: 82px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: top center;
+        border: 3px solid rgba(232, 201, 154, 0.55);
+        margin: 0 auto 0.85rem;
+        display: block;
+        transition: all var(--t) var(--ease);
+      }
+
+      .ws-speaker-card:hover .ws-speaker-avatar {
+        border-color: var(--terracotta);
+        transform: scale(1.05);
+      }
+
+      .ws-speaker-avatar-placeholder {
+        width: 82px;
+        height: 82px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--bark-lite), var(--mahogany));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--font-display);
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: var(--sand);
+        margin: 0 auto 0.85rem;
+        border: 3px solid rgba(232, 201, 154, 0.25);
+      }
+
+      .ws-speaker-name {
+        font-family: var(--font-display);
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--bark);
+        margin-bottom: 0.2rem;
+      }
+
+      .ws-speaker-title {
+        font-size: 0.76rem;
+        color: var(--terracotta);
+        font-weight: 600;
+        margin-bottom: 0.4rem;
+        line-height: 1.4;
+      }
+
+      .ws-speaker-affil {
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        line-height: 1.5;
+      }
+
+      /* Photo gallery */
+      .ws-gallery-wrap {
+        margin-top: 2rem;
+      }
+
+      .ws-gallery-label {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin-bottom: 1.25rem;
+      }
+
+      .ws-gallery-label span {
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--text-muted);
+      }
+
+      .ws-gallery-label::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: rgba(44, 26, 14, 0.1);
+      }
+
+      .ws-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 0.75rem;
+      }
+
+      .ws-gallery-img {
+        width: 100%;
+        aspect-ratio: 4/3;
+        object-fit: cover;
+        border-radius: var(--r-sm);
+        display: block;
+        transition:
+          transform 0.4s var(--ease),
+          box-shadow 0.4s var(--ease),
+          filter 0.4s var(--ease);
+        cursor: zoom-in;
+        filter: brightness(0.96) saturate(0.92);
+      }
+
+      .ws-gallery-img:hover {
+        transform: scale(1.04);
+        box-shadow: var(--shadow-md);
+        filter: brightness(1.04) saturate(1.05);
+        z-index: 2;
+        position: relative;
+      }
+
+      /* Lightbox */
+      .lightbox {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(28, 14, 6, 0.95);
+        z-index: 9999;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+        cursor: zoom-out;
+      }
+
+      .lightbox.open {
+        display: flex;
+      }
+
+      .lightbox-img {
+        max-width: 90vw;
+        max-height: 85vh;
+        object-fit: contain;
+        border-radius: var(--r);
+        box-shadow: 0 32px 80px rgba(0, 0, 0, 0.6);
+      }
+
+      .lightbox-close {
+        position: fixed;
+        top: 1.5rem;
+        right: 1.75rem;
+        color: rgba(232, 201, 154, 0.7);
+        font-size: 2rem;
+        cursor: pointer;
+        line-height: 1;
+        background: none;
+        border: none;
+        transition: color var(--t) var(--ease);
+        z-index: 10000;
+      }
+
+      .lightbox-close:hover {
+        color: var(--sand);
+      }
+
+      .lightbox-nav {
+        position: fixed;
+        top: 50%;
+        transform: translateY(-50%);
+        color: rgba(232, 201, 154, 0.7);
+        font-size: 2rem;
+        cursor: pointer;
+        background: rgba(44, 26, 14, 0.6);
+        border: none;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all var(--t) var(--ease);
+        z-index: 10000;
+      }
+
+      .lightbox-nav:hover {
+        background: rgba(192, 91, 58, 0.8);
+        color: #fff;
+      }
+
+      .lightbox-prev {
+        left: 1rem;
+      }
+      .lightbox-next {
+        right: 1rem;
+      }
+
+      .lightbox-counter {
+        position: fixed;
+        bottom: 1.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        color: rgba(232, 201, 154, 0.5);
+        font-size: 0.82rem;
+        letter-spacing: 0.1em;
+      }
+
+      /* Status badge — completed / upcoming */
+      .ws-status {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        padding: 0.28rem 0.75rem;
+        border-radius: var(--r-pill);
+      }
+
+      .ws-status-done {
+        background: rgba(61, 107, 69, 0.12);
+        color: var(--moss);
+        border: 1px solid rgba(61, 107, 69, 0.25);
+      }
+
+      .ws-status-upcoming {
+        background: rgba(232, 150, 12, 0.12);
+        color: var(--amber-glow);
+        border: 1px solid rgba(232, 150, 12, 0.28);
+      }
+
+      .ws-status-dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: currentColor;
+      }
+
+      .ws-status-done .ws-status-dot {
+        animation: none;
+      }
+      .ws-status-upcoming .ws-status-dot {
+        animation: blink 1.4s ease-in-out infinite;
+      }
+
+      @keyframes blink {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.3;
+        }
+      }
+
+      /* Timeline sidebar (left accent) */
+      .workshops-inner {
+        position: relative;
+        padding-left: 2rem;
+      }
+
+      .workshops-inner::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 3px;
+        background: linear-gradient(
+          180deg,
+          var(--terracotta) 0%,
+          var(--amber-glow) 30%,
+          var(--moss) 60%,
+          var(--violet) 80%,
+          rgba(44, 26, 14, 0.1) 100%
+        );
+        border-radius: var(--r-pill);
+      }
+
+      /* Stats strip */
+      .ws-stats-strip {
+        background: linear-gradient(
+          135deg,
+          var(--bark) 0%,
+          var(--bark-lite) 100%
+        );
+        border-radius: var(--r-lg);
+        padding: 2.25rem 2.5rem;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+        margin-bottom: 4rem;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .ws-stats-strip::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(
+            ellipse 60% 70% at 10% 50%,
+            rgba(192, 91, 58, 0.18) 0%,
+            transparent 55%
+          ),
+          radial-gradient(
+            ellipse 50% 60% at 90% 50%,
+            rgba(13, 138, 122, 0.12) 0%,
+            transparent 55%
+          );
+      }
+
+      .ws-stat-item {
+        text-align: center;
+        position: relative;
+        z-index: 1;
+      }
+
+      .ws-stat-num {
+        font-family: var(--font-display);
+        font-size: 2.4rem;
+        font-weight: 700;
+        color: var(--saffron);
+        line-height: 1;
+        display: block;
+        margin-bottom: 0.3rem;
+      }
+
+      .ws-stat-label {
+        font-size: 0.78rem;
+        color: rgba(248, 238, 224, 0.55);
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+      }
+
+      .ws-stat-sep {
+        position: absolute;
+        right: 0;
+        top: 15%;
+        height: 70%;
+        width: 1px;
+        background: rgba(232, 201, 154, 0.12);
+      }
+
+      .ws-stat-item:last-child .ws-stat-sep {
+        display: none;
+      }
+
+      /* Upcoming notice card */
+      .upcoming-notice {
+        background: linear-gradient(
+          135deg,
+          rgba(232, 150, 12, 0.08),
+          rgba(232, 201, 154, 0.06)
+        );
+        border: 1.5px solid rgba(232, 150, 12, 0.25);
+        border-radius: var(--r);
+        padding: 1.4rem 1.6rem;
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+        margin-top: 1.5rem;
+      }
+
+      .upcoming-notice-icon {
+        font-size: 1.6rem;
+        flex-shrink: 0;
+      }
+
+      .upcoming-notice h4 {
+        font-size: 0.95rem;
+        color: var(--amber-glow);
+        margin-bottom: 0.35rem;
+      }
+
+      .upcoming-notice p {
+        font-size: 0.88rem;
+        color: var(--text-muted);
+        line-height: 1.65;
+      }
+
+      /* Responsive */
+      @media (max-width: 900px) {
+        .ws-body {
+          grid-template-columns: 1fr;
+        }
+
+        .ws-speakers {
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        .ws-speaker-card {
+          width: 200px;
+        }
+
+        .ws-stats-strip {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 600px) {
+        .ws-header {
+          flex-direction: column;
+          gap: 1rem;
+        }
+        .ws-gallery {
+          grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        }
+        .ws-tabs {
+          padding: 1.5rem 1rem;
+          gap: 0.4rem;
+        }
+        .ws-tab {
+          font-size: 0.78rem;
+          padding: 0.45rem 0.9rem;
+        }
+        .workshops-inner {
+          padding-left: 0;
+        }
+        .workshops-inner::before {
+          display: none;
+        }
+        .ws-stats-strip {
+          grid-template-columns: 1fr 1fr;
+          padding: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ── NAVBAR ── -->
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+    <nav class="navbar">
+      <div class="nav-inner">
+        <a href="#home" class="nav-logo">
+          <img
+            src="./../images/web/crest.png"
+            alt="RESCON logo"
+            class="logo-img"
+            width="72"
+            height="72"
+          />
+          <span>RESCON<br /><em>2026</em></span>
+        </a>
+
+        <label for="nav-toggle" class="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </label>
+
+        <ul class="nav-links">
+          <li><a href="./../index.html">Home</a></li>
+          <li><a href="./../index.html#about">About</a></li>
+          <li><a href="./../index.html#dates">Dates</a></li>
+          <li><a href="./../index.html#committee">Committees</a></li>
+          <li><a href=".././workshops/index.html">Workshops</a></li>
+          <li><a href="./../index.html#submit">Submit</a></li>
+          <li><a href="../speakers/index.html">Speakers</a></li>
+          <li><a href=".././gallery/index.html">Past Conferences</a></li>
+          <li><a href="./../index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <label for="nav-toggle" class="nav-overlay"></label>
+
+    <!-- ── PAGE HERO ── -->
+    <section class="page-hero">
+      <div class="page-hero-rings">
+        <div class="ring r1"></div>
+        <div class="ring r2"></div>
+        <div class="ring r3"></div>
+      </div>
+
+      <div class="page-hero-content">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="sep">/</span>
+          <span>Workshops</span>
+        </div>
+        <div class="page-hero-badge">🔬 Pre-Conference Series</div>
+        <h1 class="page-hero-title">
+          Pre-Conference<br /><span>Workshops</span>
+        </h1>
+        <p class="page-hero-desc">
+          A curated series of expert-led workshops, talks, and seminars hosted
+          in the lead-up to RESCON 2026 — bridging cutting-edge science with
+          accessible knowledge.
+        </p>
+        <div
+          style="
+            display: flex;
+            gap: 0.75rem;
+            justify-content: center;
+            flex-wrap: wrap;
+          "
+        >
+          <a href="#ws-05" class="btn btn-primary btn-sm"
+            >Explore Workshops ↓</a
+          >
+          <a href="index.html#themes" class="btn btn-outline-light btn-sm"
+            >View Themes</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- ── STICKY TABS ── -->
+    <nav class="ws-tabs" aria-label="Workshop navigation">
+      <a href="#ws-05" class="ws-tab active"
+        ><span class="tab-num">05</span> Crop Breeding</a
+      >
+      <a href="#ws-04" class="ws-tab"
+        ><span class="tab-num">04</span> Clean Energy</a
+      >
+      <a href="#ws-03" class="ws-tab"
+        ><span class="tab-num">03</span> Graduate Studies</a
+      >
+      <a href="#ws-02" class="ws-tab"
+        ><span class="tab-num">02</span> Academic Challenges</a
+      >
+      <a href="#ws-01" class="ws-tab"
+        ><span class="tab-num">01</span> Neuroscience</a
+      >
+    </nav>
+
+    <!-- ── WORKSHOPS MAIN CONTENT ── -->
+    <div class="workshops-wrap section-alt">
+      <div class="container">
+        <!-- Stats Strip -->
+        <div class="ws-stats-strip">
+          <div class="ws-stat-item">
+            <span class="ws-stat-num">05</span>
+            <span class="ws-stat-label">Workshops Held</span>
+            <div class="ws-stat-sep"></div>
+          </div>
+          <div class="ws-stat-item">
+            <span class="ws-stat-num">10+</span>
+            <span class="ws-stat-label">Expert Speakers</span>
+            <div class="ws-stat-sep"></div>
+          </div>
+          <div class="ws-stat-item">
+            <span class="ws-stat-num">300+</span>
+            <span class="ws-stat-label">Participants</span>
+            <div class="ws-stat-sep"></div>
+          </div>
+          <div class="ws-stat-item">
+            <span class="ws-stat-num">4</span>
+            <span class="ws-stat-label">Countries Represented</span>
+            <div class="ws-stat-sep"></div>
+          </div>
+        </div>
+
+        <!-- Timeline line wrapper -->
+        <div class="workshops-inner">
+          <!-- ══════════════════════════════
+           WORKSHOP 05
+      ══════════════════════════════ -->
+          <article class="workshop-block" id="ws-05">
+            <div class="ws-header">
+              <div class="ws-number ws-number-5">05</div>
+              <div class="ws-header-text">
+                <div
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 0.75rem;
+                    flex-wrap: wrap;
+                    margin-bottom: 0.5rem;
+                  "
+                >
+                  <span class="ws-series-label"
+                    >Pre-Conference Workshop 05</span
+                  >
+                  <span class="ws-status ws-status-done"
+                    ><span class="ws-status-dot"></span>Completed</span
+                  >
+                </div>
+                <h2 class="ws-title">
+                  Transforming Crop Breeding with Technology and Adaptive
+                  Strategies for Resilient Varieties
+                </h2>
+                <div class="ws-meta-row">
+                  <span class="ws-meta-pill"
+                    ><span class="pill-icon">📅</span> 22nd September 2025
+                    (Monday)</span
+                  >
+                  <span class="ws-meta-pill"
+                    ><span class="pill-icon">🏛️</span> PGIS Conference
+                    Hall</span
+                  >
+                  <span class="ws-meta-pill"
+                    ><span class="pill-icon">🌱</span> Crop Science · Climate
+                    Resilience</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="ws-body">
+              <div class="ws-description">
+                <p>
+                  The 5th Pre-RESCON Workshop, themed
+                  <em
+                    >Transforming Crop Breeding with Technology and Adaptive
+                    Strategies for Resilient Varieties,</em
+                  >
+                  was successfully held on
+                  <strong>22nd September 2025</strong> at the Postgraduate
+                  Institute of Science (PGIS), University of Peradeniya. The
+                  event brought together a diverse group of researchers,
+                  breeders, technologists, policy-makers, and postgraduate
+                  students for a day of engaging discussions on how emerging
+                  technologies can reshape crop breeding pipelines.
+                </p>
+                <p>
+                  The inauguration ceremony commenced with the lighting of the
+                  oil lamp, followed by opening remarks by Dr. H. A. C. K.
+                  Ariyarathna, Workshop Coordinator; Prof. M. Y. U. Ganehenege,
+                  Congress Chair of RESCON 2025; Prof. R. G. S. C. Rajapakse,
+                  Dean of the Faculty of Science; and Prof. B. M. N. W. B.
+                  Balasooriya, Director of PGIS.
+                </p>
+                <p>
+                  The workshop featured a keynote address by
+                  <strong>Dr. Miceal Francki</strong>, who highlighted the
+                  pivotal role of modern genomic and data-driven tools in
+                  developing stress-tolerant crop varieties for future food
+                  security. Throughout the day, participants engaged in
+                  technical sessions and panel discussions exploring key themes:
+                </p>
+                <ul>
+                  <li>Integration of technology in rice breeding workflows</li>
+                  <li>
+                    Breeding for climate resilience and abiotic stress tolerance
+                  </li>
+                  <li>
+                    Policy frameworks to support technology adoption in national
+                    breeding programs
+                  </li>
+                </ul>
+                <p>
+                  The workshop concluded with a panel discussion and closing
+                  ceremony, where participants formulated key recommendations
+                  for enhancing national breeding programs through technological
+                  innovation and interdisciplinary collaboration.
+                </p>
+                <a href="#" class="ws-flyer-link">📄 View Workshop Flyer</a>
+              </div>
+
+              <div class="ws-speakers">
+                <div class="ws-speaker-card">
+                  <div class="ws-speaker-avatar-placeholder">MF</div>
+                  <div class="ws-speaker-name">Dr. Miceal Francki</div>
+                  <div class="ws-speaker-title">Keynote Speaker</div>
+                  <div class="ws-speaker-affil">
+                    Genomics & Crop Improvement Researcher
+                  </div>
+                </div>
+                <div class="ws-speaker-card">
+                  <div class="ws-speaker-avatar-placeholder">HA</div>
+                  <div class="ws-speaker-name">Dr. H.A.C.K. Ariyarathna</div>
+                  <div class="ws-speaker-title">Workshop Coordinator</div>
+                  <div class="ws-speaker-affil">
+                    PGIS, University of Peradeniya
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Gallery 05 -->
+            <div class="ws-gallery-wrap">
+              <div class="ws-gallery-label">
+                <span>Workshop Gallery</span>
+              </div>
+              <div class="ws-gallery" data-gallery="5">
+                <img
+                  class="ws-gallery-img"
+                  src="https://www.pgis.lk/rescon2025/images/Workshops/05/8.jpg"
+                  alt="Workshop 05 - Photo 1"
+                  loading="lazy"
+                />
+                <img
+                  class="ws-gallery-img"
+                  src="https://www.pgis.lk/rescon2025/images/Workshops/05/9.jpg"
+                  alt="Workshop 05 - Photo 2"
+                  loading="lazy"
+                />
+                <img
+                  class="ws-gallery-img"
+                  src="https://www.pgis.lk/rescon2025/images/Workshops/05/10.jpg"
+                  alt="Workshop 05 - Photo 3"
+                  loading="lazy"
+                />
+                <img
+                  class="ws-gallery-img"
+                  src="https://www.pgis.lk/rescon2025/images/Workshops/05/13.jpg"
+                  alt="Workshop 05 - Photo 4"
+                  loading="lazy"
+                />
+                <img
+                  class="ws-gallery-img"
+                  src="https://www.pgis.lk/rescon2025/images/Workshops/05/14.jpg"
+                  alt="Workshop 05 - Photo 5"
+                  loading="lazy"
+                />
+                <img
+                  class="ws-gallery-img"
+                  src="https://www.pgis.lk/rescon2025/images/Workshops/05/18.jpg"
+                  alt="Workshop 05 - Photo 6"
+                  loading="lazy"
+                />
+                <img
+                  class="ws-gallery-img"
+                  src="https://www.pgis.lk/rescon2025/images/Workshops/05/12.jpg"
+                  alt="Workshop 05 - Photo 7"
+                  loading="lazy"
+                />
+                <img
+                  class="ws-gallery-img"
+                  src="https://www.pgis.lk/rescon2025/images/Workshops/05/3.jpg"
+                  alt="Workshop 05 - Photo 8"
+                  loading="lazy"
+                />
+                <img
+                  class="ws-gallery-img"
+                  src="https://www.pgis.lk/rescon2025/images/Workshops/05/4.jpg"
+                  alt="Workshop 05 - Photo 9"
+                  loading="lazy"
+                />
+                <img
+                  class="ws-gallery-img"
+                  src="https://www.pgis.lk/rescon2025/images/Workshops/05/5.jpg"
+                  alt="Workshop 05 - Photo 10"
+                  loading="lazy"
+                />
+                <img
+                  class="ws-gallery-img"
+                  src="https://www.pgis.lk/rescon2025/images/Workshops/05/6.jpg"
+                  alt="Workshop 05 - Photo 11"
+                  loading="lazy"
+                />
+                <img
+                  class="ws-gallery-img"
+                  src="https://www.pgis.lk/rescon2025/images/Workshops/05/11.jpg"
+                  alt="Workshop 05 - Photo 12"
+                  loading="lazy"
+                />
+                <img
+                  class="ws-gallery-img"
+                  src="https://www.pgis.lk/rescon2025/images/Workshops/05/15.jpg"
+                  alt="Workshop 05 - Photo 13"
+                  loading="lazy"
+                />
+                <img
+                  class="ws-gallery-img"
+                  src="https://www.pgis.lk/rescon2025/images/Workshops/05/16.jpg"
+                  alt="Workshop 05 - Photo 14"
+                  loading="lazy"
+                />
+                <img
+                  class="ws-gallery-img"
+                  src="https://www.pgis.lk/rescon2025/images/Workshops/05/17.jpg"
+                  alt="Workshop 05 - Photo 15"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </article>
+
+          <!-- ══════════════════════════════
+           WORKSHOP 04
+      ══════════════════════════════ -->
+          <article class="workshop-block" id="ws-04">
+            <div class="ws-header">
+              <div class="ws-number ws-number-4">04</div>
+              <div class="ws-header-text">
+                <div
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 0.75rem;
+                    flex-wrap: wrap;
+                    margin-bottom: 0.5rem;
+                  "
+                >
+                  <span class="ws-series-label"
+                    >Pre-Conference Workshop 04</span
+                  >
+                  <span class="ws-status ws-status-done"
+                    ><span class="ws-status-dot"></span>Completed</span
+                  >
+                </div>
+                <h2 class="ws-title">
+                  Emerging Trends of Clean Energy &amp; Opportunities of Higher
+                  Studies in Europe
+                </h2>
+                <div class="ws-meta-row">
+                  <span class="ws-meta-pill"
+                    ><span class="pill-icon">📅</span> 17th September 2025
+                    (Wednesday)</span
+                  >
+                  <span class="ws-meta-pill"
+                    ><span class="pill-icon">⏰</span> 1:00 PM – 3:00 PM</span
+                  >
+                  <span class="ws-meta-pill"
+                    ><span class="pill-icon">🏛️</span> PGIS Auditorium</span
+                  >
+                  <span class="ws-meta-pill"
+                    ><span class="pill-icon">⚡</span> Energy · Hydrogen ·
+                    Higher Studies</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="ws-body">
+              <div class="ws-description">
+                <p>
+                  We were pleased to announce the 4th Pre-Conference Talk for
+                  RESCON 2025, delivered by
+                  <strong>Professor Upul Wijayantha</strong> (UK), a leading
+                  researcher in clean energy and hydrogen technologies. All
+                  students and early-career researchers were encouraged to
+                  attend.
+                </p>
+                <p>
+                  Professor Wijayantha, Head of the Hydrogen Integration
+                  Research Centre at Cranfield University and Co-Director of the
+                  EPSRC EnerHy CDT at Loughborough University, shared insights
+                  from his three decades of research. The session addressed
+                  current trends in clean energy, the role of hydrogen in
+                  decarbonisation, and the exciting opportunities available for
+                  young scientists pursuing higher studies in Europe.
+                </p>
+                <p>
+                  The session was
+                  <strong
+                    >successfully held with the participation of over 90
+                    attendees</strong
+                  >, generating vibrant discussion on energy futures and career
+                  pathways in the European research ecosystem.
+                </p>
+                <a href="#" class="ws-flyer-link">📄 View Workshop Flyer</a>
+              </div>
+
+              <div class="ws-speakers">
+                <div class="ws-speaker-card">
+                  <img
+                    class="ws-speaker-avatar"
+                    src="https://www.pgis.lk/rescon2025/images/Workshops/04/Prof. Upul Wijayantha.jpg"
+                    alt="Prof. Upul Wijayantha"
+                    onerror="
+                      this.style.display = 'none';
+                      this.nextElementSibling.style.display = 'flex';
+                    "
+                  />
+                  <div
+                    class="ws-speaker-avatar-placeholder"
+                    style="display: none"
+                  >
+                    UW
+                  </div>
+                  <div class="ws-speaker-name">Prof. Upul KG Wijayantha</div>
+                  <div class="ws-speaker-title">Keynote Speaker</div>
+                  <div class="ws-speaker-affil">
+                    Professor &amp; Head of Hydrogen Integration Research
+                    Centre<br />Cranfield University, UK
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Gallery 04 -->
+            <div class="ws-gallery-wrap">
+              <div class="ws-gallery-label"><span>Workshop Gallery</span></div>
+              <div class="ws-gallery" data-gallery="4">
+                <img
+                  class="ws-gallery-img"
+                  src="https://www.pgis.lk/rescon2025/images/Workshops/04/1.jpg"
+                  alt="Workshop 04 - Photo 1"
+                  loading="lazy"
+                />
+                <img
+                  class="ws-gallery-img"
+                  src="https://www.pgis.lk/rescon2025/images/Workshops/04/2.jpg"
+                  alt="Workshop 04 - Photo 2"
+                  loading="lazy"
+                />
+                <img
+                  class="ws-gallery-img"
+                  src="https://www.pgis.lk/rescon2025/images/Workshops/04/4.jpg"
+                  alt="Workshop 04 - Photo 3"
+                  loading="lazy"
+                />
+                <img
+                  class="ws-gallery-img"
+                  src="https://www.pgis.lk/rescon2025/images/Workshops/04/11.jpg"
+                  alt="Workshop 04 - Photo 4"
+                  loading="lazy"
+                />
+                <img
+                  class="ws-gallery-img"
+                  src="https://www.pgis.lk/rescon2025/images/Workshops/04/8.jpg"
+                  alt="Workshop 04 - Photo 5"
+                  loading="lazy"
+                />
+                <img
+                  class="ws-gallery-img"
+                  src="https://www.pgis.lk/rescon2025/images/Workshops/04/3.jpg"
+                  alt="Workshop 04 - Photo 6"
+                  loading="lazy"
+                />
+                <img
+                  class="ws-gallery-img"
+                  src="https://www.pgis.lk/rescon2025/images/Workshops/04/9.jpg"
+                  alt="Workshop 04 - Photo 7"
+                  loading="lazy"
+                />
+                <img
+                  class="ws-gallery-img"
+                  src="https://www.pgis.lk/rescon2025/images/Workshops/04/5.jpg"
+                  alt="Workshop 04 - Photo 8"
+                  loading="lazy"
+                />
+                <img
+                  class="ws-gallery-img"
+                  src="https://www.pgis.lk/rescon2025/images/Workshops/04/6.jpg"
+                  alt="Workshop 04 - Photo 9"
+                  loading="lazy"
+                />
+                <img
+                  class="ws-gallery-img"
+                  src="https://www.pgis.lk/rescon2025/images/Workshops/04/7.jpg"
+                  alt="Workshop 04 - Photo 10"
+                  loading="lazy"
+                />
+                <img
+                  class="ws-gallery-img"
+                  src="https://www.pgis.lk/rescon2025/images/Workshops/04/10.jpg"
+                  alt="Workshop 04 - Photo 11"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </article>
+
+          <!-- ══════════════════════════════
+           WORKSHOP 03
+      ══════════════════════════════ -->
+          <article class="workshop-block" id="ws-03">
+            <div class="ws-header">
+              <div class="ws-number ws-number-3">03</div>
+              <div class="ws-header-text">
+                <div
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 0.75rem;
+                    flex-wrap: wrap;
+                    margin-bottom: 0.5rem;
+                  "
+                >
+                  <span class="ws-series-label"
+                    >Pre-Conference Workshop 03</span
+                  >
+                  <span class="ws-status ws-status-done"
+                    ><span class="ws-status-dot"></span>Completed</span
+                  >
+                </div>
+                <h2 class="ws-title">
+                  Navigating Graduate Studies &amp; Effective SOP Writing
+                </h2>
+                <div class="ws-meta-row">
+                  <span class="ws-meta-pill"
+                    ><span class="pill-icon">📅</span> 2nd August 2025
+                    (Saturday)</span
+                  >
+                  <span class="ws-meta-pill"
+                    ><span class="pill-icon">⏰</span> 9:00 AM onwards</span
+                  >
+                  <span class="ws-meta-pill"
+                    ><span class="pill-icon">🏛️</span> PGIS Conference
+                    Hall</span
+                  >
+                  <span class="ws-meta-pill"
+                    ><span class="pill-icon">🎓</span> Graduate Studies · Career
+                    Guidance</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="ws-body">
+              <div class="ws-description">
+                <p>
+                  The 3rd Pre-Conference Workshop of PGIS RESCON 2025 was held
+                  on Saturday, 2nd August 2025, at the PGIS Conference Hall with
+                  <strong>over 100 participants</strong>, including
+                  undergraduates, postgraduates, and early-career researchers.
+                  The workshop offered practical guidance for students planning
+                  higher studies and careers abroad.
+                </p>
+                <p>
+                  The program opened with a ceremonial procession and remarks by
+                  Prof. M.Y.U. Ganehenege, Chairperson of RESCON 2025, followed
+                  by an introduction to PGIS and RESCON by Prof. Nanda
+                  Balasooriya, Director of PGIS.
+                </p>
+                <p>
+                  Academic proceedings began with Prof. Lunte's research talk on
+                  <em
+                    >"Bioanalytical Applications on Microchip and Capillary
+                    Electrophoresis"</em
+                  >, highlighting applications of modern separation technologies
+                  in pharmaceutical research. The event concluded with a
+                  cultural performance by the PGIS Art Circle.
+                </p>
+                <a href="#" class="ws-flyer-link">📄 View Workshop Flyer</a>
+              </div>
+
+              <div class="ws-speakers">
+                <div class="ws-speaker-card">
+                  <img
+                    class="ws-speaker-avatar"
+                    src="https://www.pgis.lk/rescon2025/images/Workshops/03/Prof. Susan M. Lunte.jpeg"
+                    alt="Prof. Susan M. Lunte"
+                    onerror="
+                      this.style.display = 'none';
+                      this.nextElementSibling.style.display = 'flex';
+                    "
+                  />
+                  <div
+                    class="ws-speaker-avatar-placeholder"
+                    style="display: none"
+                  >
+                    SL
+                  </div>
+                  <div class="ws-speaker-name">Prof. Susan M. Lunte</div>
+                  <div class="ws-speaker-title">Lead Speaker</div>
+                  <div class="ws-speaker-affil">
+                    Professor of Chemistry &amp; Chemical Pharmaceutical
+                    Chemistry<br />University of Kansas, USA
+                  </div>
+                </div>
+                <div class="ws-speaker-card">
+                  <img
+                    class="ws-speaker-avatar"
+                    src="https://www.pgis.lk/rescon2025/images/Workshops/03/Dr. Binodh De Silva.jpeg"
+                    alt="Dr. Binodh De Silva"
+                    onerror="
+                      this.style.display = 'none';
+                      this.nextElementSibling.style.display = 'flex';
+                    "
+                  />
+                  <div
+                    class="ws-speaker-avatar-placeholder"
+                    style="display: none"
+                  >
+                    BD
+                  </div>
+                  <div class="ws-speaker-name">Dr. Binodh De Silva</div>
+                  <div class="ws-speaker-title">Speaker</div>
+                  <div class="ws-speaker-affil">
+                    Senior VP, Bioanalytical &amp; Biomarker Development<br />Ultragenyx
+                    Pharmaceutical Inc.
+                  </div>
+                </div>
+                <div class="ws-speaker-card">
+                  <img
+                    class="ws-speaker-avatar"
+                    src="https://www.pgis.lk/rescon2025/images/Workshops/03/Dr. Gamini Dharmasena.jpeg"
+                    alt="Dr. Gamini Dharmasena"
+                    onerror="
+                      this.style.display = 'none';
+                      this.nextElementSibling.style.display = 'flex';
+                    "
+                  />
+                  <div
+                    class="ws-speaker-avatar-placeholder"
+                    style="display: none"
+                  >
+                    GD
+                  </div>
+                  <div class="ws-speaker-name">Dr. Gamini Dharmasena</div>
+                  <div class="ws-speaker-title">Speaker</div>
+                  <div class="ws-speaker-affil">
+                    Senior Electronics Engineer<br />VideoRay LLC / University
+                    of Oklahoma, USA
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Gallery 03 -->
+            <div class="ws-gallery-wrap">
+              <div class="ws-gallery-label"><span>Workshop Gallery</span></div>
+              <div class="ws-gallery" data-gallery="3">
+                <img
+                  class="ws-gallery-img"
+                  src="https://www.pgis.lk/rescon2025/images/Workshops/03/1.jpg"
+                  alt="Workshop 03 - Photo 1"
+                  loading="lazy"
+                />
+                <img
+                  class="ws-gallery-img"
+                  src="https://www.pgis.lk/rescon2025/images/Workshops/03/2.jpg"
+                  alt="Workshop 03 - Photo 2"
+                  loading="lazy"
+                />
+                <img
+                  class="ws-gallery-img"
+                  src="https://www.pgis.lk/rescon2025/images/Workshops/03/6.jpg"
+                  alt="Workshop 03 - Photo 3"
+                  loading="lazy"
+                />
+                <img
+                  class="ws-gallery-img"
+                  src="https://www.pgis.lk/rescon2025/images/Workshops/03/3.jpg"
+                  alt="Workshop 03 - Photo 4"
+                  loading="lazy"
+                />
+                <img
+                  class="ws-gallery-img"
+                  src="https://www.pgis.lk/rescon2025/images/Workshops/03/4.jpg"
+                  alt="Workshop 03 - Photo 5"
+                  loading="lazy"
+                />
+                <img
+                  class="ws-gallery-img"
+                  src="https://www.pgis.lk/rescon2025/images/Workshops/03/5.jpg"
+                  alt="Workshop 03 - Photo 6"
+                  loading="lazy"
+                />
+                <img
+                  class="ws-gallery-img"
+                  src="https://www.pgis.lk/rescon2025/images/Workshops/03/9.jpg"
+                  alt="Workshop 03 - Photo 7"
+                  loading="lazy"
+                />
+                <img
+                  class="ws-gallery-img"
+                  src="https://www.pgis.lk/rescon2025/images/Workshops/03/10.jpg"
+                  alt="Workshop 03 - Photo 8"
+                  loading="lazy"
+                />
+                <img
+                  class="ws-gallery-img"
+                  src="https://www.pgis.lk/rescon2025/images/Workshops/03/7.jpg"
+                  alt="Workshop 03 - Photo 9"
+                  loading="lazy"
+                />
+                <img
+                  class="ws-gallery-img"
+                  src="https://www.pgis.lk/rescon2025/images/Workshops/03/8.jpg"
+                  alt="Workshop 03 - Photo 10"
+                  loading="lazy"
+                />
+                <img
+                  class="ws-gallery-img"
+                  src="https://www.pgis.lk/rescon2025/images/Workshops/03/13.jpg"
+                  alt="Workshop 03 - Photo 11"
+                  loading="lazy"
+                />
+                <img
+                  class="ws-gallery-img"
+                  src="https://www.pgis.lk/rescon2025/images/Workshops/03/14.jpg"
+                  alt="Workshop 03 - Photo 12"
+                  loading="lazy"
+                />
+                <img
+                  class="ws-gallery-img"
+                  src="https://www.pgis.lk/rescon2025/images/Workshops/03/20.jpg"
+                  alt="Workshop 03 - Photo 13"
+                  loading="lazy"
+                />
+                <img
+                  class="ws-gallery-img"
+                  src="https://www.pgis.lk/rescon2025/images/Workshops/03/23.jpg"
+                  alt="Workshop 03 - Photo 14"
+                  loading="lazy"
+                />
+                <img
+                  class="ws-gallery-img"
+                  src="https://www.pgis.lk/rescon2025/images/Workshops/03/24.jpg"
+                  alt="Workshop 03 - Photo 15"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </article>
+
+          <!-- ══════════════════════════════
+           WORKSHOP 02
+      ══════════════════════════════ -->
+          <article class="workshop-block" id="ws-02">
+            <div class="ws-header">
+              <div class="ws-number ws-number-2">02</div>
+              <div class="ws-header-text">
+                <div
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 0.75rem;
+                    flex-wrap: wrap;
+                    margin-bottom: 0.5rem;
+                  "
+                >
+                  <span class="ws-series-label"
+                    >Pre-Conference Workshop 02</span
+                  >
+                  <span class="ws-status ws-status-done"
+                    ><span class="ws-status-dot"></span>Completed</span
+                  >
+                </div>
+                <h2 class="ws-title">
+                  How to Navigate Through the Academic Challenges
+                </h2>
+                <div class="ws-meta-row">
+                  <span class="ws-meta-pill"
+                    ><span class="pill-icon">📅</span> 19th June 2025
+                    (Thursday)</span
+                  >
+                  <span class="ws-meta-pill"
+                    ><span class="pill-icon">⏰</span> 1:00 PM</span
+                  >
+                  <span class="ws-meta-pill"
+                    ><span class="pill-icon">🏛️</span> PGIS Conference
+                    Hall</span
+                  >
+                  <span class="ws-meta-pill"
+                    ><span class="pill-icon">🧠</span> Mental Health ·
+                    Resilience · Career</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="ws-body">
+              <div class="ws-description">
+                <p>
+                  Students and early-career academics often face intense
+                  pressure that can hinder their academic and personal growth.
+                  This seminar explored practical strategies and motivational
+                  insights derived from the speaker's personal experiences,
+                  focusing on overcoming common obstacles encountered during
+                  academic journeys.
+                </p>
+                <p>Key themes addressed during the seminar:</p>
+                <ul>
+                  <li>
+                    Academic pressure and its impact on performance and mental
+                    health
+                  </li>
+                  <li>
+                    Effective time management and prioritization techniques to
+                    enhance productivity
+                  </li>
+                  <li>
+                    Setting realistic goals and maintaining motivation under
+                    pressure
+                  </li>
+                  <li>
+                    Practical methods for overcoming procrastination and
+                    cultivating self-discipline
+                  </li>
+                  <li>
+                    Resilience frameworks for navigating failure and rejection
+                    in academia
+                  </li>
+                  <li>
+                    Career pathways and future planning strategies for
+                    researchers
+                  </li>
+                </ul>
+                <p>
+                  The overarching goal was to inspire and empower attendees to
+                  thrive amidst pressures, harnessing their potential for both
+                  academic success and personal fulfilment in challenging times.
+                </p>
+                <a href="#" class="ws-flyer-link">📄 View Workshop Flyer</a>
+              </div>
+
+              <div class="ws-speakers">
+                <div class="ws-speaker-card">
+                  <img
+                    class="ws-speaker-avatar"
+                    src="https://www.pgis.lk/rescon2025/images/Workshops/02/AjithKarunarathna.jpg"
+                    alt="Prof. Ajith Karunaratne"
+                    onerror="
+                      this.style.display = 'none';
+                      this.nextElementSibling.style.display = 'flex';
+                    "
+                  />
+                  <div
+                    class="ws-speaker-avatar-placeholder"
+                    style="display: none"
+                  >
+                    AK
+                  </div>
+                  <div class="ws-speaker-name">Prof. Ajith Karunaratne</div>
+                  <div class="ws-speaker-title">Speaker</div>
+                  <div class="ws-speaker-affil">
+                    Professor of Chemistry and Chemical Biology<br />Saint Louis
+                    University, USA
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Gallery 02 -->
+            <div class="ws-gallery-wrap">
+              <div class="ws-gallery-label"><span>Workshop Gallery</span></div>
+              <div class="ws-gallery" data-gallery="2">
+                <img
+                  class="ws-gallery-img"
+                  src="https://www.pgis.lk/rescon2025/images/Workshops/02/PHOTO-2025-07-02-20-56-26_8.jpg"
+                  alt="Workshop 02 - Photo 1"
+                  loading="lazy"
+                />
+                <img
+                  class="ws-gallery-img"
+                  src="https://www.pgis.lk/rescon2025/images/Workshops/02/PHOTO-2025-07-02-20-56-26_1.jpg"
+                  alt="Workshop 02 - Photo 2"
+                  loading="lazy"
+                />
+                <img
+                  class="ws-gallery-img"
+                  src="https://www.pgis.lk/rescon2025/images/Workshops/02/PHOTO-2025-07-02-20-56-26_2.jpg"
+                  alt="Workshop 02 - Photo 3"
+                  loading="lazy"
+                />
+                <img
+                  class="ws-gallery-img"
+                  src="https://www.pgis.lk/rescon2025/images/Workshops/02/PHOTO-2025-07-02-20-56-26_3.jpg"
+                  alt="Workshop 02 - Photo 4"
+                  loading="lazy"
+                />
+                <img
+                  class="ws-gallery-img"
+                  src="https://www.pgis.lk/rescon2025/images/Workshops/02/PHOTO-2025-07-02-20-56-26_6.jpg"
+                  alt="Workshop 02 - Photo 5"
+                  loading="lazy"
+                />
+                <img
+                  class="ws-gallery-img"
+                  src="https://www.pgis.lk/rescon2025/images/Workshops/02/PHOTO-2025-07-02-20-56-26_5.jpg"
+                  alt="Workshop 02 - Photo 6"
+                  loading="lazy"
+                />
+                <img
+                  class="ws-gallery-img"
+                  src="https://www.pgis.lk/rescon2025/images/Workshops/02/PHOTO-2025-07-02-20-56-26_4.jpg"
+                  alt="Workshop 02 - Photo 7"
+                  loading="lazy"
+                />
+                <img
+                  class="ws-gallery-img"
+                  src="https://www.pgis.lk/rescon2025/images/Workshops/02/PHOTO-2025-07-02-20-56-26_7.jpg"
+                  alt="Workshop 02 - Photo 8"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </article>
+
+          <!-- ══════════════════════════════
+           WORKSHOP 01
+      ══════════════════════════════ -->
+          <article class="workshop-block" id="ws-01">
+            <div class="ws-header">
+              <div class="ws-number ws-number-1">01</div>
+              <div class="ws-header-text">
+                <div
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 0.75rem;
+                    flex-wrap: wrap;
+                    margin-bottom: 0.5rem;
+                  "
+                >
+                  <span class="ws-series-label"
+                    >Pre-Conference Workshop 01</span
+                  >
+                  <span class="ws-status ws-status-done"
+                    ><span class="ws-status-dot"></span>Completed</span
+                  >
+                </div>
+                <h2 class="ws-title">
+                  Intermittent Fasting, Neuroplasticity, and Brain Health
+                </h2>
+                <div class="ws-meta-row">
+                  <span class="ws-meta-pill"
+                    ><span class="pill-icon">📅</span> 28th March 2025
+                    (Friday)</span
+                  >
+                  <span class="ws-meta-pill"
+                    ><span class="pill-icon">⏰</span> 2:00 PM – 3:00 PM</span
+                  >
+                  <span class="ws-meta-pill"
+                    ><span class="pill-icon">🏛️</span> PGIS Auditorium</span
+                  >
+                  <span class="ws-meta-pill"
+                    ><span class="pill-icon">🧬</span> Neuroscience · Diet ·
+                    Brain Health</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="ws-body">
+              <div class="ws-description">
+                <p>
+                  The RESCON 2025 Pre-Conference Series was officially launched
+                  with an engaging and well-attended public lecture on
+                  <em
+                    >"Intermittent Fasting, Neuroplasticity, and Brain
+                    Health"</em
+                  >, delivered by
+                  <strong>Professor Thiruma V. Arumugam</strong>, an
+                  internationally renowned neuroscientist and Professor of
+                  Physiology at La Trobe University, Australia.
+                </p>
+                <p>
+                  This insightful session explored how intermittent fasting
+                  influences neuroplasticity and brain function, drawing on
+                  cutting-edge research to highlight how dietary patterns can
+                  impact cognitive performance, neurodegeneration, and healthy
+                  brain aging.
+                </p>
+                <p>
+                  Professor Arumugam heads the Healthy Brain Ageing and Dementia
+                  Laboratory at La Trobe University, Melbourne. His research
+                  focuses on the molecular mechanisms behind neuronal death in
+                  conditions such as stroke and vascular dementia. The lecture
+                  provided participants with:
+                </p>
+                <ul>
+                  <li>
+                    A scientific overview of intermittent fasting and its
+                    physiological impacts
+                  </li>
+                  <li>
+                    The latest insights into neuroplasticity and aging-related
+                    cognitive decline
+                  </li>
+                  <li>
+                    Evidence-based discussions on the relationship between diet
+                    and brain function
+                  </li>
+                  <li>
+                    A vibrant Q&amp;A session engaging practical and
+                    research-oriented aspects
+                  </li>
+                </ul>
+                <p>
+                  This public lecture was an outstanding kickoff to PGIS RESCON
+                  2025's pre-conference events, reaffirming the Institute's
+                  commitment to bridging cutting-edge science with public
+                  knowledge and health awareness.
+                </p>
+                <a href="#" class="ws-flyer-link">📄 View Workshop Flyer</a>
+              </div>
+
+              <div class="ws-speakers">
+                <div class="ws-speaker-card">
+                  <img
+                    class="ws-speaker-avatar"
+                    src="https://www.pgis.lk/rescon2025/images/Workshops/01/Thiruma-Arumugam.jpg"
+                    alt="Prof. Thiruma Arumugam"
+                    onerror="
+                      this.style.display = 'none';
+                      this.nextElementSibling.style.display = 'flex';
+                    "
+                  />
+                  <div
+                    class="ws-speaker-avatar-placeholder"
+                    style="display: none"
+                  >
+                    TA
+                  </div>
+                  <div class="ws-speaker-name">Prof. Thiruma V. Arumugam</div>
+                  <div class="ws-speaker-title">Keynote Speaker</div>
+                  <div class="ws-speaker-affil">
+                    Professor of Physiology<br />La Trobe University, Melbourne,
+                    Australia
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Gallery 01 -->
+            <div class="ws-gallery-wrap">
+              <div class="ws-gallery-label"><span>Workshop Gallery</span></div>
+              <div class="ws-gallery" data-gallery="1">
+                <img
+                  class="ws-gallery-img"
+                  src="https://www.pgis.lk/rescon2025/images/Workshops/01/157A5687.JPG"
+                  alt="Workshop 01 - Photo 1"
+                  loading="lazy"
+                />
+                <img
+                  class="ws-gallery-img"
+                  src="https://www.pgis.lk/rescon2025/images/Workshops/01/157A5712.JPG"
+                  alt="Workshop 01 - Photo 2"
+                  loading="lazy"
+                />
+                <img
+                  class="ws-gallery-img"
+                  src="https://www.pgis.lk/rescon2025/images/Workshops/01/157A5721.JPG"
+                  alt="Workshop 01 - Photo 3"
+                  loading="lazy"
+                />
+                <img
+                  class="ws-gallery-img"
+                  src="https://www.pgis.lk/rescon2025/images/Workshops/01/157A5739.JPG"
+                  alt="Workshop 01 - Photo 4"
+                  loading="lazy"
+                />
+                <img
+                  class="ws-gallery-img"
+                  src="https://www.pgis.lk/rescon2025/images/Workshops/01/157A5740.JPG"
+                  alt="Workshop 01 - Photo 5"
+                  loading="lazy"
+                />
+                <img
+                  class="ws-gallery-img"
+                  src="https://www.pgis.lk/rescon2025/images/Workshops/01/157A5746.JPG"
+                  alt="Workshop 01 - Photo 6"
+                  loading="lazy"
+                />
+                <img
+                  class="ws-gallery-img"
+                  src="https://www.pgis.lk/rescon2025/images/Workshops/01/157A5748.JPG"
+                  alt="Workshop 01 - Photo 7"
+                  loading="lazy"
+                />
+                <img
+                  class="ws-gallery-img"
+                  src="https://www.pgis.lk/rescon2025/images/Workshops/01/157A5752.JPG"
+                  alt="Workshop 01 - Photo 8"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </article>
+        </div>
+        <!-- /.workshops-inner -->
+      </div>
+      <!-- /.container -->
+    </div>
+    <!-- /.workshops-wrap -->
+
+    <!-- ── FOOTER ── -->
+    <footer class="footer" id="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="footer-logo">🌿 RESCON 2026</div>
+            <p>
+              The Annual Research Congress of the Postgraduate Institute of
+              Science, University of Peradeniya — bringing together researchers,
+              scientists, and innovators in Earth &amp; Environmental Sciences.
+            </p>
+            <div class="social-links">
+              <a href="#" class="social-btn" title="Facebook">f</a>
+              <a href="#" class="social-btn" title="Twitter">𝕏</a>
+              <a href="#" class="social-btn" title="LinkedIn">in</a>
+              <a href="#" class="social-btn" title="YouTube">▶</a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h5>Quick Links</h5>
+            <ul>
+              <li><a href="index.html#about">About RESCON</a></li>
+              <li><a href="guidelines.html">Submission Guidelines</a></li>
+              <li><a href="workshops.html">Pre-Conference Workshops</a></li>
+              <li><a href="speakers.html">Keynote Speakers</a></li>
+              <li><a href="index.html#themes">Research Themes</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h5>Resources</h5>
+            <ul>
+              <li><a href="#">Abstract Template</a></li>
+              <li><a href="#">Registration Form</a></li>
+              <li><a href="#">Conference Schedule</a></li>
+              <li><a href="#">Venue &amp; Travel</a></li>
+              <li><a href="#">Past Proceedings</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h5>Organised By</h5>
+            <div class="footer-org">
+              <div class="org-logo">PGIS</div>
+              <p>
+                Postgraduate Institute of Science<br />University of
+                Peradeniya<br />Peradeniya 20400
+              </p>
+            </div>
+            <div
+              style="
+                margin-top: 1rem;
+                font-size: 0.84rem;
+                color: rgba(248, 238, 224, 0.55);
+              "
+            >
+              <div>📞 +94 81 231 2796</div>
+              <div style="margin-top: 0.35rem">✉️ rescon2025@pgis.lk</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            © 2026 RESCON · Postgraduate Institute of Science, University of
+            Peradeniya. All rights reserved.
+          </p>
+          <p>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Use</a>
+            <a href="https://www.pgis.lk" target="_blank" rel="noopener"
+              >www.pgis.lk ↗</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ── LIGHTBOX ── -->
+    <div
+      class="lightbox"
+      id="lightbox"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Image viewer"
+    >
+      <button class="lightbox-close" id="lb-close" aria-label="Close">×</button>
+      <button
+        class="lightbox-nav lightbox-prev"
+        id="lb-prev"
+        aria-label="Previous"
+      >
+        ‹
+      </button>
+      <img class="lightbox-img" id="lb-img" src="" alt="" />
+      <button class="lightbox-nav lightbox-next" id="lb-next" aria-label="Next">
+        ›
+      </button>
+      <div class="lightbox-counter" id="lb-counter"></div>
+    </div>
+
+    <!-- ── BACK TO TOP ── -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+      ↑
+    </button>
+
+    <script>
+      /* ── Navbar shrink on scroll ── */
+      const navbar = document.getElementById("navbar");
+      const btt = document.getElementById("backToTop");
+
+      window.addEventListener(
+        "scroll",
+        () => {
+          if (window.scrollY > 60) {
+            navbar.classList.add("shrink");
+            btt.classList.add("visible");
+          } else {
+            navbar.classList.remove("shrink");
+            btt.classList.remove("visible");
+          }
+        },
+        { passive: true },
+      );
+
+      btt.addEventListener("click", () =>
+        window.scrollTo({ top: 0, behavior: "smooth" }),
+      );
+
+      /* ── Tab active state on scroll ── */
+      const tabs = document.querySelectorAll(".ws-tab");
+      const sections = document.querySelectorAll(".workshop-block[id]");
+
+      const tabObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              tabs.forEach((t) => t.classList.remove("active"));
+              const active = document.querySelector(
+                `.ws-tab[href="#${entry.target.id}"]`,
+              );
+              if (active) active.classList.add("active");
+            }
+          });
+        },
+        { rootMargin: "-30% 0px -60% 0px", threshold: 0 },
+      );
+
+      sections.forEach((s) => tabObserver.observe(s));
+
+      /* ── Scroll-in animations ── */
+      const animObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("animate-in");
+              animObserver.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.08 },
+      );
+
+      document
+        .querySelectorAll(".ws-speaker-card, .ws-stat-item")
+        .forEach((el) => {
+          el.style.opacity = "0";
+          el.style.transform = "translateY(20px)";
+          el.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+          animObserver.observe(el);
+        });
+
+      /* Override animate-in for these elements */
+      const animStyle = document.createElement("style");
+      animStyle.textContent = `
+    .ws-speaker-card.animate-in,
+    .ws-stat-item.animate-in { opacity: 1 !important; transform: translateY(0) !important; }
+  `;
+      document.head.appendChild(animStyle);
+
+      /* ── Lightbox ── */
+      const lightbox = document.getElementById("lightbox");
+      const lbImg = document.getElementById("lb-img");
+      const lbCounter = document.getElementById("lb-counter");
+      const lbClose = document.getElementById("lb-close");
+      const lbPrev = document.getElementById("lb-prev");
+      const lbNext = document.getElementById("lb-next");
+
+      let currentGallery = [];
+      let currentIndex = 0;
+
+      function openLightbox(imgs, idx) {
+        currentGallery = Array.from(imgs);
+        currentIndex = idx;
+        showImage();
+        lightbox.classList.add("open");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove("open");
+        document.body.style.overflow = "";
+      }
+
+      function showImage() {
+        lbImg.src = currentGallery[currentIndex].src;
+        lbImg.alt = currentGallery[currentIndex].alt;
+        lbCounter.textContent = `${currentIndex + 1} / ${currentGallery.length}`;
+      }
+
+      document.querySelectorAll(".ws-gallery").forEach((gallery) => {
+        const imgs = gallery.querySelectorAll(".ws-gallery-img");
+        imgs.forEach((img, idx) => {
+          img.addEventListener("click", () => openLightbox(imgs, idx));
+        });
+      });
+
+      lbClose.addEventListener("click", closeLightbox);
+
+      lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox) closeLightbox();
+      });
+
+      lbPrev.addEventListener("click", (e) => {
+        e.stopPropagation();
+        currentIndex =
+          (currentIndex - 1 + currentGallery.length) % currentGallery.length;
+        showImage();
+      });
+
+      lbNext.addEventListener("click", (e) => {
+        e.stopPropagation();
+        currentIndex = (currentIndex + 1) % currentGallery.length;
+        showImage();
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (!lightbox.classList.contains("open")) return;
+        if (e.key === "Escape") closeLightbox();
+        if (e.key === "ArrowLeft") {
+          currentIndex =
+            (currentIndex - 1 + currentGallery.length) % currentGallery.length;
+          showImage();
+        }
+        if (e.key === "ArrowRight") {
+          currentIndex = (currentIndex + 1) % currentGallery.length;
+          showImage();
+        }
+      });
+
+      /* ── Smooth tab scroll ── */
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", (e) => {
+          e.preventDefault();
+          const target = document.querySelector(tab.getAttribute("href"));
+          if (target) {
+            const offset =
+              parseFloat(
+                getComputedStyle(document.documentElement).getPropertyValue(
+                  "--nav-h",
+                ),
+              ) + 90;
+            const top =
+              target.getBoundingClientRect().top + window.scrollY - offset;
+            window.scrollTo({ top, behavior: "smooth" });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
