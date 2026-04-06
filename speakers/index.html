@@ -1,1013 +1,992 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Speakers — RESCON 2026 | PGIS</title>
-    <meta
-      name="description"
-      content="Keynote, Plenary and Chief Guest Speakers of RESCON 2026 at the Postgraduate Institute of Science, University of Peradeniya."
-    />
-    <link rel="stylesheet" href="./../style.css" />
-    <style>
-      /* ══════════════════════════════════════════
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Speakers — RESCON 2026 | PGIS</title>
+  <meta name="description"
+    content="Keynote, Plenary and Chief Guest Speakers of RESCON 2026 at the Postgraduate Institute of Science, University of Peradeniya." />
+  <link rel="stylesheet" href="./../style.css" />
+  <style>
+    /* ══════════════════════════════════════════
        SPEAKERS PAGE — ADDITIONAL STYLES
     ══════════════════════════════════════════ */
 
-      /* ── Page Hero ── */
-      .page-hero {
-        position: relative;
-        min-height: 46vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding: calc(var(--nav-h) + 4.5rem) 2rem 4.5rem;
-        overflow: hidden;
-        background: linear-gradient(
-          135deg,
+    /* ── Page Hero ── */
+    .page-hero {
+      position: relative;
+      min-height: 46vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: calc(var(--nav-h) + 4.5rem) 2rem 4.5rem;
+      overflow: hidden;
+      background: linear-gradient(135deg,
           rgba(19, 58, 37, 0.96),
-          rgba(37, 86, 55, 0.96)
-        );
-      }
+          rgba(37, 86, 55, 0.96));
+    }
 
-      .page-hero::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: transparent;
-        pointer-events: none;
-      }
+    .page-hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: transparent;
+      pointer-events: none;
+    }
 
-      .page-hero-rings {
-        position: absolute;
-        inset: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        pointer-events: none;
-      }
+    .page-hero-rings {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+    }
 
-      .page-hero-content {
-        position: relative;
-        z-index: 2;
-        max-width: 700px;
-      }
+    .page-hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+    }
 
-      .breadcrumb {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        font-size: 0.8rem;
-        color: rgba(232, 201, 154, 0.5);
-        justify-content: center;
-        margin-bottom: 1.25rem;
-      }
-      .breadcrumb a {
-        color: rgba(232, 201, 154, 0.65);
-        transition: color var(--t) var(--ease);
-      }
-      .breadcrumb a:hover {
-        color: var(--sand);
-      }
-      .breadcrumb .sep {
-        opacity: 0.4;
-      }
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      color: rgba(232, 201, 154, 0.5);
+      justify-content: center;
+      margin-bottom: 1.25rem;
+    }
 
-      .page-hero-badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-        font-size: 0.72rem;
-        font-weight: 600;
-        letter-spacing: 0.22em;
-        text-transform: uppercase;
-        color: var(--saffron);
-        background: rgba(244, 166, 35, 0.15);
-        border: 1px solid rgba(244, 166, 35, 0.3);
-        padding: 0.4rem 1.2rem;
-        border-radius: var(--r-pill);
-        margin-bottom: 1.2rem;
-      }
+    .breadcrumb a {
+      color: rgba(232, 201, 154, 0.65);
+      transition: color var(--t) var(--ease);
+    }
 
-      .page-hero-title {
-        font-family: var(--font-display);
-        font-size: clamp(2.6rem, 7vw, 4.5rem);
-        font-weight: 700;
-        color: var(--offwhite);
-        line-height: 1.08;
-        margin-bottom: 1rem;
-        letter-spacing: -0.025em;
-      }
+    .breadcrumb a:hover {
+      color: var(--sand);
+    }
 
-      .page-hero-title span {
-        color: var(--saffron);
-      }
+    .breadcrumb .sep {
+      opacity: 0.4;
+    }
 
-      .page-hero-desc {
-        font-size: 1rem;
-        color: rgba(248, 238, 224, 0.68);
-        max-width: 500px;
-        margin: 0 auto 2rem;
-        line-height: 1.78;
-      }
+    .page-hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--saffron);
+      background: rgba(244, 166, 35, 0.15);
+      border: 1px solid rgba(244, 166, 35, 0.3);
+      padding: 0.4rem 1.2rem;
+      border-radius: var(--r-pill);
+      margin-bottom: 1.2rem;
+    }
 
-      /* ── Speaker Category Labels ── */
-      .spk-section {
-        padding: 5.5rem 0;
-        position: relative;
-      }
+    .page-hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.6rem, 7vw, 4.5rem);
+      font-weight: 700;
+      color: var(--offwhite);
+      line-height: 1.08;
+      margin-bottom: 1rem;
+      letter-spacing: -0.025em;
+    }
 
-      .spk-section + .spk-section {
-        padding-top: 0;
-      }
+    .page-hero-title span {
+      color: var(--saffron);
+    }
 
-      .spk-cat-label {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.6rem;
-        font-size: 0.72rem;
-        font-weight: 700;
-        letter-spacing: 0.22em;
-        text-transform: uppercase;
-        padding: 0.38rem 1.1rem;
-        border-radius: var(--r-pill);
-        margin-bottom: 0.85rem;
-      }
+    .page-hero-desc {
+      font-size: 1rem;
+      color: rgba(248, 238, 224, 0.68);
+      max-width: 500px;
+      margin: 0 auto 2rem;
+      line-height: 1.78;
+    }
 
-      .cat-chief {
-        color: var(--saffron);
-        background: rgba(244, 166, 35, 0.13);
-        border: 1px solid rgba(244, 166, 35, 0.28);
-      }
+    /* ── Speaker Category Labels ── */
+    .spk-section {
+      padding: 5.5rem 0;
+      position: relative;
+    }
 
-      .cat-keynote {
-        color: var(--terracotta);
-        background: rgba(192, 91, 58, 0.11);
-        border: 1px solid rgba(192, 91, 58, 0.26);
-      }
+    .spk-section+.spk-section {
+      padding-top: 0;
+    }
 
-      .cat-plenary {
-        color: var(--teal-vivid);
-        background: rgba(13, 138, 122, 0.11);
-        border: 1px solid rgba(13, 138, 122, 0.26);
-      }
+    .spk-cat-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      padding: 0.38rem 1.1rem;
+      border-radius: var(--r-pill);
+      margin-bottom: 0.85rem;
+    }
 
-      /* ── CHIEF GUEST — full-width hero card ── */
-      .chief-card {
-        display: grid;
-        grid-template-columns: 420px 1fr;
-        gap: 0;
-        border-radius: var(--r-xl);
-        overflow: hidden;
-        box-shadow: var(--shadow-xl);
-        background: var(--offwhite);
-        border: 1.5px solid rgba(44, 26, 14, 0.1);
-        transition: box-shadow var(--t) var(--ease);
-        position: relative;
-      }
+    .cat-chief {
+      color: var(--saffron);
+      background: rgba(244, 166, 35, 0.13);
+      border: 1px solid rgba(244, 166, 35, 0.28);
+    }
 
-      .chief-card:hover {
-        box-shadow: var(--shadow-xl);
-      }
+    .cat-keynote {
+      color: var(--terracotta);
+      background: rgba(192, 91, 58, 0.11);
+      border: 1px solid rgba(192, 91, 58, 0.26);
+    }
 
-      /* Left photo panel */
-      .chief-photo-panel {
-        position: relative;
-        background: linear-gradient(
-          160deg,
+    .cat-plenary {
+      color: var(--teal-vivid);
+      background: rgba(13, 138, 122, 0.11);
+      border: 1px solid rgba(13, 138, 122, 0.26);
+    }
+
+    /* ── CHIEF GUEST — full-width hero card ── */
+    .chief-card {
+      display: grid;
+      grid-template-columns: 420px 1fr;
+      gap: 0;
+      border-radius: var(--r-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-xl);
+      background: var(--offwhite);
+      border: 1.5px solid rgba(44, 26, 14, 0.1);
+      transition: box-shadow var(--t) var(--ease);
+      position: relative;
+    }
+
+    .chief-card:hover {
+      box-shadow: var(--shadow-xl);
+    }
+
+    /* Left photo panel */
+    .chief-photo-panel {
+      position: relative;
+      background: linear-gradient(160deg,
           var(--bark) 0%,
           var(--bark-lite) 60%,
-          var(--mahogany) 100%
-        );
-        min-height: 520px;
-        display: flex;
-        align-items: flex-end;
-        overflow: hidden;
-      }
+          var(--mahogany) 100%);
+      min-height: 520px;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+    }
 
-      .chief-photo-panel::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background:
-          radial-gradient(
-            ellipse 80% 60% at 50% 20%,
-            rgba(192, 91, 58, 0.22) 0%,
-            transparent 60%
-          ),
-          radial-gradient(
-            ellipse 60% 50% at 20% 80%,
-            rgba(232, 150, 12, 0.14) 0%,
-            transparent 55%
-          );
-      }
+    .chief-photo-panel::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 20%,
+          rgba(192, 91, 58, 0.22) 0%,
+          transparent 60%),
+        radial-gradient(ellipse 60% 50% at 20% 80%,
+          rgba(232, 150, 12, 0.14) 0%,
+          transparent 55%);
+    }
 
-      .chief-img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: top center;
-        display: block;
-        position: absolute;
-        inset: 0;
-        mix-blend-mode: luminosity;
-        opacity: 0.82;
-        transition:
-          opacity 0.5s var(--ease),
-          transform 0.5s var(--ease);
-      }
+    .chief-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+      position: absolute;
+      inset: 0;
+      mix-blend-mode: luminosity;
+      opacity: 0.82;
+      transition:
+        opacity 0.5s var(--ease),
+        transform 0.5s var(--ease);
+    }
 
-      .chief-card:hover .chief-img {
-        opacity: 0.92;
-        transform: scale(1.03);
-      }
+    .chief-card:hover .chief-img {
+      opacity: 0.92;
+      transform: scale(1.03);
+    }
 
-      .chief-photo-overlay {
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(
-          to right,
+    .chief-photo-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right,
           rgba(28, 14, 6, 0) 0%,
-          rgba(28, 14, 6, 0.45) 100%
-        );
+          rgba(28, 14, 6, 0.45) 100%);
+    }
+
+    .chief-photo-bottom {
+      position: relative;
+      z-index: 2;
+      padding: 2rem;
+      width: 100%;
+    }
+
+    .chief-photo-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--saffron);
+      background: rgba(244, 166, 35, 0.2);
+      border: 1px solid rgba(244, 166, 35, 0.35);
+      padding: 0.3rem 0.8rem;
+      border-radius: var(--r-pill);
+      margin-bottom: 0.6rem;
+    }
+
+    .chief-photo-name {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--offwhite);
+      line-height: 1.2;
+    }
+
+    /* Right content panel */
+    .chief-content-panel {
+      padding: 3rem 3.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+    }
+
+    .chief-content-panel::before {
+      content: "";
+      position: absolute;
+      top: 3rem;
+      left: 0;
+      width: 4px;
+      bottom: 3rem;
+      background: linear-gradient(180deg,
+          var(--saffron),
+          var(--amber-glow),
+          rgba(232, 150, 12, 0.2));
+      border-radius: var(--r-pill);
+    }
+
+    .chief-name {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 700;
+      color: var(--text-heading);
+      line-height: 1.1;
+      margin-bottom: 0.6rem;
+    }
+
+    .chief-role-block {
+      margin-bottom: 1.8rem;
+    }
+
+    .chief-role {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--amber-glow);
+      margin-bottom: 0.2rem;
+    }
+
+    .chief-affil {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    .chief-bio {
+      color: var(--text-mid);
+      font-size: 0.96rem;
+      line-height: 1.85;
+    }
+
+    .chief-bio p+p {
+      margin-top: 1rem;
+    }
+
+    .chief-stats {
+      display: flex;
+      gap: 2rem;
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(44, 26, 14, 0.09);
+      flex-wrap: wrap;
+    }
+
+    .chief-stat strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--amber-glow);
+      line-height: 1;
+    }
+
+    .chief-stat span {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    /* ── KEYNOTE SPEAKER — large two-column alternating ── */
+    .keynote-card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      border-radius: var(--r-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      background: var(--cream);
+      border: 1.5px solid rgba(44, 26, 14, 0.09);
+      margin-bottom: 3rem;
+      transition:
+        box-shadow var(--t) var(--ease),
+        transform var(--t) var(--ease);
+    }
+
+    .keynote-card:hover {
+      box-shadow: var(--shadow-xl);
+      transform: translateY(-4px);
+    }
+
+    /* Alternate photo side */
+    .keynote-card.flip {
+      direction: rtl;
+    }
+
+    .keynote-card.flip>* {
+      direction: ltr;
+    }
+
+    .keynote-photo-panel {
+      position: relative;
+      min-height: 440px;
+      overflow: hidden;
+    }
+
+    .keynote-photo-bg {
+      position: absolute;
+      inset: 0;
+    }
+
+    .keynote-photo-bg.bg-1 {
+      background: linear-gradient(145deg, var(--ocean) 0%, var(--bark) 100%);
+    }
+
+    .keynote-photo-bg.bg-2 {
+      background: linear-gradient(145deg, var(--moss) 0%, var(--bark) 100%);
+    }
+
+    .keynote-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+      position: absolute;
+      inset: 0;
+      mix-blend-mode: luminosity;
+      opacity: 0.78;
+      transition:
+        opacity 0.5s var(--ease),
+        transform 0.5s var(--ease);
+    }
+
+    .keynote-card:hover .keynote-img {
+      opacity: 0.9;
+      transform: scale(1.04);
+    }
+
+    .keynote-photo-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top,
+          rgba(44, 26, 14, 0.55) 0%,
+          transparent 50%);
+    }
+
+    .keynote-photo-info {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 1.6rem 1.8rem;
+      z-index: 2;
+    }
+
+    .keynote-photo-tag {
+      display: inline-block;
+      font-size: 0.66rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--sand);
+      background: rgba(44, 26, 14, 0.45);
+      border: 1px solid rgba(232, 201, 154, 0.25);
+      padding: 0.28rem 0.7rem;
+      border-radius: var(--r-pill);
+      margin-bottom: 0.45rem;
+      backdrop-filter: blur(6px);
+    }
+
+    .keynote-photo-name {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.15;
+    }
+
+    .keynote-content-panel {
+      padding: 3rem 2.8rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+    }
+
+    .keynote-content-panel::after {
+      content: '"';
+      position: absolute;
+      top: 1.5rem;
+      right: 2rem;
+      font-family: var(--font-display);
+      font-size: 7rem;
+      line-height: 1;
+      color: rgba(192, 91, 58, 0.08);
+      font-style: italic;
+      pointer-events: none;
+    }
+
+    .keynote-name {
+      font-family: var(--font-display);
+      font-size: clamp(1.5rem, 2.8vw, 2.1rem);
+      font-weight: 700;
+      color: var(--text-heading);
+      margin-bottom: 0.35rem;
+      line-height: 1.15;
+    }
+
+    .keynote-role {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--terracotta);
+      margin-bottom: 0.2rem;
+    }
+
+    .keynote-dept {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      margin-bottom: 0.2rem;
+    }
+
+    .keynote-uni {
+      font-size: 0.84rem;
+      color: var(--ocean);
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+    }
+
+    .keynote-divider {
+      width: 48px;
+      height: 3px;
+      background: linear-gradient(90deg,
+          var(--terracotta),
+          var(--amber-glow));
+      border-radius: var(--r-pill);
+      margin-bottom: 1.4rem;
+    }
+
+    .keynote-bio {
+      color: var(--text-mid);
+      font-size: 0.93rem;
+      line-height: 1.82;
+    }
+
+    .keynote-bio p+p {
+      margin-top: 0.85rem;
+    }
+
+    .keynote-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1.75rem;
+    }
+
+    .keynote-tag {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.28rem 0.8rem;
+      border-radius: var(--r-pill);
+      background: var(--parchment);
+      color: var(--text-muted);
+      border: 1px solid rgba(44, 26, 14, 0.1);
+    }
+
+    /* ── PLENARY SPEAKERS — card grid ── */
+    .plenary-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.75rem;
+    }
+
+    .plenary-card {
+      background: var(--cream);
+      border-radius: var(--r-lg);
+      border: 1.5px solid rgba(44, 26, 14, 0.09);
+      box-shadow: var(--shadow-xs);
+      overflow: hidden;
+      transition: all var(--t) var(--ease);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .plenary-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform var(--t) var(--ease);
+    }
+
+    .plenary-card:nth-child(1)::before {
+      background: linear-gradient(90deg, var(--teal-vivid), var(--lagoon));
+    }
+
+    .plenary-card:nth-child(2)::before {
+      background: linear-gradient(90deg, var(--violet), var(--plum));
+    }
+
+    .plenary-card:nth-child(3)::before {
+      background: linear-gradient(90deg, var(--moss), var(--fern));
+    }
+
+    .plenary-card:nth-child(4)::before {
+      background: linear-gradient(90deg, var(--amber-glow), var(--gold));
+    }
+
+    .plenary-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-md);
+      border-color: rgba(44, 26, 14, 0.15);
+      background: var(--offwhite);
+    }
+
+    .plenary-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .plenary-photo-wrap {
+      position: relative;
+      height: 240px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .plenary-photo-bg-1 {
+      background: linear-gradient(145deg,
+          var(--teal-vivid) 0%,
+          var(--bark) 100%);
+    }
+
+    .plenary-photo-bg-2 {
+      background: linear-gradient(145deg, var(--violet) 0%, var(--bark) 100%);
+    }
+
+    .plenary-photo-bg-3 {
+      background: linear-gradient(145deg,
+          var(--moss) 0%,
+          var(--bark-lite) 100%);
+    }
+
+    .plenary-photo-bg-4 {
+      background: linear-gradient(145deg,
+          var(--amber-glow) 0%,
+          var(--bark) 100%);
+    }
+
+    .plenary-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+      mix-blend-mode: luminosity;
+      opacity: 0.8;
+      transition:
+        opacity 0.5s var(--ease),
+        transform 0.5s var(--ease);
+    }
+
+    .plenary-card:hover .plenary-img {
+      opacity: 0.92;
+      transform: scale(1.05);
+    }
+
+    .plenary-photo-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top,
+          rgba(44, 26, 14, 0.6) 0%,
+          transparent 55%);
+    }
+
+    .plenary-photo-tag {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      font-size: 0.64rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--sand);
+      background: rgba(44, 26, 14, 0.55);
+      border: 1px solid rgba(232, 201, 154, 0.22);
+      padding: 0.26rem 0.7rem;
+      border-radius: var(--r-pill);
+      backdrop-filter: blur(6px);
+    }
+
+    .plenary-photo-country {
+      position: absolute;
+      bottom: 0.9rem;
+      right: 1rem;
+      font-size: 1.2rem;
+    }
+
+    .plenary-body {
+      padding: 1.75rem 1.6rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .plenary-name {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-heading);
+      margin-bottom: 0.3rem;
+      line-height: 1.2;
+    }
+
+    .plenary-role {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--teal-vivid);
+      margin-bottom: 0.2rem;
+    }
+
+    .plenary-dept {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+
+    .plenary-divider {
+      width: 36px;
+      height: 2px;
+      background: var(--terracotta);
+      border-radius: var(--r-pill);
+      margin-bottom: 1rem;
+    }
+
+    .plenary-bio {
+      font-size: 0.88rem;
+      color: var(--text-mid);
+      line-height: 1.78;
+      flex: 1;
+    }
+
+    /* ── Highlights / Credential pills ── */
+    .credential-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1.2rem;
+    }
+
+    .credential-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.74rem;
+      font-weight: 500;
+      padding: 0.3rem 0.8rem;
+      border-radius: var(--r-pill);
+      background: var(--parchment);
+      color: var(--text-mid);
+      border: 1px solid rgba(44, 26, 14, 0.1);
+    }
+
+    .credential-pill .cp-icon {
+      font-size: 0.85rem;
+    }
+
+    /* ── Divider between sections ── */
+    .section-divider {
+      width: 80px;
+      height: 3px;
+      margin: 0 auto 4rem;
+      background: linear-gradient(90deg,
+          var(--terracotta),
+          var(--amber-glow),
+          transparent);
+      border-radius: var(--r-pill);
+    }
+
+    /* ── CTA at bottom ── */
+    .speakers-cta {
+      margin-top: 5rem;
+      background: linear-gradient(135deg,
+          var(--bark) 0%,
+          var(--bark-lite) 100%);
+      border-radius: var(--r-xl);
+      padding: 3.5rem 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(232, 201, 154, 0.1);
+    }
+
+    .speakers-cta::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 60% at 15% 50%,
+          rgba(192, 91, 58, 0.18) 0%,
+          transparent 55%),
+        radial-gradient(ellipse 50% 60% at 85% 50%,
+          rgba(13, 138, 122, 0.13) 0%,
+          transparent 55%);
+      pointer-events: none;
+    }
+
+    .speakers-cta h3 {
+      font-family: var(--font-display);
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      color: var(--offwhite);
+      margin-bottom: 0.75rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .speakers-cta p {
+      color: rgba(248, 238, 224, 0.68);
+      font-size: 1rem;
+      line-height: 1.75;
+      max-width: 520px;
+      margin: 0 auto 2rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .speakers-cta .cta-btns {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 1024px) {
+      .chief-card {
+        grid-template-columns: 340px 1fr;
       }
 
-      .chief-photo-bottom {
-        position: relative;
-        z-index: 2;
-        padding: 2rem;
-        width: 100%;
+      .keynote-card {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 860px) {
+      .chief-card {
+        grid-template-columns: 1fr;
       }
 
-      .chief-photo-tag {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.4rem;
-        font-size: 0.68rem;
-        font-weight: 700;
-        letter-spacing: 0.18em;
-        text-transform: uppercase;
-        color: var(--saffron);
-        background: rgba(244, 166, 35, 0.2);
-        border: 1px solid rgba(244, 166, 35, 0.35);
-        padding: 0.3rem 0.8rem;
-        border-radius: var(--r-pill);
-        margin-bottom: 0.6rem;
+      .chief-photo-panel {
+        min-height: 380px;
       }
 
-      .chief-photo-name {
-        font-family: var(--font-display);
-        font-size: 1.5rem;
-        font-weight: 700;
-        color: var(--offwhite);
-        line-height: 1.2;
-      }
-
-      /* Right content panel */
       .chief-content-panel {
-        padding: 3rem 3.5rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        position: relative;
+        padding: 2.5rem 2rem;
       }
 
       .chief-content-panel::before {
-        content: "";
-        position: absolute;
-        top: 3rem;
-        left: 0;
-        width: 4px;
-        bottom: 3rem;
-        background: linear-gradient(
-          180deg,
-          var(--saffron),
-          var(--amber-glow),
-          rgba(232, 150, 12, 0.2)
-        );
-        border-radius: var(--r-pill);
+        display: none;
       }
 
-      .chief-name {
-        font-family: var(--font-display);
-        font-size: clamp(1.8rem, 3.5vw, 2.8rem);
-        font-weight: 700;
-        color: var(--text-heading);
-        line-height: 1.1;
-        margin-bottom: 0.6rem;
-      }
-
-      .chief-role-block {
-        margin-bottom: 1.8rem;
-      }
-
-      .chief-role {
-        font-size: 0.9rem;
-        font-weight: 600;
-        color: var(--amber-glow);
-        margin-bottom: 0.2rem;
-      }
-
-      .chief-affil {
-        font-size: 0.88rem;
-        color: var(--text-muted);
-        line-height: 1.55;
-      }
-
-      .chief-bio {
-        color: var(--text-mid);
-        font-size: 0.96rem;
-        line-height: 1.85;
-      }
-
-      .chief-bio p + p {
-        margin-top: 1rem;
-      }
-
-      .chief-stats {
-        display: flex;
-        gap: 2rem;
-        margin-top: 2rem;
-        padding-top: 1.5rem;
-        border-top: 1px solid rgba(44, 26, 14, 0.09);
-        flex-wrap: wrap;
-      }
-
-      .chief-stat strong {
-        display: block;
-        font-family: var(--font-display);
-        font-size: 1.8rem;
-        font-weight: 700;
-        color: var(--amber-glow);
-        line-height: 1;
-      }
-
-      .chief-stat span {
-        font-size: 0.76rem;
-        color: var(--text-muted);
-        text-transform: uppercase;
-        letter-spacing: 0.12em;
-      }
-
-      /* ── KEYNOTE SPEAKER — large two-column alternating ── */
       .keynote-card {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 0;
-        border-radius: var(--r-xl);
-        overflow: hidden;
-        box-shadow: var(--shadow-lg);
-        background: var(--cream);
-        border: 1.5px solid rgba(44, 26, 14, 0.09);
-        margin-bottom: 3rem;
-        transition:
-          box-shadow var(--t) var(--ease),
-          transform var(--t) var(--ease);
+        grid-template-columns: 1fr;
       }
 
-      .keynote-card:hover {
-        box-shadow: var(--shadow-xl);
-        transform: translateY(-4px);
-      }
-
-      /* Alternate photo side */
       .keynote-card.flip {
-        direction: rtl;
-      }
-      .keynote-card.flip > * {
         direction: ltr;
       }
 
       .keynote-photo-panel {
-        position: relative;
-        min-height: 440px;
-        overflow: hidden;
-      }
-
-      .keynote-photo-bg {
-        position: absolute;
-        inset: 0;
-      }
-
-      .keynote-photo-bg.bg-1 {
-        background: linear-gradient(145deg, var(--ocean) 0%, var(--bark) 100%);
-      }
-      .keynote-photo-bg.bg-2 {
-        background: linear-gradient(145deg, var(--moss) 0%, var(--bark) 100%);
-      }
-
-      .keynote-img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: top center;
-        display: block;
-        position: absolute;
-        inset: 0;
-        mix-blend-mode: luminosity;
-        opacity: 0.78;
-        transition:
-          opacity 0.5s var(--ease),
-          transform 0.5s var(--ease);
-      }
-
-      .keynote-card:hover .keynote-img {
-        opacity: 0.9;
-        transform: scale(1.04);
-      }
-
-      .keynote-photo-overlay {
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(
-          to top,
-          rgba(44, 26, 14, 0.55) 0%,
-          transparent 50%
-        );
-      }
-
-      .keynote-photo-info {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        padding: 1.6rem 1.8rem;
-        z-index: 2;
-      }
-
-      .keynote-photo-tag {
-        display: inline-block;
-        font-size: 0.66rem;
-        font-weight: 700;
-        letter-spacing: 0.18em;
-        text-transform: uppercase;
-        color: var(--sand);
-        background: rgba(44, 26, 14, 0.45);
-        border: 1px solid rgba(232, 201, 154, 0.25);
-        padding: 0.28rem 0.7rem;
-        border-radius: var(--r-pill);
-        margin-bottom: 0.45rem;
-        backdrop-filter: blur(6px);
-      }
-
-      .keynote-photo-name {
-        font-family: var(--font-display);
-        font-size: 1.4rem;
-        font-weight: 700;
-        color: #fff;
-        line-height: 1.15;
+        min-height: 300px;
       }
 
       .keynote-content-panel {
-        padding: 3rem 2.8rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        position: relative;
+        padding: 2rem 1.75rem;
       }
 
-      .keynote-content-panel::after {
-        content: '"';
-        position: absolute;
-        top: 1.5rem;
-        right: 2rem;
-        font-family: var(--font-display);
-        font-size: 7rem;
-        line-height: 1;
-        color: rgba(192, 91, 58, 0.08);
-        font-style: italic;
-        pointer-events: none;
-      }
-
-      .keynote-name {
-        font-family: var(--font-display);
-        font-size: clamp(1.5rem, 2.8vw, 2.1rem);
-        font-weight: 700;
-        color: var(--text-heading);
-        margin-bottom: 0.35rem;
-        line-height: 1.15;
-      }
-
-      .keynote-role {
-        font-size: 0.85rem;
-        font-weight: 600;
-        color: var(--terracotta);
-        margin-bottom: 0.2rem;
-      }
-      .keynote-dept {
-        font-size: 0.84rem;
-        color: var(--text-muted);
-        margin-bottom: 0.2rem;
-      }
-      .keynote-uni {
-        font-size: 0.84rem;
-        color: var(--ocean);
-        font-weight: 500;
-        margin-bottom: 1.5rem;
-      }
-
-      .keynote-divider {
-        width: 48px;
-        height: 3px;
-        background: linear-gradient(
-          90deg,
-          var(--terracotta),
-          var(--amber-glow)
-        );
-        border-radius: var(--r-pill);
-        margin-bottom: 1.4rem;
-      }
-
-      .keynote-bio {
-        color: var(--text-mid);
-        font-size: 0.93rem;
-        line-height: 1.82;
-      }
-
-      .keynote-bio p + p {
-        margin-top: 0.85rem;
-      }
-
-      .keynote-tags {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-        margin-top: 1.75rem;
-      }
-
-      .keynote-tag {
-        font-size: 0.72rem;
-        font-weight: 600;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        padding: 0.28rem 0.8rem;
-        border-radius: var(--r-pill);
-        background: var(--parchment);
-        color: var(--text-muted);
-        border: 1px solid rgba(44, 26, 14, 0.1);
-      }
-
-      /* ── PLENARY SPEAKERS — card grid ── */
-      .plenary-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-        gap: 1.75rem;
-      }
-
-      .plenary-card {
-        background: var(--cream);
-        border-radius: var(--r-lg);
-        border: 1.5px solid rgba(44, 26, 14, 0.09);
-        box-shadow: var(--shadow-xs);
-        overflow: hidden;
-        transition: all var(--t) var(--ease);
-        display: flex;
-        flex-direction: column;
-        position: relative;
-      }
-
-      .plenary-card::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 4px;
-        transform: scaleX(0);
-        transform-origin: left;
-        transition: transform var(--t) var(--ease);
-      }
-
-      .plenary-card:nth-child(1)::before {
-        background: linear-gradient(90deg, var(--teal-vivid), var(--lagoon));
-      }
-      .plenary-card:nth-child(2)::before {
-        background: linear-gradient(90deg, var(--violet), var(--plum));
-      }
-      .plenary-card:nth-child(3)::before {
-        background: linear-gradient(90deg, var(--moss), var(--fern));
-      }
-      .plenary-card:nth-child(4)::before {
-        background: linear-gradient(90deg, var(--amber-glow), var(--gold));
-      }
-
-      .plenary-card:hover {
-        transform: translateY(-8px);
-        box-shadow: var(--shadow-md);
-        border-color: rgba(44, 26, 14, 0.15);
-        background: var(--offwhite);
-      }
-
-      .plenary-card:hover::before {
-        transform: scaleX(1);
-      }
-
-      .plenary-photo-wrap {
-        position: relative;
-        height: 240px;
-        overflow: hidden;
-        flex-shrink: 0;
-      }
-
-      .plenary-photo-bg-1 {
-        background: linear-gradient(
-          145deg,
-          var(--teal-vivid) 0%,
-          var(--bark) 100%
-        );
-      }
-      .plenary-photo-bg-2 {
-        background: linear-gradient(145deg, var(--violet) 0%, var(--bark) 100%);
-      }
-      .plenary-photo-bg-3 {
-        background: linear-gradient(
-          145deg,
-          var(--moss) 0%,
-          var(--bark-lite) 100%
-        );
-      }
-      .plenary-photo-bg-4 {
-        background: linear-gradient(
-          145deg,
-          var(--amber-glow) 0%,
-          var(--bark) 100%
-        );
-      }
-
-      .plenary-img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: top center;
-        display: block;
-        mix-blend-mode: luminosity;
-        opacity: 0.8;
-        transition:
-          opacity 0.5s var(--ease),
-          transform 0.5s var(--ease);
-      }
-
-      .plenary-card:hover .plenary-img {
-        opacity: 0.92;
-        transform: scale(1.05);
-      }
-
-      .plenary-photo-overlay {
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(
-          to top,
-          rgba(44, 26, 14, 0.6) 0%,
-          transparent 55%
-        );
-      }
-
-      .plenary-photo-tag {
-        position: absolute;
-        top: 1rem;
-        left: 1rem;
-        font-size: 0.64rem;
-        font-weight: 700;
-        letter-spacing: 0.16em;
-        text-transform: uppercase;
-        color: var(--sand);
-        background: rgba(44, 26, 14, 0.55);
-        border: 1px solid rgba(232, 201, 154, 0.22);
-        padding: 0.26rem 0.7rem;
-        border-radius: var(--r-pill);
-        backdrop-filter: blur(6px);
-      }
-
-      .plenary-photo-country {
-        position: absolute;
-        bottom: 0.9rem;
-        right: 1rem;
-        font-size: 1.2rem;
-      }
-
-      .plenary-body {
-        padding: 1.75rem 1.6rem;
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-      }
-
-      .plenary-name {
-        font-family: var(--font-display);
-        font-size: 1.25rem;
-        font-weight: 700;
-        color: var(--text-heading);
-        margin-bottom: 0.3rem;
-        line-height: 1.2;
-      }
-
-      .plenary-role {
-        font-size: 0.8rem;
-        font-weight: 600;
-        color: var(--teal-vivid);
-        margin-bottom: 0.2rem;
-      }
-      .plenary-dept {
-        font-size: 0.8rem;
-        color: var(--text-muted);
-        margin-bottom: 1rem;
-      }
-
-      .plenary-divider {
-        width: 36px;
-        height: 2px;
-        background: var(--terracotta);
-        border-radius: var(--r-pill);
-        margin-bottom: 1rem;
-      }
-
-      .plenary-bio {
-        font-size: 0.88rem;
-        color: var(--text-mid);
-        line-height: 1.78;
-        flex: 1;
-      }
-
-      /* ── Highlights / Credential pills ── */
-      .credential-pills {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-        margin-top: 1.2rem;
-      }
-
-      .credential-pill {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.35rem;
-        font-size: 0.74rem;
-        font-weight: 500;
-        padding: 0.3rem 0.8rem;
-        border-radius: var(--r-pill);
-        background: var(--parchment);
-        color: var(--text-mid);
-        border: 1px solid rgba(44, 26, 14, 0.1);
-      }
-
-      .credential-pill .cp-icon {
-        font-size: 0.85rem;
-      }
-
-      /* ── Divider between sections ── */
-      .section-divider {
-        width: 80px;
-        height: 3px;
-        margin: 0 auto 4rem;
-        background: linear-gradient(
-          90deg,
-          var(--terracotta),
-          var(--amber-glow),
-          transparent
-        );
-        border-radius: var(--r-pill);
-      }
-
-      /* ── CTA at bottom ── */
       .speakers-cta {
-        margin-top: 5rem;
-        background: linear-gradient(
-          135deg,
-          var(--bark) 0%,
-          var(--bark-lite) 100%
-        );
-        border-radius: var(--r-xl);
-        padding: 3.5rem 4rem;
-        text-align: center;
-        position: relative;
-        overflow: hidden;
-        border: 1px solid rgba(232, 201, 154, 0.1);
+        padding: 2.5rem 2rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .plenary-grid {
+        grid-template-columns: 1fr;
       }
 
-      .speakers-cta::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background:
-          radial-gradient(
-            ellipse 60% 60% at 15% 50%,
-            rgba(192, 91, 58, 0.18) 0%,
-            transparent 55%
-          ),
-          radial-gradient(
-            ellipse 50% 60% at 85% 50%,
-            rgba(13, 138, 122, 0.13) 0%,
-            transparent 55%
-          );
-        pointer-events: none;
+      .chief-stats {
+        gap: 1.25rem;
       }
+    }
+  </style>
+</head>
 
-      .speakers-cta h3 {
-        font-family: var(--font-display);
-        font-size: clamp(1.6rem, 3.5vw, 2.4rem);
-        color: var(--offwhite);
-        margin-bottom: 0.75rem;
-        position: relative;
-        z-index: 1;
-      }
+<body>
+  <!-- ── NAVBAR ── -->
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="./../index.html#home" class="nav-logo">
+        <img src="./../images/web/LOGO.png" alt="RESCON logo" class="logo-img" width="72" height="72" />
+        <span>RESCON<br /><em>2026</em></span>
+      </a>
 
-      .speakers-cta p {
-        color: rgba(248, 238, 224, 0.68);
-        font-size: 1rem;
-        line-height: 1.75;
-        max-width: 520px;
-        margin: 0 auto 2rem;
-        position: relative;
-        z-index: 1;
-      }
+      <label for="nav-toggle" class="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </label>
 
-      .speakers-cta .cta-btns {
-        display: flex;
-        gap: 1rem;
-        justify-content: center;
-        flex-wrap: wrap;
-        position: relative;
-        z-index: 1;
-      }
+      <ul class="nav-links">
+        <li><a href="./../index.html">Home</a></li>
+        <li><a href="./../index.html#about">About</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" id="callForPapersBtn">Call for Papers <span
+              style="font-size: 0.8em; margin-left: 2px;">▼</span></a>
+          <ul class="dropdown-menu" id="callForPapersMenu">
+            <li><a href="./../index.html#dates">Important Dates</a></li>
+            <li><a href="./../guidelines/index.html">Guidelines</a></li>
+            <li><a href="">Submit</a></li>
+          </ul>
+        </li>
+        <li><a href="./../index.html#committee">Committees</a></li>
+        <li><a href=".././workshops/index.html">Workshops</a></li>
+        <li><a href="./../index.html#submit">Submit</a></li>
+        <li><a href="../speakers/index.html">Speakers</a></li>
+        <li><a href=".././gallery/index.html">Past Conferences</a></li>
+        <li><a href="./../index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <label for="nav-toggle" class="nav-overlay"></label>
 
-      /* ── Responsive ── */
-      @media (max-width: 1024px) {
-        .chief-card {
-          grid-template-columns: 340px 1fr;
-        }
-        .keynote-card {
-          grid-template-columns: 1fr 1fr;
-        }
-      }
-
-      @media (max-width: 860px) {
-        .chief-card {
-          grid-template-columns: 1fr;
-        }
-        .chief-photo-panel {
-          min-height: 380px;
-        }
-        .chief-content-panel {
-          padding: 2.5rem 2rem;
-        }
-        .chief-content-panel::before {
-          display: none;
-        }
-
-        .keynote-card {
-          grid-template-columns: 1fr;
-        }
-        .keynote-card.flip {
-          direction: ltr;
-        }
-        .keynote-photo-panel {
-          min-height: 300px;
-        }
-        .keynote-content-panel {
-          padding: 2rem 1.75rem;
-        }
-
-        .speakers-cta {
-          padding: 2.5rem 2rem;
-        }
-      }
-
-      @media (max-width: 600px) {
-        .plenary-grid {
-          grid-template-columns: 1fr;
-        }
-        .chief-stats {
-          gap: 1.25rem;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <!-- ── NAVBAR ── -->
-    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
-    <nav class="navbar">
-      <div class="nav-inner">
-        <a href="#home" class="nav-logo">
-          <img
-            src="./../images/web/LOGO.png"
-            alt="RESCON logo"
-            class="logo-img"
-            width="72"
-            height="72"
-          />
-          <span>RESCON<br /><em>2026</em></span>
-        </a>
-
-        <label for="nav-toggle" class="hamburger" aria-label="Toggle menu">
-          <span></span><span></span><span></span>
-        </label>
-
-        <ul class="nav-links">
-          <li><a href="./../index.html">Home</a></li>
-          <li><a href="./../index.html#about">About</a></li>
-          <li><a href="./../index.html#dates">Dates</a></li>
-          <li><a href="./../index.html#committee">Committees</a></li>
-          <li><a href=".././workshops/index.html">Workshops</a></li>
-          <li><a href="./../index.html#submit">Submit</a></li>
-          <li><a href="../speakers/index.html">Speakers</a></li>
-          <li><a href=".././gallery/index.html">Past Conferences</a></li>
-          <li><a href="./../index.html#contact">Contact</a></li>
-        </ul>
+  <!-- ── PAGE HERO ── -->
+  <section class="page-hero">
+    <div class="page-hero-rings">
+      <div class="ring r1"></div>
+      <div class="ring r2"></div>
+      <div class="ring r3"></div>
+    </div>
+    <div class="page-hero-content">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="sep">/</span>
+        <span>Speakers</span>
       </div>
-    </nav>
-    <label for="nav-toggle" class="nav-overlay"></label>
-
-    <!-- ── PAGE HERO ── -->
-    <section class="page-hero">
-      <div class="page-hero-rings">
-        <div class="ring r1"></div>
-        <div class="ring r2"></div>
-        <div class="ring r3"></div>
-      </div>
-      <div class="page-hero-content">
-        <div class="breadcrumb">
-          <a href="index.html">Home</a>
-          <span class="sep">/</span>
-          <span>Speakers</span>
-        </div>
-        <div class="page-hero-badge">🎤 RESCON 2026</div>
-        <h1 class="page-hero-title">
-          Distinguished<br /><span>Speakers</span>
-        </h1>
-        <p class="page-hero-desc">
-          World-class scientists, researchers, and thought leaders sharing
-          breakthroughs in Earth, environmental, and life sciences at RESCON
-          2026.
-        </p>
-        <div
-          style="
+      <div class="page-hero-badge">🎤 RESCON 2026</div>
+      <h1 class="page-hero-title">
+        Distinguished<br /><span>Speakers</span>
+      </h1>
+      <p class="page-hero-desc">
+        World-class scientists, researchers, and thought leaders sharing
+        breakthroughs in Earth, environmental, and life sciences at RESCON
+        2026.
+      </p>
+      <div style="
             display: flex;
             gap: 0.75rem;
             justify-content: center;
             flex-wrap: wrap;
-          "
-        >
-          <!-- <a href="#keynote" class="btn btn-outline-light btn-sm"
+          ">
+        <!-- <a href="#keynote" class="btn btn-outline-light btn-sm"
             >Keynote Speakers</a
           >
           <a href="#plenary" class="btn btn-outline-light btn-sm"
             >Plenary Speakers</a
           > -->
-        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ═══════════════════════════════════════════
+  <!-- ═══════════════════════════════════════════
      CHIEF GUEST
 ═══════════════════════════════════════════ -->
 
-    <!-- ═══════════════════════════════════════════
+  <!-- ═══════════════════════════════════════════
      KEYNOTE SPEAKERS
 ═══════════════════════════════════════════ -->
-    <section
-      class="spk-section section-alt"
-      id="keynote"
-      style="padding-top: 2rem"
-    >
-      <div class="container">
-        <div class="section-header" style="margin-bottom: 2.5rem">
-          <span class="spk-cat-label cat-keynote">🎤 Keynote Speakers</span>
-          <h2 class="section-title">Keynote Speakers</h2>
-          <p class="section-desc">
-            Leading global researchers delivering plenary addresses on frontier
-            topics in science and innovation.
-          </p>
+  <section class="spk-section section-alt" id="keynote" style="padding-top: 2rem">
+    <div class="container">
+      <div class="section-header" style="margin-bottom: 2.5rem">
+        <span class="spk-cat-label cat-keynote">🎤 Keynote Speakers</span>
+        <h2 class="section-title">Keynote Speakers</h2>
+        <p class="section-desc">
+          Leading global researchers delivering plenary addresses on frontier
+          topics in science and innovation.
+        </p>
+      </div>
+
+      <!-- Keynote 1 — Prof. Suniti Karunatillake -->
+      <div class="keynote-card" id="k-suniti">
+        <div class="keynote-photo-panel">
+          <div class="keynote-photo-bg bg-1"></div>
+          <img class="keynote-img" src="" alt="Prof. Suniti Karunatillake" onerror="this.style.display = 'none'" />
+          <div class="keynote-photo-overlay"></div>
+          <div class="keynote-photo-info">
+            <div class="keynote-photo-tag">🎤 Keynote Speaker</div>
+            <div class="keynote-photo-name">Prof. Suniti Karunatillake</div>
+          </div>
         </div>
 
-        <!-- Keynote 1 — Prof. Suniti Karunatillake -->
-        <div class="keynote-card" id="k-suniti">
-          <div class="keynote-photo-panel">
-            <div class="keynote-photo-bg bg-1"></div>
-            <img
-              class="keynote-img"
-              src=""
-              alt="Prof. Suniti Karunatillake"
-              onerror="this.style.display = 'none'"
-            />
-            <div class="keynote-photo-overlay"></div>
-            <div class="keynote-photo-info">
-              <div class="keynote-photo-tag">🎤 Keynote Speaker</div>
-              <div class="keynote-photo-name">Prof. Suniti Karunatillake</div>
-            </div>
+        <div class="keynote-content-panel">
+          <span class="spk-cat-label cat-keynote" style="margin-bottom: 1rem">Keynote Speaker</span>
+          <h2 class="keynote-name">Prof. Suniti Karunatillake</h2>
+          <div class="keynote-role">
+            Professor in Planetary Science, Remote Sensing and Exobiology
           </div>
-
-          <div class="keynote-content-panel">
-            <span class="spk-cat-label cat-keynote" style="margin-bottom: 1rem"
-              >Keynote Speaker</span
-            >
-            <h2 class="keynote-name">Prof. Suniti Karunatillake</h2>
-            <div class="keynote-role">
-              Professor in Planetary Science, Remote Sensing and Exobiology
-            </div>
-            <div class="keynote-dept">Department of Geology and Geophysics</div>
-            <div class="keynote-uni">🇺🇸 Louisiana State University, USA</div>
-            <div class="keynote-divider"></div>
-            <div class="keynote-bio">
+          <div class="keynote-dept">Department of Geology and Geophysics</div>
+          <div class="keynote-uni">🇺🇸 Louisiana State University, USA</div>
+          <div class="keynote-divider"></div>
+          <!-- <div class="keynote-bio">
               <p>
                 Professor Suniti Karunatillake is a leading expert in planetary
                 science, specializing in remote sensing and exobiology. Her
@@ -1027,65 +1006,50 @@
                 journals and has been involved in international collaborations
                 on planetary science research.
               </p>
-            </div>
-            <div class="keynote-tags">
-              <span class="keynote-tag">🪐 Planetary Science</span>
-              <span class="keynote-tag">📡 Remote Sensing</span>
-              <span class="keynote-tag">🧬 Exobiology</span>
-              <span class="keynote-tag">🌍 Geology</span>
-              <span class="keynote-tag">⚡ Geophysics</span>
-            </div>
+            </div> -->
+          <div class="keynote-tags">
+            <span class="keynote-tag">🪐 Planetary Science</span>
+            <span class="keynote-tag">📡 Remote Sensing</span>
+            <span class="keynote-tag">🧬 Exobiology</span>
+            <span class="keynote-tag">🌍 Geology</span>
+            <span class="keynote-tag">⚡ Geophysics</span>
+          </div>
 
-            <div class="credential-pills" style="margin-top: 1.5rem">
-              <span class="credential-pill"
-                ><span class="cp-icon">🎓</span> Ph.D. in Planetary
-                Science</span
-              >
-              <span class="credential-pill"
-                ><span class="cp-icon">📄</span> Numerous Publications</span
-              >
-              <span class="credential-pill"
-                ><span class="cp-icon">🚀</span> Planetary Missions
-                Contributor</span
-              >
-              <span class="credential-pill"
-                ><span class="cp-icon">🌌</span> Astrobiology Research</span
-              >
-            </div>
+          <div class="credential-pills" style="margin-top: 1.5rem">
+            <span class="credential-pill"><span class="cp-icon">🎓</span> Ph.D. in Planetary
+              Science</span>
+            <span class="credential-pill"><span class="cp-icon">📄</span> Numerous Publications</span>
+            <span class="credential-pill"><span class="cp-icon">🚀</span> Planetary Missions
+              Contributor</span>
+            <span class="credential-pill"><span class="cp-icon">🌌</span> Astrobiology Research</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Keynote 2 — Prof. Zhao Yuyan (flipped) -->
+      <div class="keynote-card flip" id="k-zhao">
+        <div class="keynote-photo-panel">
+          <div class="keynote-photo-bg bg-2"></div>
+          <img class="keynote-img" src="" alt="Prof. Zhao Yuyan" onerror="this.style.display = 'none'" />
+          <div class="keynote-photo-overlay"></div>
+          <div class="keynote-photo-info">
+            <div class="keynote-photo-tag">🎤 Keynote Speaker</div>
+            <div class="keynote-photo-name">Prof. Zhao Yuyan</div>
           </div>
         </div>
 
-        <!-- Keynote 2 — Prof. Zhao Yuyan (flipped) -->
-        <div class="keynote-card flip" id="k-zhao">
-          <div class="keynote-photo-panel">
-            <div class="keynote-photo-bg bg-2"></div>
-            <img
-              class="keynote-img"
-              src=""
-              alt="Prof. Zhao Yuyan"
-              onerror="this.style.display = 'none'"
-            />
-            <div class="keynote-photo-overlay"></div>
-            <div class="keynote-photo-info">
-              <div class="keynote-photo-tag">🎤 Keynote Speaker</div>
-              <div class="keynote-photo-name">Prof. Zhao Yuyan</div>
-            </div>
+        <div class="keynote-content-panel">
+          <span class="spk-cat-label cat-keynote" style="margin-bottom: 1rem">Keynote Speaker</span>
+          <h2 class="keynote-name">Prof. Zhao Yuyan</h2>
+          <div class="keynote-role">Professor in Planetary Sciences</div>
+          <div class="keynote-dept">
+            International Research Center for Planetary Sciences
           </div>
-
-          <div class="keynote-content-panel">
-            <span class="spk-cat-label cat-keynote" style="margin-bottom: 1rem"
-              >Keynote Speaker</span
-            >
-            <h2 class="keynote-name">Prof. Zhao Yuyan</h2>
-            <div class="keynote-role">Professor in Planetary Sciences</div>
-            <div class="keynote-dept">
-              International Research Center for Planetary Sciences
-            </div>
-            <div class="keynote-uni">
-              🇨🇳 Chengdu University of Technology (CDUT), China
-            </div>
-            <div class="keynote-divider"></div>
-            <div class="keynote-bio">
+          <div class="keynote-uni">
+            🇨🇳 Chengdu University of Technology (CDUT), China
+          </div>
+          <div class="keynote-divider"></div>
+          <!-- <div class="keynote-bio">
               <p>
                 Professor Zhao Yuyan is a prominent figure in planetary
                 sciences, leading research at the International Research Center
@@ -1106,167 +1070,150 @@
                 recognition for her contributions to planetary science in China
                 and internationally.
               </p>
-            </div>
-            <div class="keynote-tags">
-              <span class="keynote-tag">🪐 Planetary Sciences</span>
-              <span class="keynote-tag">🌍 Planetary Geology</span>
-              <span class="keynote-tag">🔭 Exploration</span>
-              <span class="keynote-tag">🇨🇳 Chinese Research</span>
-              <span class="keynote-tag">🌌 Solar System Studies</span>
-            </div>
+            </div> -->
+          <div class="keynote-tags">
+            <span class="keynote-tag">🪐 Planetary Sciences</span>
+            <span class="keynote-tag">🌍 Planetary Geology</span>
+            <span class="keynote-tag">🔭 Exploration</span>
+            <span class="keynote-tag">🇨🇳 Chinese Research</span>
+            <span class="keynote-tag">🌌 Solar System Studies</span>
+          </div>
 
-            <div class="credential-pills" style="margin-top: 1.5rem">
-              <span class="credential-pill"
-                ><span class="cp-icon">🎓</span> Ph.D. in Planetary
-                Sciences</span
-              >
-              <span class="credential-pill"
-                ><span class="cp-icon">📄</span> Extensive Publications</span
-              >
-              <span class="credential-pill"
-                ><span class="cp-icon">🌐</span> International
-                Collaborations</span
-              >
-              <span class="credential-pill"
-                ><span class="cp-icon">🏆</span> Recognized Researcher</span
-              >
-            </div>
+          <div class="credential-pills" style="margin-top: 1.5rem">
+            <span class="credential-pill"><span class="cp-icon">🎓</span> Ph.D. in Planetary
+              Sciences</span>
+            <span class="credential-pill"><span class="cp-icon">📄</span> Extensive Publications</span>
+            <span class="credential-pill"><span class="cp-icon">🌐</span> International
+              Collaborations</span>
+            <span class="credential-pill"><span class="cp-icon">🏆</span> Recognized Researcher</span>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <div class="section-divider"></div>
+  <div class="section-divider"></div>
 
-    <!-- ── FOOTER ── -->
-    <footer class="footer" id="footer">
-      <div class="container">
-        <div class="footer-grid">
-          <div class="footer-brand">
-            <div class="footer-logo">
-              <img
-                src="./../images/web/Logo.png"
-                alt="RESCON logo"
-                class="logo-img"
-                width="72"
-                height="72"
-              />
-              RESCON 2026
-            </div>
+  <!-- ── FOOTER ── -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="./../images/web/Logo.png" alt="RESCON logo" class="logo-img" width="72" height="72" />
+            RESCON 2026
+          </div>
+          <p>
+            The Annual Research Congress of the Postgraduate Institute of
+            Science, University of Peradeniya — bringing together researchers,
+            scientists, and innovators in Earth &amp; Environmental Sciences.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-btn" title="Facebook">f</a>
+            <a href="#" class="social-btn" title="Twitter">𝕏</a>
+            <a href="#" class="social-btn" title="LinkedIn">in</a>
+            <a href="#" class="social-btn" title="YouTube">▶</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="index.html#about">About RESCON</a></li>
+            <li><a href="guidelines.html">Submission Guidelines</a></li>
+            <li><a href="workshops.html">Pre-Conference Workshops</a></li>
+            <li><a href="speakers.html">Keynote Speakers</a></li>
+            <li><a href="index.html#themes">Research Themes</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Resources</h5>
+          <ul>
+            <li><a href="#">Abstract Template</a></li>
+            <li><a href="#">Registration Form</a></li>
+            <li><a href="#">Conference Schedule</a></li>
+            <li><a href="#">Venue &amp; Travel</a></li>
+            <li><a href="#">Past Proceedings</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Organised By</h5>
+          <div class="footer-org">
+            <div class="org-logo">PGIS</div>
             <p>
-              The Annual Research Congress of the Postgraduate Institute of
-              Science, University of Peradeniya — bringing together researchers,
-              scientists, and innovators in Earth &amp; Environmental Sciences.
+              Postgraduate Institute of Science<br />University of
+              Peradeniya<br />Peradeniya 20400
             </p>
-            <div class="social-links">
-              <a href="#" class="social-btn" title="Facebook">f</a>
-              <a href="#" class="social-btn" title="Twitter">𝕏</a>
-              <a href="#" class="social-btn" title="LinkedIn">in</a>
-              <a href="#" class="social-btn" title="YouTube">▶</a>
-            </div>
           </div>
-          <div class="footer-col">
-            <h5>Quick Links</h5>
-            <ul>
-              <li><a href="index.html#about">About RESCON</a></li>
-              <li><a href="guidelines.html">Submission Guidelines</a></li>
-              <li><a href="workshops.html">Pre-Conference Workshops</a></li>
-              <li><a href="speakers.html">Keynote Speakers</a></li>
-              <li><a href="index.html#themes">Research Themes</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h5>Resources</h5>
-            <ul>
-              <li><a href="#">Abstract Template</a></li>
-              <li><a href="#">Registration Form</a></li>
-              <li><a href="#">Conference Schedule</a></li>
-              <li><a href="#">Venue &amp; Travel</a></li>
-              <li><a href="#">Past Proceedings</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h5>Organised By</h5>
-            <div class="footer-org">
-              <div class="org-logo">PGIS</div>
-              <p>
-                Postgraduate Institute of Science<br />University of
-                Peradeniya<br />Peradeniya 20400
-              </p>
-            </div>
-            <div
-              style="
+          <div style="
                 margin-top: 1rem;
                 font-size: 0.84rem;
                 color: rgba(248, 238, 224, 0.55);
-              "
-            >
-              <div>📞 +94 81 231 2796</div>
-              <div style="margin-top: 0.35rem">✉️ rescon2025@pgis.lk</div>
-            </div>
+              ">
+            <div>📞 +94 81 231 2796</div>
+            <div style="margin-top: 0.35rem">✉️ rescon2025@pgis.lk</div>
           </div>
         </div>
-        <div class="footer-bottom">
-          <p>
-            © 2026 RESCON · Postgraduate Institute of Science, University of
-            Peradeniya. All rights reserved.
-          </p>
-          <p>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Use</a>
-            <a href="https://www.pgis.lk" target="_blank" rel="noopener"
-              >www.pgis.lk ↗</a
-            >
-          </p>
-        </div>
       </div>
-    </footer>
+      <div class="footer-bottom">
+        <p>
+          © 2026 RESCON · Postgraduate Institute of Science, University of
+          Peradeniya. All rights reserved.
+        </p>
+        <p>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="https://www.pgis.lk" target="_blank" rel="noopener">www.pgis.lk ↗</a>
+        </p>
+      </div>
+    </div>
+  </footer>
 
-    <!-- ── BACK TO TOP ── -->
-    <button class="back-to-top" id="backToTop" aria-label="Back to top">
-      ↑
-    </button>
+  <!-- ── BACK TO TOP ── -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    ↑
+  </button>
 
-    <script>
-      /* Navbar shrink */
-      const navbar = document.getElementById("navbar");
-      const btt = document.getElementById("backToTop");
+  <script>
+    /* Navbar shrink */
+    const navbar = document.getElementById("navbar");
+    const btt = document.getElementById("backToTop");
 
-      window.addEventListener(
-        "scroll",
-        () => {
-          navbar.classList.toggle("shrink", window.scrollY > 60);
-          btt.classList.toggle("visible", window.scrollY > 200);
-        },
-        { passive: true },
-      );
+    window.addEventListener(
+      "scroll",
+      () => {
+        navbar.classList.toggle("shrink", window.scrollY > 60);
+        btt.classList.toggle("visible", window.scrollY > 200);
+      },
+      { passive: true },
+    );
 
-      btt.addEventListener("click", () =>
-        window.scrollTo({ top: 0, behavior: "smooth" }),
-      );
+    btt.addEventListener("click", () =>
+      window.scrollTo({ top: 0, behavior: "smooth" }),
+    );
 
-      /* Scroll-in animations */
-      const obs = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((e) => {
-            if (e.isIntersecting) {
-              e.target.style.opacity = "1";
-              e.target.style.transform = "translateY(0)";
-              obs.unobserve(e.target);
-            }
-          });
-        },
-        { threshold: 0.07 },
-      );
-
-      document
-        .querySelectorAll(".plenary-card, .keynote-card, .chief-card")
-        .forEach((el, i) => {
-          el.style.opacity = "0";
-          el.style.transform = "translateY(32px)";
-          el.style.transition = `opacity 0.65s ease ${i * 0.12}s, transform 0.65s ease ${i * 0.12}s`;
-          obs.observe(el);
+    /* Scroll-in animations */
+    const obs = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.style.opacity = "1";
+            e.target.style.transform = "translateY(0)";
+            obs.unobserve(e.target);
+          }
         });
-    </script>
-  </body>
+      },
+      { threshold: 0.07 },
+    );
+
+    document
+      .querySelectorAll(".plenary-card, .keynote-card, .chief-card")
+      .forEach((el, i) => {
+        el.style.opacity = "0";
+        el.style.transform = "translateY(32px)";
+        el.style.transition = `opacity 0.65s ease ${i * 0.12}s, transform 0.65s ease ${i * 0.12}s`;
+        obs.observe(el);
+      });
+  </script>
+</body>
+
 </html>
