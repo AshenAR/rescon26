@@ -354,7 +354,6 @@ img {
 .nav-inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   height: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -369,6 +368,7 @@ img {
   font-size: 1.3rem;
   font-weight: 800;
   color: var(--white);
+  margin-right: auto;
 }
 
 .nav-logo span {
@@ -399,6 +399,13 @@ img {
   display: flex;
   align-items: center;
   gap: 0.25rem;
+  margin-right: 1.5rem;
+}
+
+.pgis-logo {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
 }
 
 .nav-links a {
@@ -506,6 +513,7 @@ img {
   gap: 5px;
   cursor: pointer;
   padding: 0.5rem;
+  margin-left: 1rem;
 }
 
 .hamburger span {
@@ -899,12 +907,13 @@ img {
 }
 
 .hero-tag {
-  font-size: 0.82rem;
+  font-size: 1rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 1);
   margin-bottom: 1.5rem;
-  font-weight: 400;
+  font-weight: 600;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
 }
 
 .hero-title {
@@ -3143,6 +3152,10 @@ code {
   .hamburger {
     display: flex;
     z-index: 1002;
+  }
+
+  .pgis-logo {
+    height: 36px;
   }
 
   .nav-links {
