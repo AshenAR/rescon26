@@ -377,12 +377,20 @@ img {
 }
 
 .logo-img {
-  width: 32px;
-  height: 48px;
-  /*original - 64px*/
+  height: 200px;
+  width: auto;
+  margin-top: 10%;
   object-fit: contain;
-  /* border-radius: 50%; */
-  /* border: 1px solid rgba(255,255,255,0.25); */
+  transition: all var(--transition);
+}
+
+.navbar.shrink .logo-img {
+  /* Maintain initial height or remove resizing */
+  height: 200px;
+}
+
+.navbar.shrink .pgis-logo {
+  height: 100px;
 }
 
 .logo-icon {
@@ -403,9 +411,12 @@ img {
 }
 
 .pgis-logo {
-  height: 48px;
+  height: 100px;
   width: auto;
+  margin-top: 1%;
+
   object-fit: contain;
+  transition: all var(--transition);
 }
 
 .nav-links a {
@@ -988,7 +999,7 @@ img {
 
 .hero-buttons {
   position: absolute;
-  bottom: 2rem;
+  bottom: 4rem;
   left: 0;
   width: 100%;
   display: flex;
@@ -996,6 +1007,33 @@ img {
   justify-content: center;
   flex-wrap: wrap;
   z-index: 10;
+}
+
+.hero-links {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0;
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  z-index: 10;
+}
+
+.hero-links a {
+  color: var(--white);
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
+  text-decoration-color: var(--accent);
+  transition: all var(--transition, 0.3s ease);
+}
+
+.hero-links a:hover {
+  color: var(--accent);
+  text-decoration-color: var(--white);
 }
 
 .hero-doc-panel {
@@ -2890,6 +2928,12 @@ code {
   color: var(--white);
 }
 
+.footer-logo .logo-img {
+  height: 200px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
 .footer-brand p {
   font-size: 0.88rem;
   color: rgba(255, 255, 255, 0.5);
@@ -3154,8 +3198,9 @@ code {
     z-index: 1002;
   }
 
-  .pgis-logo {
-    height: 36px;
+  .pgis-logo,
+  .logo-img {
+    height: 120px;
   }
 
   .nav-links {
