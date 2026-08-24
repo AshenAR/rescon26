@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Speakers — RESCON 2026 | PGIS</title>
   <meta name="description"
-    content="Keynote, Plenary and Chief Guest Speakers of RESCON 2026 at the Postgraduate Institute of Science, University of Peradeniya." />
-  <link rel="stylesheet" href="./../style.css" />
+    content="Plenary, Plenary and Chief Guest Speakers of RESCON 2026 at the Postgraduate Institute of Science, University of Peradeniya." />
+  <link rel="stylesheet" href="./../../../../../style.css" />
   <style>
     /* ══════════════════════════════════════════
        SPEAKERS PAGE — ADDITIONAL STYLES
@@ -166,7 +166,7 @@
       border: 1px solid rgba(244, 166, 35, 0.28);
     }
 
-    .cat-keynote {
+    .cat-plenary {
       color: var(--terracotta);
       background: rgba(192, 91, 58, 0.11);
       border: 1px solid rgba(192, 91, 58, 0.26);
@@ -369,7 +369,7 @@
     }
 
     /* ── KEYNOTE SPEAKER — large two-column alternating ── */
-    .keynote-card {
+    .plenary-card {
       display: grid;
       grid-template-columns: 400px 1fr;
       gap: 0;
@@ -384,12 +384,12 @@
         transform var(--t) var(--ease);
     }
 
-    .keynote-card:hover {
+    .plenary-card:hover {
       box-shadow: var(--shadow-xl);
       transform: translateY(-4px);
     }
 
-    .keynote-left-col {
+    .plenary-left-col {
       display: flex;
       flex-direction: column;
       background: var(--cream);
@@ -400,15 +400,15 @@
     }
 
     /* Alternate photo side */
-    .keynote-card.flip {
+    .plenary-card.flip {
       direction: rtl;
     }
 
-    .keynote-card.flip>* {
+    .plenary-card.flip>* {
       direction: ltr;
     }
 
-    .keynote-photo-panel {
+    .plenary-photo-panel {
       width: 100%;
       display: flex;
       justify-content: center;
@@ -416,7 +416,7 @@
       position: relative;
     }
 
-    .keynote-img {
+    .plenary-img {
       width: 100%;
       max-width: 300px;
       aspect-ratio: 1 / 1;
@@ -433,14 +433,14 @@
         border-color 0.4s ease;
     }
 
-    .keynote-card:hover .keynote-img {
+    .plenary-card:hover .plenary-img {
       transform: translateY(-8px) scale(1.03);
       box-shadow: 0 20px 40px rgba(21, 54, 36, 0.18),
         0 4px 10px rgba(21, 54, 36, 0.08);
       border-color: var(--sky-mid);
     }
 
-    .keynote-content-panel {
+    .plenary-content-panel {
       padding: 2.2rem 2.5rem;
       display: flex;
       flex-direction: column;
@@ -448,7 +448,7 @@
       position: relative;
     }
 
-    .keynote-content-panel::after {
+    .plenary-content-panel::after {
       content: '"';
       position: absolute;
       top: 1.5rem;
@@ -461,7 +461,7 @@
       pointer-events: none;
     }
 
-    .keynote-name {
+    .plenary-name {
       font-family: var(--font-display);
       font-size: clamp(1.5rem, 2.8vw, 2.1rem);
       font-weight: 700;
@@ -470,27 +470,27 @@
       line-height: 1.15;
     }
 
-    .keynote-role {
+    .plenary-role {
       font-size: 0.85rem;
       font-weight: 600;
       color: var(--terracotta);
       margin-bottom: 0.2rem;
     }
 
-    .keynote-dept {
+    .plenary-dept {
       font-size: 0.84rem;
       color: var(--text-muted);
       margin-bottom: 0.2rem;
     }
 
-    .keynote-uni {
+    .plenary-uni {
       font-size: 0.84rem;
       color: var(--ocean);
       font-weight: 500;
       margin-bottom: 1.5rem;
     }
 
-    .keynote-divider {
+    .plenary-divider {
       width: 48px;
       height: 3px;
       background: linear-gradient(90deg,
@@ -500,7 +500,7 @@
       margin-bottom: 1.4rem;
     }
 
-    .keynote-bio {
+    .plenary-bio {
       color: var(--text-mid);
       font-size: 0.88rem;
       line-height: 1.7;
@@ -511,18 +511,18 @@
       scrollbar-color: rgba(44, 26, 14, 0.15) rgba(44, 26, 14, 0.05);
     }
 
-    .keynote-bio p+p {
+    .plenary-bio p+p {
       margin-top: 0.85rem;
     }
 
-    .keynote-tags {
+    .plenary-tags {
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
       margin-top: 1.75rem;
     }
 
-    .keynote-tag {
+    .plenary-tag {
       font-size: 0.72rem;
       font-weight: 600;
       letter-spacing: 0.08em;
@@ -719,27 +719,27 @@
 
     /* Custom Scrollbar for bios */
     .chief-bio::-webkit-scrollbar,
-    .keynote-bio::-webkit-scrollbar,
+    .plenary-bio::-webkit-scrollbar,
     .plenary-bio::-webkit-scrollbar {
       width: 6px;
     }
 
     .chief-bio::-webkit-scrollbar-track,
-    .keynote-bio::-webkit-scrollbar-track,
+    .plenary-bio::-webkit-scrollbar-track,
     .plenary-bio::-webkit-scrollbar-track {
       background: rgba(44, 26, 14, 0.05);
       border-radius: 4px;
     }
 
     .chief-bio::-webkit-scrollbar-thumb,
-    .keynote-bio::-webkit-scrollbar-thumb,
+    .plenary-bio::-webkit-scrollbar-thumb,
     .plenary-bio::-webkit-scrollbar-thumb {
       background: rgba(44, 26, 14, 0.15);
       border-radius: 4px;
     }
 
     .chief-bio::-webkit-scrollbar-thumb:hover,
-    .keynote-bio::-webkit-scrollbar-thumb:hover,
+    .plenary-bio::-webkit-scrollbar-thumb:hover,
     .plenary-bio::-webkit-scrollbar-thumb:hover {
       background: rgba(44, 26, 14, 0.25);
     }
@@ -843,7 +843,7 @@
         grid-template-columns: 340px 1fr;
       }
 
-      .keynote-card {
+      .plenary-card {
         grid-template-columns: 350px 1fr;
       }
     }
@@ -865,21 +865,21 @@
         display: none;
       }
 
-      .keynote-card {
+      .plenary-card {
         grid-template-columns: 1fr;
       }
 
-      .keynote-left-col {
+      .plenary-left-col {
         border-right: none;
         border-bottom: 1.5px solid rgba(44, 26, 14, 0.09);
         padding: 1.5rem;
       }
 
-      .keynote-card.flip {
+      .plenary-card.flip {
         direction: ltr;
       }
 
-      .keynote-content-panel {
+      .plenary-content-panel {
         padding: 2rem 1.75rem;
       }
 
@@ -921,7 +921,7 @@
       </div>
       <div class="page-hero-badge">🎤 RESCON 2026</div>
       <h1 class="page-hero-title">
-        Keynote<br /><span>Speakers</span>
+        Plenary<br /><span>Speakers</span>
       </h1>
       <p class="page-hero-desc">
         World-class scientists, researchers, and thought leaders sharing
@@ -934,8 +934,8 @@
             justify-content: center;
             flex-wrap: wrap;
           ">
-        <!-- <a href="#keynote" class="btn btn-outline-light btn-sm"
-            >Keynote Speakers</a
+        <!-- <a href="#plenary" class="btn btn-outline-light btn-sm"
+            >Plenary Speakers</a
           >
           <a href="#plenary" class="btn btn-outline-light btn-sm"
             >Plenary Speakers</a
@@ -947,36 +947,36 @@
   <!-- ═══════════════════════════════════════════
      KEYNOTE SPEAKERS
 ═══════════════════════════════════════════ -->
-  <section class="spk-section section-alt" id="keynote" style="padding-top: 2rem">
+  <section class="spk-section section-alt" id="plenary" style="padding-top: 2rem">
     <div class="container">
       <div class="section-header" style="margin-bottom: 2.5rem">
-        <span class="spk-cat-label cat-keynote">🎤 Keynote Speakers</span>
-        <h2 class="section-title">Keynote Speakers</h2>
+        <span class="spk-cat-label cat-plenary">🎤 Plenary Speakers</span>
+        <h2 class="section-title">Plenary Speakers</h2>
         <p class="section-desc">
           Leading global researchers delivering plenary addresses on frontier
           topics in science and innovation.
         </p>
       </div>
 
-      <!-- Keynote 1 — Prof. Suniti Karunatillake -->
-      <div class="keynote-card" id="k-suniti">
-        <div class="keynote-left-col">
-          <div class="keynote-photo-panel">
-            <img class="keynote-img" src="./../media/speakers/Professor Suniti.png" alt="Prof. Suniti Karunatillake"
+      <!-- Plenary 1 — Prof. Suniti Karunatillake -->
+      <div class="plenary-card" id="k-suniti">
+        <div class="plenary-left-col">
+          <div class="plenary-photo-panel">
+            <img class="plenary-img" src="./../../../../../media/speakers/Professor Suniti.png" alt="Prof. Suniti Karunatillake"
               onerror="this.style.display = 'none'" />
           </div>
         </div>
 
-        <div class="keynote-content-panel">
-          <span class="spk-cat-label cat-keynote" style="margin-bottom: 1rem">Keynote Speaker</span>
-          <h2 class="keynote-name">Prof. Suniti Karunatillake</h2>
-          <div class="keynote-role">
+        <div class="plenary-content-panel">
+          <span class="spk-cat-label cat-plenary" style="margin-bottom: 1rem">Plenary Speaker</span>
+          <h2 class="plenary-name">Prof. Suniti Karunatillake</h2>
+          <div class="plenary-role">
             Professor in Planetary Science, Remote Sensing and Exobiology
           </div>
-          <div class="keynote-dept">Department of Geology and Geophysics</div>
-          <div class="keynote-uni">Louisiana State University, USA</div>
+          <div class="plenary-dept">Department of Geology and Geophysics</div>
+          <div class="plenary-uni">Louisiana State University, USA</div>
 
-          <div class="keynote-bio">
+          <div class="plenary-bio">
             <p>
               Dr. Suniti Karunatillake is a planetary scientist and Associate Professor in the Department of
               Geology &amp; Geophysics at Louisiana State University. His research focuses on planetary
@@ -996,32 +996,32 @@
             </p>
           </div>
           <div style="margin-top: 1.5rem;">
-            <a href="./../docs/SK CV.pdf" class="btn btn-primary btn-sm" target="_blank"
+            <a href="./../../../../../docs/SK CV.pdf" class="btn btn-primary btn-sm" target="_blank"
               rel="noopener noreferrer">Curriculum Vitae</a>
           </div>
         </div>
       </div>
 
-      <div class="keynote-card" id="k-zhao">
-        <div class="keynote-left-col">
-          <div class="keynote-photo-panel">
-            <img class="keynote-img" src="./../media/speakers/Yuyan Zhao.jpg" alt="Prof. Zhao Yuyan"
+      <div class="plenary-card" id="k-zhao">
+        <div class="plenary-left-col">
+          <div class="plenary-photo-panel">
+            <img class="plenary-img" src="./../../../../../media/speakers/Yuyan Zhao.jpg" alt="Prof. Zhao Yuyan"
               onerror="this.style.display = 'none'" />
           </div>
         </div>
 
-        <div class="keynote-content-panel">
-          <span class="spk-cat-label cat-keynote" style="margin-bottom: 1rem">Keynote Speaker</span>
-          <h2 class="keynote-name">Prof. Zhao Yuyan</h2>
-          <div class="keynote-role">Professor in Planetary Sciences</div>
-          <div class="keynote-dept">
+        <div class="plenary-content-panel">
+          <span class="spk-cat-label cat-plenary" style="margin-bottom: 1rem">Plenary Speaker</span>
+          <h2 class="plenary-name">Prof. Zhao Yuyan</h2>
+          <div class="plenary-role">Professor in Planetary Sciences</div>
+          <div class="plenary-dept">
             International Research Center for Planetary Sciences
           </div>
-          <div class="keynote-uni">
+          <div class="plenary-uni">
             Chengdu University of Technology (CDUT), China
           </div>
 
-          <div class="keynote-bio">
+          <div class="plenary-bio">
             <p>
               Dr. Yuyan (Sara) Zhao is a Professor at the Research Center for Planetary Science within the
               College of Earth and Planetary Sciences at Chengdu University of Technology, where she
@@ -1055,7 +1055,7 @@
             </p>
           </div>
           <div style="margin-top: 1.5rem;">
-            <a href="./../docs/Zhao CV.pdf" class="btn btn-primary btn-sm" target="_blank"
+            <a href="./../../../../../docs/Zhao CV.pdf" class="btn btn-primary btn-sm" target="_blank"
               rel="noopener noreferrer">Curriculum Vitae</a>
           </div>
         </div>
@@ -1199,7 +1199,7 @@
     );
 
     document
-      .querySelectorAll(".plenary-card, .keynote-card, .chief-card")
+      .querySelectorAll(".plenary-card, .plenary-card, .chief-card")
       .forEach((el, i) => {
         el.style.opacity = "0";
         el.style.transform = "translateY(32px)";
