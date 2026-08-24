@@ -470,19 +470,6 @@
       line-height: 1.15;
     }
 
-    .plenary-role {
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--terracotta);
-      margin-bottom: 0.2rem;
-    }
-
-    .plenary-dept {
-      font-size: 0.84rem;
-      color: var(--text-muted);
-      margin-bottom: 0.2rem;
-    }
-
     .plenary-uni {
       font-size: 0.84rem;
       color: var(--ocean);
@@ -534,97 +521,108 @@
       border: 1px solid rgba(44, 26, 14, 0.1);
     }
 
-.plenary-role {
-  font-size: 0.9rem;
-  font-weight: 600;
-  line-height: 1.55;
-}
+    .plenary-role {
+      font-size: 0.9rem;
+      line-height: 1.55;
+    }
 
-.plenary-dept {
-  font-size: 0.9rem;
-  font-weight: 500;
-  line-height: 1.55;
-}
+    .plenary-dept {
+      font-size: 0.9rem;
+      font-weight: 500;
+      line-height: 1.55;
+    }
 
-/* Address and Email */
-.plenary-addr,
-.plenary-email {
-  font-size: 0.7rem;
-  line-height: 1.5;
-  color: #777;
-  margin-bottom: 0.1rem;
-}
+    .plenary-role
+    .plenary-dept {
+      font-size: 0.85rem;
+      color: var(--terracotta);
+      margin-bottom: 0.2rem;
+    }
 
-.plenary-email {
-  margin-bottom: 1.5rem;
-}
+    .plenary-dept
+    .plenary-role {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      margin-bottom: 0.2rem;
+    }
 
-.plenary-email span {
-  font-weight: 500;
-  margin-right: 0.25rem;
-}
+    /* Address and Email */
+    .plenary-addr,
+    .plenary-email {
+      font-size: 0.7rem;
+      line-height: 1.5;
+      color: #777;
+      margin-bottom: 0.1rem;
+    }
 
-.plenary-email a {
-  color: inherit;
-  text-decoration: none;
-  margin-bottom: 0.5rem;
-}
+    .plenary-email {
+      margin-bottom: 1.5rem;
+    }
 
-.plenary-email a:hover {
-  text-decoration: underline;
-}
+    .plenary-email span {
+      font-weight: 500;
+      margin-right: 0.25rem;
+    }
 
-/* Talk Information */
-/* Highlighted Plenary Talk */
-.plenary-talk {
-  position: relative;
-  margin-top: 0%;
-  padding: 1.4rem 1.6rem 1.5rem;
-  border: 1px solid rgba(34, 197, 94, 0.25);
-  border-left: 5px solid #16a34a;
-  border-radius: 10px;
-  background: linear-gradient(
-    135deg,
-    rgba(34, 197, 94, 0.10),
-    rgba(34, 197, 94, 0.035)
-  );
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
-}
+    .plenary-email a {
+      color: inherit;
+      text-decoration: none;
+      margin-bottom: 0.5rem;
+    }
 
-/* Small label above the title */
-.plenary-talk-label {
-  display: inline-block;
-  margin-bottom: 0.65rem;
-  padding: 0.3rem 0.7rem;
-  border-radius: 20px;
-  background: #234331;
-  color: #fff;
-  font-size: 0.72rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
+    .plenary-email a:hover {
+      text-decoration: underline;
+    }
 
-/* Talk title */
-.plenary-talk-title {
-  font-size: 1.2rem;
-  font-weight: 700;
-  line-height: 1.5;
-  color: #1f2937;
-}
+    /* Talk Information */
+    /* Highlighted Plenary Talk */
+    .plenary-talk {
+      position: relative;
+      margin-top: 0%;
+      padding: 1.4rem 1.6rem 1.5rem;
+      border: 1px solid rgba(34, 197, 94, 0.25);
+      border-left: 5px solid #16a34a;
+      border-radius: 10px;
+      background: linear-gradient(135deg,
+          rgba(34, 197, 94, 0.10),
+          rgba(34, 197, 94, 0.035));
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+    }
 
-/* Subtle quotation-style decoration */
-.plenary-talk::before {
-  content: "“";
-  position: absolute;
-  top: 0.3rem;
-  right: 1rem;
-  font-size: 4rem;
-  line-height: 1;
-  font-weight: 700;
-  color: rgba(22, 163, 74, 0.12);
-  pointer-events: none;
-}
+    /* Small label above the title */
+    .plenary-talk-label {
+      display: inline-block;
+      margin-bottom: 0.65rem;
+      padding: 0.3rem 0.7rem;
+      border-radius: 20px;
+      background: #234331;
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    /* Talk title */
+    .plenary-talk-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      line-height: 1.5;
+      color: #1f2937;
+    }
+
+    /* Subtle quotation-style decoration */
+    .plenary-talk::before {
+      content: "“";
+      position: absolute;
+      top: 0.3rem;
+      right: 1rem;
+      font-size: 4rem;
+      line-height: 1;
+      font-weight: 700;
+      color: rgba(22, 163, 74, 0.12);
+      pointer-events: none;
+    }
 
     /* ── PLENARY SPEAKERS — card grid ── */
     .plenary-grid {
@@ -1037,8 +1035,49 @@
           topics in science and innovation.
         </p>
       </div>
+      <!-- Plenary 1 — Prof. Ross Mitchell -->
+      <div class="plenary-card" id="k-ross-mitchell">
+        <div class="plenary-left-col">
+          <div class="plenary-photo-panel">
+            <img class="plenary-img" src="./../../../../../media/speakers/Professor Ross Mitchell.png"
+              alt="Prof. Ross Mitchell" onerror="this.style.display = 'none'" />
+          </div>
+        </div>
 
-      <!-- Plenary 1 — Prof. Lin Zhaohui -->
+        <div class="plenary-content-panel">
+          <span class="spk-cat-label cat-plenary" style="margin-bottom: 1rem">
+            Plenary Speaker
+          </span>
+
+          <h2 class="plenary-name">Prof. Ross Mitchell</h2>
+
+          <div class="plenary-role">
+            Professor, State Key Laboratory of Lithospheric and Environmental Coevolution
+          </div>
+
+          <div class="plenary-dept">
+            Institute of Geology &amp; Geophysics, Chinese Academy of Sciences
+            <br>
+            No. 19, Beitucheng West Road, Beijing, China
+          </div>
+
+          <div class="plenary-email">
+            <span>Email:</span>
+            <a href="mailto:ross.mitchell@mail.iggcas.ac.cn">
+              ross.mitchell@mail.iggcas.ac.cn
+            </a>
+          </div>
+
+          <!-- Talk Information -->
+          <div class="plenary-talk">
+            <div class="plenary-talk-label">Title of the Talk</div>
+            <div class="plenary-talk-title">
+              SCIENCE WRITING: Tricks of th trade for high impact publishing
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Plenary 2 — Prof. Lin Zhaohui -->
       <div class="plenary-card" id="k-lin-zhaohui">
         <div class="plenary-left-col">
           <div class="plenary-photo-panel">
@@ -1075,67 +1114,48 @@
           <div class="plenary-talk">
             <div class="plenary-talk-label">Title of the Talk</div>
             <div class="plenary-talk-title">
-              SCIENCE WRITING: Tricks of the trade for high impact publishing
+              AI enhanced Earth System Modeling and Prediction for Sustainable Development in the Global South
             </div>
           </div>
         </div>
       </div>
 
-      <div class="plenary-card" id="k-zhao">
+      <!-- Plenary 3 — Dr. S. Viswanath -->
+      <div class="plenary-card" id="k-s-viswanath">
         <div class="plenary-left-col">
           <div class="plenary-photo-panel">
-            <img class="plenary-img" src="./../../../../../media/speakers/Yuyan Zhao.jpg" alt="Prof. Zhao Yuyan"
+            <img class="plenary-img" src="./../../../../../media/speakers/Dr. S. Viswanath.png" alt="Dr. S. Viswanath"
               onerror="this.style.display = 'none'" />
           </div>
         </div>
 
         <div class="plenary-content-panel">
-          <span class="spk-cat-label cat-plenary" style="margin-bottom: 1rem">Plenary Speaker</span>
-          <h2 class="plenary-name">Prof. Zhao Yuyan</h2>
-          <div class="plenary-role">Professor in Planetary Sciences</div>
-          <div class="plenary-dept">
-            International Research Center for Planetary Sciences
-          </div>
-          <div class="plenary-uni">
-            Chengdu University of Technology (CDUT), China
+          <span class="spk-cat-label cat-plenary" style="margin-bottom: 1rem">
+            Plenary Speaker
+          </span>
+
+          <h2 class="plenary-name">Dr. S. Viswanath</h2>
+
+          <div class="plenary-role">
+            Scientist G, Retd., ICFRE, MoEF&amp;CC, Govt. of India
           </div>
 
-          <div class="plenary-bio">
-            <p>
-              Dr. Yuyan (Sara) Zhao is a Professor at the Research Center for Planetary Science within the
-              College of Earth and Planetary Sciences at Chengdu University of Technology, where she
-              also currently serves as Associate Dean of the International Education College. She earned
-              her Ph.D. in Geoscience from Stony Brook University in 2014, following an M.S. and B.S. in
-              Geochemistry and Geology from Sun Yat-sen University.
-            </p>
-            <p>
-              Dr. Zhao’s research focuses on the geochemical and surface processes of terrestrial
-              planets—particularly Mars. Her work investigates halogen cycling, iron oxidation,
-              perchlorate and chlorate formation, and mineral stability under Martian atmospheric and
-              aqueous conditions. She has led experimental studies on jarosite, olivine, and sulfate brines
-              to better understand Mars’ past habitability and present-day surface chemistry.
-            </p>
-            <p>
-              A key member of China’s first Mars exploration mission (Tianwen-1) scientist team, Dr. Zhao
-              has contributed directly to the analysis of data from the Zhurong rover. She is actively
-              involved in the planetary science community, serving on the Youth Working Committee of
-              the Chinese Society for Mineralogy, Petrology and Geochemistry, as a council member for
-              several academic societies, and as Executive Editor of the journal Planet and an editorial
-              board member of Acta Geochemica.
-            </p>
-            <p>
-              She has authored or co-authored numerous high-impact papers in journals such as Nature
-              Astronomy, Nature Geoscience, Nature Communications, JGR: Planets, and Geochimica et
-              Cosmochimica Acta. Her work bridges laboratory experiments, remote sensing, and in-situ
-              rover data to advance understanding of Martian geology, climate evolution, and the
-              potential preservation of biosignatures. Recognized as a leading scientist in planetary
-              geochemistry, Dr. Zhao’s interdisciplinary contributions have positioned her as a leading
-              voice in unraveling Mars’ complex environmental history on the global stage.
-            </p>
+          <div class="plenary-dept">
+            Former Director, KSCSTE-Kerala Forest Research Institute
           </div>
-          <div style="margin-top: 1.5rem;">
-            <a href="./../../../../../docs/Zhao CV.pdf" class="btn btn-primary btn-sm" target="_blank"
-              rel="noopener noreferrer">Curriculum Vitae</a>
+
+          <div class="plenary-email">
+            <span>Email:</span>
+            <a href="mailto:syam.viswanath@gmail.com">syam.viswanath@gmail.com</a>
+          </div>
+
+          <!-- Talk Information -->
+          <div class="plenary-talk">
+            <div class="plenary-talk-label">Title of the Talk</div>
+            <div class="plenary-talk-title">
+              Securing nutritional security, ecological and climate resilience in small farms: Food Forests shows how to
+              do it.
+            </div>
           </div>
         </div>
       </div>
