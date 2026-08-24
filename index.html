@@ -20,10 +20,15 @@
         <img src="media/web/4.png" alt="RESCON logo" class="logo-img" />
 
       </a>
-
       <ul class="nav-links">
-        <li><a href="./index.html#home">Home</a></li>
-        <li><a href="./index.html#about">About</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" id="homeBtn">Home <span
+              style="font-size: 0.8em; margin-left: 2px;">▼</span></a>
+          <ul class="dropdown-menu" id="homeMenu">
+            <li><a href="./index.html#home">Home</a></li>
+            <li><a href="./index.html#about">About</a></li>
+          </ul>
+        </li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" id="callForPapersBtn">Call for Abstracts <span
               style="font-size: 0.8em; margin-left: 2px;">▼</span></a>
@@ -1073,6 +1078,27 @@
         });
       });
     }
+    const homeBtn = document.getElementById("homeBtn");
+    const homeMenu = document.getElementById("homeMenu");
+
+    homeBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      homeMenu.classList.toggle("show");
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!e.target.closest('.dropdown')) {
+        homeMenu.classList.remove("show");
+      }
+    });
+
+    // Close dropdown when a submenu link is clicked
+    const subLinks = homeMenu.querySelectorAll('a');
+    subLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        homeMenu.classList.remove("show");
+      });
+    });
   });
 </script>
 
