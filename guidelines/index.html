@@ -118,42 +118,8 @@
 	style="background: linear-gradient(145deg, var(--surface) 0%, var(--sky-mid) 45%, var(--offwhite) 100%); min-height: 100vh;">
 	<!-- ========== NAVIGATION ========== -->
 	<input type="checkbox" id="nav-toggle" class="nav-toggle" />
-	<nav class="navbar">
-		<div class="nav-inner">
-			<a href="./../index.html" class="nav-logo">
-				<img src="./../media/web/4.png" alt="RESCON logo" class="logo-img" />
+	<div id="navbar"></div>
 
-			</a>
-
-			<ul class="nav-links">
-				<li><a href="./../index.html#home">Home</a></li>
-				<li><a href="./../index.html#about">About</a></li>
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" id="callForPapersBtn">Call for Abstracts <span
-							style="font-size: 0.8em; margin-left: 2px;">▼</span></a>
-					<ul class="dropdown-menu" id="callForPapersMenu">
-						<li><a href="./../index.html#dates">Important Dates</a></li>
-						<li><a href="./../guidelines/index.html">Guidelines</a></li>
-						<li><a href="">Submit</a></li>
-					</ul>
-				</li>
-				<li><a href="./../index.html#committee">Committees</a></li>
-				<li><a href="../workshops/index.html">Workshops</a></li>
-				<!-- <li><a href="#submit">Submit</a></li> -->
-				<li><a href="../speakers/index.html">Speakers</a></li>
-				<!-- <li><a href="../gallery/index.html">Past Conferences</a></li> -->
-				<li><a href="../#contact">Contact</a></li>
-			</ul>
-
-			<a href="https://www.pgis.lk/"><img src="../images/web/PGIS Anniversary Logo.png"
-					alt="PGIS Anniversary Logo" class="pgis-logo" /></a>
-
-
-			<label for="nav-toggle" class="hamburger" aria-label="Toggle menu">
-				<span></span><span></span><span></span>
-			</label>
-		</div>
-	</nav>
 	<label for="nav-toggle" class="nav-overlay"></label>
 
 
@@ -465,5 +431,31 @@
 		}
 	});
 </script>
+<script>
+
+  fetch("/components/navbar.html")
+    .then(response => {
+      if (!response.ok) {
+        throw new Error("Could not load navbar.html");
+      }
+      return response.text();
+    })
+    .then(data => {
+      document.getElementById("navbar").innerHTML = data;
+
+      const script = document.createElement("script");
+      script.src = "/components/navbar.js";
+
+      script.onload = function () {
+        initNavbar();
+      };
+
+      document.body.appendChild(script);
+    })
+    .catch(error => {
+      console.error("Navbar error:", error);
+    });
+</script>
+
 
 </html>
