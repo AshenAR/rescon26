@@ -893,6 +893,8 @@
     });
 
     function updateScrollUI() {
+      const navbar = document.querySelector(".navbar");
+      if (!navbar) return;
       const y = window.scrollY;
       if (y > 72) {
         navbar.classList.add("shrink");
@@ -1008,16 +1010,31 @@
       });
     }
   });
+</script>
+<script>
 
   fetch("components/navbar.html")
-    .then(response => response.text())
+    .then(response => {
+      if (!response.ok) {
+        throw new Error("Could not load navbar.html");
+      }
+      return response.text();
+    })
     .then(data => {
       document.getElementById("navbar").innerHTML = data;
 
       const script = document.createElement("script");
-      script.src = "/components/navbar.js";
+      script.src = "components/navbar.js";
+
+      script.onload = function () {
+        initNavbar();
+      };
+
       document.body.appendChild(script);
-    }).catch(error => console.error("Navbar loading error:", error));
+    })
+    .catch(error => {
+      console.error("Navbar error:", error);
+    });
 </script>
 
 </html>

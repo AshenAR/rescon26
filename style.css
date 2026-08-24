@@ -1545,6 +1545,14 @@ img {
   animation: scrollBob 2s ease-in-out infinite;
 }
 
+.dropdown-menu {
+  display: none;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
 @keyframes scrollBob {
 
   0%,
