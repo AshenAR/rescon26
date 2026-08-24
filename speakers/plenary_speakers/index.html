@@ -534,6 +534,98 @@
       border: 1px solid rgba(44, 26, 14, 0.1);
     }
 
+.plenary-role {
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.55;
+}
+
+.plenary-dept {
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.55;
+}
+
+/* Address and Email */
+.plenary-addr,
+.plenary-email {
+  font-size: 0.7rem;
+  line-height: 1.5;
+  color: #777;
+  margin-bottom: 0.1rem;
+}
+
+.plenary-email {
+  margin-bottom: 1.5rem;
+}
+
+.plenary-email span {
+  font-weight: 500;
+  margin-right: 0.25rem;
+}
+
+.plenary-email a {
+  color: inherit;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+}
+
+.plenary-email a:hover {
+  text-decoration: underline;
+}
+
+/* Talk Information */
+/* Highlighted Plenary Talk */
+.plenary-talk {
+  position: relative;
+  margin-top: 0%;
+  padding: 1.4rem 1.6rem 1.5rem;
+  border: 1px solid rgba(34, 197, 94, 0.25);
+  border-left: 5px solid #16a34a;
+  border-radius: 10px;
+  background: linear-gradient(
+    135deg,
+    rgba(34, 197, 94, 0.10),
+    rgba(34, 197, 94, 0.035)
+  );
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+/* Small label above the title */
+.plenary-talk-label {
+  display: inline-block;
+  margin-bottom: 0.65rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 20px;
+  background: #234331;
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* Talk title */
+.plenary-talk-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #1f2937;
+}
+
+/* Subtle quotation-style decoration */
+.plenary-talk::before {
+  content: "“";
+  position: absolute;
+  top: 0.3rem;
+  right: 1rem;
+  font-size: 4rem;
+  line-height: 1;
+  font-weight: 700;
+  color: rgba(22, 163, 74, 0.12);
+  pointer-events: none;
+}
+
     /* ── PLENARY SPEAKERS — card grid ── */
     .plenary-grid {
       display: grid;
@@ -686,18 +778,6 @@
       line-height: 1.2;
     }
 
-    .plenary-role {
-      font-size: 0.8rem;
-      font-weight: 600;
-      color: var(--teal-vivid);
-      margin-bottom: 0.2rem;
-    }
-
-    .plenary-dept {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      margin-bottom: 1rem;
-    }
 
     .plenary-divider {
       width: 36px;
@@ -958,46 +1038,45 @@
         </p>
       </div>
 
-      <!-- Plenary 1 — Prof. Suniti Karunatillake -->
-      <div class="plenary-card" id="k-suniti">
+      <!-- Plenary 1 — Prof. Lin Zhaohui -->
+      <div class="plenary-card" id="k-lin-zhaohui">
         <div class="plenary-left-col">
           <div class="plenary-photo-panel">
-            <img class="plenary-img" src="./../../../../../media/speakers/Professor Suniti.png" alt="Prof. Suniti Karunatillake"
-              onerror="this.style.display = 'none'" />
+            <img class="plenary-img" src="./../../../../../media/speakers/Professor Lin Zhaohui.png"
+              alt="Prof. Lin Zhaohui" onerror="this.style.display = 'none'" />
           </div>
         </div>
 
         <div class="plenary-content-panel">
-          <span class="spk-cat-label cat-plenary" style="margin-bottom: 1rem">Plenary Speaker</span>
-          <h2 class="plenary-name">Prof. Suniti Karunatillake</h2>
-          <div class="plenary-role">
-            Professor in Planetary Science, Remote Sensing and Exobiology
-          </div>
-          <div class="plenary-dept">Department of Geology and Geophysics</div>
-          <div class="plenary-uni">Louisiana State University, USA</div>
+          <span class="spk-cat-label cat-plenary" style="margin-bottom: 1rem">
+            Plenary Speaker
+          </span>
 
-          <div class="plenary-bio">
-            <p>
-              Dr. Suniti Karunatillake is a planetary scientist and Associate Professor in the Department of
-              Geology &amp; Geophysics at Louisiana State University. His research focuses on planetary
-              critical zones, Mars geochemistry, regolith hydration, habitability, and the interpretation of
-              satellite and in situ planetary data. He specializes in integrating remote sensing,
-              geochemical mapping, and sedimentological analyses to better understand the geological
-              and hydrological evolution of Mars and other planetary bodies.
-            </p>
-            <p>
-              Dr. Karunatillake earned a BA in Physics from Wabash College and a PhD in Physics,
-              Astronomy, and Planetary Science from Cornell University, followed by postdoctoral
-              research at Stony Brook University. Over the course of his career, he has contributed
-              extensively to planetary science through interdisciplinary research, NASA-funded projects,
-              mission concept development, and international collaborations. His work has advanced
-              understanding of Martian surface processes, crustal evolution, hydrothermal activity, and
-              the potential for past habitability and biosignature preservation on Mars.
-            </p>
+          <h2 class="plenary-name">Prof. Lin Zhaohui</h2>
+
+          <div class="plenary-role">
+            Director, CAS-TWAS Center of Excellence for Climate and Environment Sciences
           </div>
-          <div style="margin-top: 1.5rem;">
-            <a href="./../../../../../docs/SK CV.pdf" class="btn btn-primary btn-sm" target="_blank"
-              rel="noopener noreferrer">Curriculum Vitae</a>
+
+          <div class="plenary-dept">
+            Institute of Atmospheric Physics, Chinese Academy of Sciences
+          </div>
+
+          <div class="plenary-addr">
+            P.O. Box 9804, Beijing 100029, China
+          </div>
+
+          <div class="plenary-email">
+            <span>Email:</span>
+            <a href="mailto:lzh@mail.iap.ac.cn">lzh@mail.iap.ac.cn</a>
+          </div>
+
+          <!-- Talk Information -->
+          <div class="plenary-talk">
+            <div class="plenary-talk-label">Title of the Talk</div>
+            <div class="plenary-talk-title">
+              SCIENCE WRITING: Tricks of the trade for high impact publishing
+            </div>
           </div>
         </div>
       </div>
@@ -1234,29 +1313,29 @@
   </script>
   <script>
 
-  fetch("/components/navbar.html")
-    .then(response => {
-      if (!response.ok) {
-        throw new Error("Could not load navbar.html");
-      }
-      return response.text();
-    })
-    .then(data => {
-      document.getElementById("navbar").innerHTML = data;
+    fetch("/components/navbar.html")
+      .then(response => {
+        if (!response.ok) {
+          throw new Error("Could not load navbar.html");
+        }
+        return response.text();
+      })
+      .then(data => {
+        document.getElementById("navbar").innerHTML = data;
 
-      const script = document.createElement("script");
-      script.src = "/components/navbar.js";
+        const script = document.createElement("script");
+        script.src = "/components/navbar.js";
 
-      script.onload = function () {
-        initNavbar();
-      };
+        script.onload = function () {
+          initNavbar();
+        };
 
-      document.body.appendChild(script);
-    })
-    .catch(error => {
-      console.error("Navbar error:", error);
-    });
-</script>
+        document.body.appendChild(script);
+      })
+      .catch(error => {
+        console.error("Navbar error:", error);
+      });
+  </script>
 </body>
 
 </html>
