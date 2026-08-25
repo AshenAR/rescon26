@@ -433,7 +433,7 @@
 </script>
 <script>
 
-  fetch("/components/navbar.html")
+  fetch("/rescon2026/components/navbar.html")
     .then(response => {
       if (!response.ok) {
         throw new Error("Could not load navbar.html");
@@ -444,7 +444,7 @@
       document.getElementById("navbar").innerHTML = data;
 
       const script = document.createElement("script");
-      script.src = "/components/navbar.js";
+      script.src = "/rescon2026/components/navbar.js";
 
       script.onload = function () {
         initNavbar();

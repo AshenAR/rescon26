@@ -7,7 +7,7 @@
   <title>Speakers — RESCON 2026 | PGIS</title>
   <meta name="description"
     content="Plenary, Plenary and Chief Guest Speakers of RESCON 2026 at the Postgraduate Institute of Science, University of Peradeniya." />
-  <link rel="stylesheet" href="./../../../../../style.css" />
+  <link rel="stylesheet" href="../../style.css" />
   <style>
     /* ══════════════════════════════════════════
        SPEAKERS PAGE — ADDITIONAL STYLES
@@ -964,7 +964,7 @@
       <div class="plenary-card" id="k-ross-mitchell">
         <div class="plenary-left-col">
           <div class="plenary-photo-panel">
-            <img class="plenary-img" src="./../../../../../media/speakers/Professor Ross Mitchell.png"
+            <img class="plenary-img" src="./../../media/speakers/Professor Ross Mitchell.png"
               alt="Prof. Ross Mitchell" onerror="this.style.display = 'none'" />
           </div>
         </div>
@@ -1006,7 +1006,7 @@
       <div class="plenary-card" id="k-lin-zhaohui">
         <div class="plenary-left-col">
           <div class="plenary-photo-panel">
-            <img class="plenary-img" src="./../../../../../media/speakers/Professor Lin Zhaohui.png"
+            <img class="plenary-img" src="./../../media/speakers/Professor Lin Zhaohui.png"
               alt="Prof. Lin Zhaohui" onerror="this.style.display = 'none'" />
           </div>
         </div>
@@ -1049,7 +1049,7 @@
       <div class="plenary-card" id="k-s-viswanath">
         <div class="plenary-left-col">
           <div class="plenary-photo-panel">
-            <img class="plenary-img" src="./../../../../../media/speakers/Dr. S. Viswanath.png" alt="Dr. S. Viswanath"
+            <img class="plenary-img" src="./../../media/speakers/Dr. S. Viswanath.png" alt="Dr. S. Viswanath"
               onerror="this.style.display = 'none'" />
           </div>
         </div>
@@ -1258,7 +1258,7 @@
   </script>
   <script>
 
-    fetch("/components/navbar.html")
+    fetch("/rescon2026/components/navbar.html")
       .then(response => {
         if (!response.ok) {
           throw new Error("Could not load navbar.html");
@@ -1269,7 +1269,7 @@
         document.getElementById("navbar").innerHTML = data;
 
         const script = document.createElement("script");
-        script.src = "/components/navbar.js";
+        script.src = "/rescon2026/components/navbar.js";
 
         script.onload = function () {
           initNavbar();
