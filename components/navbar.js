@@ -1,4 +1,41 @@
 function initNavbar() {
+
+  const hamburger = document.querySelector(".hamburger");
+  const navLinks = document.querySelector(".nav-links");
+  const navbar = document.querySelector(".navbar");
+
+  if (hamburger && navLinks && navbar) {
+
+    // Hamburger
+    hamburger.addEventListener("click", function (e) {
+      e.stopPropagation();
+      navLinks.classList.toggle("active");
+    });
+
+    // Close mobile menu when clicking actual navigation links
+    navLinks.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", function () {
+
+        // Don't close when clicking a dropdown button
+        if (link.classList.contains("dropdown-toggle")) {
+          return;
+        }
+
+        navLinks.classList.remove("active");
+      });
+    });
+
+    // Close everything when clicking outside navbar
+    document.addEventListener("click", function (e) {
+      if (!navbar.contains(e.target)) {
+        navLinks.classList.remove("active");
+
+        navbar.querySelectorAll(".dropdown-menu").forEach(menu => {
+          menu.classList.remove("show");
+        });
+      }
+    });
+  }
   const dropdowns = document.querySelectorAll(".dropdown");
 
   dropdowns.forEach(dropdown => {
